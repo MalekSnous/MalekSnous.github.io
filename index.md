@@ -3,61 +3,57 @@ layout: default
 title: "Home"
 ---
 
+<p align="center">
+  <img src="/assets/logo.svg" width="260"/>
+</p>
+
 # 👋 Hello, I'm **Malek Senoussi**
-### **Data Scientist & Machine Learning Engineer**
+### Data Scientist · ML Engineer · PhD in Applied Mathematics
 
-PhD in Applied Mathematics with strong expertise in:
-- Machine Learning & Deep Learning  
+---
+
+<div class="section">
+<h2>🚀 What I Do</h2>
+
+- Machine Learning & Deep Learning
+- Probability and statistics theory 
 - Scientific Computing & Large-Scale Data Analysis  
-- LLMs, RAG systems & AI Engineering  
 - Python, R, SQL, distributed computing  
-- Dashboards, visualisation & reproducible pipelines  
+- Dashboards, visualisation & reproducible pipelines
+  
 
-I specialize in turning complex datasets into actionable insights and designing robust ML pipelines that scale — from research to production.
-
-I am currently looking for a **Data Scientist / ML Engineer position in Switzerland (Geneva or Lausanne)**.
+</div>
 
 ---
 
 ## 🔍 Featured Projects
 
-### 🧠 **LLM-Powered Scientific Assistant (RAG)**
-Retrieval-augmented chatbot supporting domain-specific analysis using:
-- Python · LangChain · FAISS · OpenAI API  
-- Document chunking, reranking, context compression  
-- Hallucination control + citation tracing  
 
-→ [View project](projects#llm-scientific-assistant)
 
----
+<div class="card">
+<h3>🔬 Single-Cell ML Pipeline</h3>
+A scalable ML workflow analyzing millions of RNA-seq datapoints.
+<br><br>
+<a class="btn" href="/projects#single-cell-pipeline">View Project</a>
+</div>
 
-### 🔬 **Single-Cell Data Analysis Pipeline (PhD Work)**
-End-to-end ML pipeline for high-dimensional omics data:
-- Python · PyTorch · Scanpy · scVI  
-- Graph modelling, clustering, probabilistic modeling  
-- Dash dashboard for interactive exploration  
-
-→ [View project](projects#single-cell-pipeline)
+<div class="card">
+<h3>📈 Graph network and random walk</h3>
+Predictive models + interactive dashboards for decision-making.
+<br><br>
+<a class="btn" href="/projects#forecasting">View Project</a>
+</div>
 
 ---
 
-### 📈 **Time Series Forecasting for Resource Optimization**
-- LSTM / Prophet / ARIMA  
-- Interactive dashboards with Dash  
-- CI/CD pipeline with GitHub Actions  
-
-→ [View project](projects#forecasting)
+## 📄 Curriculum Vitae  
+<a class="btn" href="/assets/CV.pdf">Download my CV</a>
 
 ---
 
-## 📄 Download my CV
-👉 [Click here to open](assets/CV.pdf)
+## 📫 Contact  
+- Email: malek.senoussi@gmail.com
+- GitHub: [Malek Snous](https://github.com/MalekSnous)
+- LinkedIn: [Malek Sen](https://www.linkedin.com/in/maleksen)
 
----
-
-## 📫 Contact
-
-- **Email:** ton-email  
-- **GitHub:** ton-url  
-- **LinkedIn:** ton-url
 
