@@ -1,0 +1,68 @@
+<svg width="100%" height="220" viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg"
+     fill="none" stroke-linecap="round" stroke-linejoin="round">
+
+  <!-- ======= BACKGROUND (soft gradient for GitHub dark/light themes) ======= -->
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f6f9fc"/>
+      <stop offset="100%" stop-color="#e8f3f9"/>
+    </linearGradient>
+
+    <!-- Color Palette -->
+    <style><![CDATA[
+      .main { stroke:#0A3D62; }
+      .accent { stroke:#0AB7B7; }
+      .thin { stroke-width:2; }
+      .thick { stroke-width:3; }
+      .bg { fill:url(#bg); }
+    ]]></style>
+  </defs>
+
+  <rect width="520" height="200" class="bg"/>
+
+  <!-- ==================== LEFT : MULTI-OMICS CELLS ==================== -->
+  <ellipse cx="70" cy="110" rx="38" ry="32" class="main thick" fill="none"/>
+  <circle cx="70" cy="110" r="14" class="accent thick" fill="none"/>
+
+  <!-- Small omics bubbles -->
+  <circle cx="35" cy="70" r="11" class="accent thin" fill="none"/>
+  <circle cx="45" cy="145" r="9" class="accent thin" fill="none"/>
+  <circle cx="115" cy="80" r="10" class="accent thin" fill="none"/>
+
+  <!-- Sketch accents -->
+  <path d="M25 60 Q32 65 38 58" class="main thin"/>
+  <path d="M60 160 Q72 165 84 155" class="main thin"/>
+
+  <!-- ==================== CENTER : GRAPH NETWORK ==================== -->
+  <!-- Nodes -->
+  <circle cx="200" cy="95" r="7" class="accent thick"/>
+  <circle cx="235" cy="135" r="7" class="accent thick"/>
+  <circle cx="265" cy="80" r="7" class="accent thick"/>
+  <circle cx="295" cy="120" r="7" class="accent thick"/>
+
+  <!-- Edges -->
+  <line x1="200" y1="95" x2="235" y2="135" class="main thick"/>
+  <line x1="235" y1="135" x2="265" y2="80" class="main thick"/>
+  <line x1="265" y1="80" x2="295" y2="120" class="main thick"/>
+  <line x1="200" y1="95" x2="265" y2="80" class="main thick"/>
+
+  <!-- Sketchy network accents -->
+  <path d="M165 110 Q185 120 205 112" class="main thin" stroke-dasharray="3 6"/>
+  <path d="M250 65 Q265 70 260 78" class="main thin" stroke-dasharray="3 6"/>
+
+  <!-- ==================== RIGHT : SAILBOAT ==================== -->
+  <!-- Hull -->
+  <path d="M380 140 Q405 160 445 140" class="main thick" fill="none"/>
+
+  <!-- Mast -->
+  <line x1="410" y1="140" x2="410" y2="70" class="main thick"/>
+
+  <!-- Sails -->
+  <path d="M410 70 L450 115 L410 115 Z" class="accent thick" fill="none"/>
+  <path d="M410 70 L375 115 L410 115 Z" class="accent thick" fill="none"/>
+
+  <!-- Waves -->
+  <path d="M370 155 Q390 168 410 155 Q430 168 450 155 Q470 168 490 155"
+        class="main thin" fill="none"/>
+
+</svg>
