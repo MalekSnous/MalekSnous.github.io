@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio – Data Science & AI</title>
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- STYLE -->
+    <style>
+        :root {
+            --bg: #ffffff;
+            --fg: #0d1b2a;
+            --accent: #0277bd;
+            --card-bg: #f4f6f8;
+            --border: #d9e0eb;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0d1117;
+                --fg: #e6edf3;
+                --accent: #5abaff;
+                --card-bg: #161b22;
+                --border: #30363d;
+            }
+        }
+
+        body {
+            margin: 0;
+            font-family: "Inter", sans-serif;
+            background: var(--bg);
+            color: var(--fg);
+            line-height: 1.7;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 20px;
+        }
+
+        .logo-container img {
+            max-width: 440px;
+            width: 90%;
+            margin-bottom: 20px;
+            opacity: 0;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 2.4rem;
+            margin: 10px 0 5px;
+        }
+
+        h2 {
+            margin-top: 40px;
+            font-size: 1.9rem;
+        }
+
+        p {
+            font-size: 1.05rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Cards */
+        .section {
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .project {
+            border: 1px solid var(--border);
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 14px;
+            margin-bottom: 25px;
+            transition: 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+
+        .project-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            padding: 20px;
+            opacity: 0.7;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="assets/logo-dynamic.svg" alt="Data Science Logo" class="logo">
+    </div>
+    <h1>Data Scientist & Machine Learning Engineer</h1>
+    <p>Expertise in machine learning, scientific computing, AI systems, generative models, and multi-omics data analysis.</p>
+</header>
+
+<!-- ABOUT SECTION -->
+<div class="section" id="about">
+    <h2>About Me</h2>
+    <p>
+        I am a Data Scientist and Machine Learning Engineer specializing in machine learning, AI systems, 
+        and high-dimensional biological and time-series data. My background includes a PhD in applied ML, 
+        computational biology, large-scale pipelines, and MLOps.
+        I enjoy building robust, interpretable, and scalable AI systems.
+    </p>
+</div>
+
+<!-- PROJECTS SECTION -->
+<div class="section" id="projects">
+    <h2>Selected Projects</h2>
+
+    <div class="project">
+        <div class="project-title">📌 Multi-Omics Single-Cell Analysis Pipeline</div>
+        <p>End-to-end pipeline processing millions of RNA-seq measurements, clustering, graph-based models, 
+        dimensionality reduction, and biological interpretation. Built with Python, Scanpy, NumPy, PyTorch.</p>
+    </div>
+
+ 
+
+    <div class="project">
+        <div class="project-title">📌 Forecasting & Time-Series Dashboard</div>
+        <p>Developed interactive Plotly Dash dashboards for time-series forecasting, resource planning, 
+        and anomaly detection. Deployed via Docker on cloud infrastructure.</p>
+        <a href="#">→ View Project</a>
+    </div>
+
+    <div class="project">
+        <div class="project-title">📌 Graph Exploration WebApp</div>
+        <p>Visualization of large-scale random walks and graph structures.  
+        Deployed using Dash + Docker on remote server.</p>
+        <a href="#">→ View Project</a>
+    </div>
+
+</div>
+
+<footer>
+    © 2025 – Portfolio Data Science & AI · Built with ♥ using GitHub Pages
+</footer>
+
+<!-- SCROLLREVEAL ANIMATION -->
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+ScrollReveal().reveal('.logo', {
+    distance: '40px',
+    duration: 1200,
+    origin: 'bottom',
+    opacity: 0
+});
+ScrollReveal().reveal('.section', {
+    distance: '20px',
+    duration: 1000,
+    interval: 150,
+    origin: 'bottom',
+    opacity: 0
+});
+</script>
+
+</body>
+</html>
