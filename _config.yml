@@ -1,0 +1,25 @@
+title: "Malek Senoussi – Data Scientist & ML Engineer"
+description: "Portfolio – Data Science, ML Engineering, LLMs, Dashboards, Python Projects"
+theme: jekyll-theme-cayman
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+markdown: kramdown
+
+author:
+  name: "Malek Senoussi"
+  email: "ton-email"
+  github: "ton-github"
+  linkedin: "ton-linkedin"
+
+navbar:
+  - name: "Home"
+    link: /
+  - name: "Projects"
+    link: /projects
+  - name: "About"
+    link: /about
+  - name: "CV"
+    link: /assets/CV.pdf
