@@ -10,9 +10,9 @@ markdown: kramdown
 
 author:
   name: "Malek Senoussi"
-  email: "ton-email"
-  github: "ton-github"
-  linkedin: "ton-linkedin"
+  email: "malek.senoussi@gmail.com"
+  github: "https://github.com/MalekSnous"
+  linkedin: "https://www.linkedin.com/in/maleksen/"
 
 navbar:
   - name: "Home"
