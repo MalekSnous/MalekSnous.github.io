@@ -43,6 +43,7 @@ body {
     line-height: 1.7;
 }
 
+/* HEADER */
 header {
     text-align: center;
     padding: 40px 20px 20px;
@@ -97,7 +98,7 @@ li {
     border-radius: 14px;
     margin-bottom: 25px;
     transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
-    opacity: 0; /* hidden initially for scroll animation */
+    opacity: 0;
     transform: translateY(30px);
 }
 
@@ -126,7 +127,7 @@ li {
     font-size: 0.8rem;
     padding: 4px 8px;
     border-radius: 6px;
-    opacity: 0; /* hidden for animation */
+    opacity: 0;
     transform: translateY(10px);
     transition: all 0.4s ease;
 }
@@ -177,6 +178,14 @@ footer {
     50% { transform: translateY(-4px); }
     100% { transform: translateY(0px); }
 }
+
+/* Slogan styling */
+.svg-slogan {
+    font-size: 0.85rem;
+    font-weight: 600;
+    fill: var(--fg);
+    text-anchor: middle;
+}
 </style>
 </head>
 
@@ -193,14 +202,18 @@ footer {
 
         <rect x="2" y="2" width="516" height="196" rx="12" fill="var(--bg-color)" />
 
+        <!-- LEFT: multi-omics cells -->
         <g class="cells">
             <ellipse cx="75" cy="100" rx="38" ry="32" stroke="var(--main-color)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#softShadow)"/>
             <circle cx="75" cy="100" r="14" stroke="var(--accent-color)" stroke-width="2.5" fill="var(--accent-color)" class="pulse"/>
             <circle cx="40" cy="70" r="10" fill="var(--accent-color)"/>
             <circle cx="50" cy="140" r="8" fill="var(--accent-color)"/>
             <circle cx="115" cy="78" r="9" fill="var(--accent-color)"/>
+            <!-- Slogan -->
+            <text x="75" y="180" class="svg-slogan">Data, Graph & Beyond</text>
         </g>
 
+        <!-- CENTER: graph -->
         <g class="graph">
             <circle cx="210" cy="92" r="7" fill="var(--accent-color)" stroke="var(--main-color)" stroke-width="1.6"/>
             <circle cx="245" cy="132" r="7" fill="var(--accent-color)" stroke="var(--main-color)" stroke-width="1.6"/>
@@ -210,19 +223,24 @@ footer {
             <line x1="245" y1="132" x2="275" y2="78" stroke="var(--main-color)" stroke-width="3"/>
             <line x1="275" y1="78" x2="305" y2="118" stroke="var(--main-color)" stroke-width="3"/>
             <line x1="210" y1="92" x2="275" y2="78" stroke="var(--main-color)" stroke-width="3"/>
+            <!-- Slogan -->
+            <text x="245" y="180" class="svg-slogan">Data, Graph & Beyond</text>
         </g>
 
+        <!-- RIGHT: sailboat -->
         <g class="boat">
             <path d="M380 140 Q405 160 445 140" stroke="var(--main-color)" stroke-width="3" fill="none"/>
             <line x1="410" y1="140" x2="410" y2="72" stroke="var(--main-color)" stroke-width="3"/>
             <path d="M410 72 L453 118 L410 118 Z" stroke="var(--accent-color)" stroke-width="2.5" fill="none"/>
             <path d="M410 72 L375 118 L410 118 Z" stroke="var(--accent-color)" stroke-width="2.5" fill="none"/>
+            <!-- Slogan -->
+            <text x="410" y="180" class="svg-slogan">Data, Graph & Beyond</text>
         </g>
     </svg>
 </div>
 
 <h1>Data Scientist & Machine Learning Engineer</h1>
-<p>Expertise in machine learning, scientific computing, AI systems, generative models, and multi-omics data analysis.</p>
+<p>I am a data scientist working on multi-disciplinary data and fields, building AI and ML solutions across biology, graphs, and large-scale datasets.</p>
 </header>
 
 <!-- SKILLS -->
@@ -241,10 +259,7 @@ footer {
 <div class="section" id="about">
 <h2>About Me</h2>
 <p>
-I am a Data Scientist and Machine Learning Engineer specializing in machine learning, AI systems, 
-and high-dimensional biological and time-series data. My background includes a PhD in applied ML, 
-computational biology, large-scale pipelines, and MLOps.
-I enjoy building robust, interpretable, and scalable AI systems.
+I specialize in building interpretable and scalable AI systems, focusing on multi-disciplinary data analysis, from multi-omics to network graphs.
 </p>
 </div>
 
@@ -302,7 +317,6 @@ I enjoy building robust, interpretable, and scalable AI systems.
 © 2025 – Portfolio Data Science & AI · Built with ♥ using GitHub Pages
 </footer>
 
-<!-- ScrollReveal for projects fade-in -->
 <script src="https://unpkg.com/scrollreveal"></script>
 <script>
 ScrollReveal().reveal('.logo-container svg', { distance: '40px', duration: 1200, origin: 'bottom', opacity: 0 });
@@ -312,5 +326,3 @@ ScrollReveal().reveal('.section:not(#projects)', { distance: '20px', duration: 1
 
 </body>
 </html>
-
-
