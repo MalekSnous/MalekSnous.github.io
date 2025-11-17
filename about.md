@@ -9,7 +9,6 @@ I am a Data Scientist & Machine Learning Engineer with a strong academic foundat
 
 My interests include:
 - applied machine learning  
-- LLM systems & RAG architectures  
 - probabilistic modeling  
 - data visualization  
 - multi-omics analysis  
@@ -17,5 +16,5 @@ My interests include:
 
 I am passionate about **solving real-world problems with data**, building scalable ML pipelines, and designing AI solutions that combine scientific rigor with practical impact.
 
-Beyond work, I enjoy contributing to open-source, mentoring junior scientists, and exploring new developments in AI research.
+Beyond work, I enjoy playing Greek and Arabic music repertoires. I'm also passionate about sailing.
 
