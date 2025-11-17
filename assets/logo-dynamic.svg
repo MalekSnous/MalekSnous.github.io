@@ -1,68 +1,97 @@
-<svg width="100%" height="220" viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg"
-     fill="none" stroke-linecap="round" stroke-linejoin="round">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 520 200"
+     width="100%" height="auto"
+     role="img" aria-label="Malek Senoussi data science logo">
 
-  <!-- ======= BACKGROUND (soft gradient for GitHub dark/light themes) ======= -->
   <defs>
-    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0%" stop-color="#f6f9fc"/>
-      <stop offset="100%" stop-color="#e8f3f9"/>
-    </linearGradient>
-
-    <!-- Color Palette -->
-    <style><![CDATA[
-      .main { stroke:#0A3D62; }
-      .accent { stroke:#0AB7B7; }
-      .thin { stroke-width:2; }
-      .thick { stroke-width:3; }
-      .bg { fill:url(#bg); }
+    <!-- Default colors rely on CSS variables, fallback provided -->
+    <style type="text/css"><![CDATA[
+      :root{
+        --main-color: #0A3D62;
+        --accent-color: #0AB7B7;
+        --bg-color: #f6f9fc;
+      }
+      .bg { fill: var(--bg-color); }
+      .main { stroke: var(--main-color); stroke-width:3; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+      .accent { stroke: var(--accent-color); stroke-width:2.5; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+      .thin { stroke: var(--main-color); stroke-width:1.6; fill:none; stroke-linecap:round; stroke-linejoin:round; stroke-dasharray: 0; }
+      .node { fill: var(--accent-color); stroke: var(--main-color); stroke-width:1.6; }
+      .pulse { animation: pulse 3.6s infinite ease-in-out; transform-origin: center; }
+      .float { animation: floaty 6s infinite ease-in-out; transform-origin: center; }
+      @keyframes pulse {
+        0% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.06); opacity: 0.86; }
+        100% { transform: scale(1); opacity: 1; }
+      }
+      @keyframes floaty {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-4px); }
+        100% { transform: translateY(0px); }
+      }
     ]]></style>
+
+    <!-- subtle drop shadow filter -->
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
   </defs>
 
-  <rect width="520" height="200" class="bg"/>
+  <!-- background rounded card (optional) -->
+  <rect x="2" y="2" width="516" height="196" rx="12" class="bg" />
 
-  <!-- ==================== LEFT : MULTI-OMICS CELLS ==================== -->
-  <ellipse cx="70" cy="110" rx="38" ry="32" class="main thick" fill="none"/>
-  <circle cx="70" cy="110" r="14" class="accent thick" fill="none"/>
+  <!-- LEFT: multi-omics cells -->
+  <!-- large cell -->
+  <ellipse cx="75" cy="100" rx="38" ry="32" class="main float" filter="url(#softShadow)"/>
+  <circle cx="75" cy="100" r="14" class="accent pulse"/>
 
-  <!-- Small omics bubbles -->
-  <circle cx="35" cy="70" r="11" class="accent thin" fill="none"/>
-  <circle cx="45" cy="145" r="9" class="accent thin" fill="none"/>
-  <circle cx="115" cy="80" r="10" class="accent thin" fill="none"/>
+  <!-- small bubbles / omics -->
+  <circle cx="40" cy="70" r="10" class="accent"/>
+  <circle cx="50" cy="140" r="8" class="accent"/>
+  <circle cx="115" cy="78" r="9" class="accent"/>
 
-  <!-- Sketch accents -->
-  <path d="M25 60 Q32 65 38 58" class="main thin"/>
-  <path d="M60 160 Q72 165 84 155" class="main thin"/>
+  <!-- small sketch accents -->
+  <path d="M28 58 Q34 64 40 58" class="thin"/>
+  <path d="M58 160 Q70 165 82 158" class="thin"/>
 
-  <!-- ==================== CENTER : GRAPH NETWORK ==================== -->
-  <!-- Nodes -->
-  <circle cx="200" cy="95" r="7" class="accent thick"/>
-  <circle cx="235" cy="135" r="7" class="accent thick"/>
-  <circle cx="265" cy="80" r="7" class="accent thick"/>
-  <circle cx="295" cy="120" r="7" class="accent thick"/>
+  <!-- CENTER: graph / network -->
+  <!-- nodes -->
+  <circle cx="210" cy="92" r="7" class="node"/>
+  <circle cx="245" cy="132" r="7" class="node"/>
+  <circle cx="275" cy="78" r="7" class="node pulse"/>
+  <circle cx="305" cy="118" r="7" class="node"/>
 
-  <!-- Edges -->
-  <line x1="200" y1="95" x2="235" y2="135" class="main thick"/>
-  <line x1="235" y1="135" x2="265" y2="80" class="main thick"/>
-  <line x1="265" y1="80" x2="295" y2="120" class="main thick"/>
-  <line x1="200" y1="95" x2="265" y2="80" class="main thick"/>
+  <!-- edges -->
+  <line x1="210" y1="92" x2="245" y2="132" class="main"/>
+  <line x1="245" y1="132" x2="275" y2="78" class="main"/>
+  <line x1="275" y1="78" x2="305" y2="118" class="main"/>
+  <line x1="210" y1="92" x2="275" y2="78" class="main"/>
 
-  <!-- Sketchy network accents -->
-  <path d="M165 110 Q185 120 205 112" class="main thin" stroke-dasharray="3 6"/>
-  <path d="M250 65 Q265 70 260 78" class="main thin" stroke-dasharray="3 6"/>
+  <!-- dashed sketch accents -->
+  <path d="M185 110 Q200 120 215 112" class="thin" stroke-dasharray="4 6"/>
+  <path d="M260 60 Q270 66 266 74" class="thin" stroke-dasharray="3 6"/>
 
-  <!-- ==================== RIGHT : SAILBOAT ==================== -->
-  <!-- Hull -->
-  <path d="M380 140 Q405 160 445 140" class="main thick" fill="none"/>
+  <!-- RIGHT: sailboat -->
+  <!-- hull -->
+  <path d="M380 140 Q405 160 445 140" class="main" />
+  <!-- mast -->
+  <line x1="410" y1="140" x2="410" y2="72" class="main"/>
+  <!-- sails -->
+  <path d="M410 72 L453 118 L410 118 Z" class="accent"/>
+  <path d="M410 72 L375 118 L410 118 Z" class="accent"/>
 
-  <!-- Mast -->
-  <line x1="410" y1="140" x2="410" y2="70" class="main thick"/>
+  <!-- small details on hull -->
+  <path d="M384 138 Q405 150 444 138" class="thin"/>
 
-  <!-- Sails -->
-  <path d="M410 70 L450 115 L410 115 Z" class="accent thick" fill="none"/>
-  <path d="M410 70 L375 115 L410 115 Z" class="accent thick" fill="none"/>
+  <!-- waves -->
+  <path d="M370 154 Q388 167 405 154 Q423 167 441 154 Q459 167 477 154" class="thin"/>
 
-  <!-- Waves -->
-  <path d="M370 155 Q390 168 410 155 Q430 168 450 155 Q470 168 490 155"
-        class="main thin" fill="none"/>
+  <!-- optional signature initials (subtle) -->
+  <g transform="translate(10, 10)" opacity="0.9">
+    <text x="0" y="0" font-size="0" fill="none"> </text>
+  </g>
 
+  <!-- Accessibility: title/desc -->
+  <title>Logo - Cells, Graph, Sailboat - Malek Senoussi</title>
+  <desc>Hand-drawn style logo: multi-omics cells on the left, a network graph in the center, and a sailboat on the right. Colors are themeable via CSS variables --main-color and --accent-color.</desc>
 </svg>
