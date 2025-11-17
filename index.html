@@ -20,21 +20,24 @@
 }
 
 
-
 body {
     margin:0;
     font-family:"Inter",sans-serif;
     color: var(--fg);
-    /* Dégradé subtil */
-    background: linear-gradient(135deg, #f8fafc 0%, #eaeff2 100%);
+    background-color: var(--bg);
+    /* Overlay radial léger */
+    background-image: radial-gradient(circle at top left, rgba(2, 119, 189, 0.05), transparent 70%);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 @media (prefers-color-scheme: dark) {
     body {
-        background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+        background-color: var(--bg);
+        background-image: radial-gradient(circle at top left, rgba(90, 186, 255, 0.05), transparent 70%);
     }
 }
-
+    
 
 
 
