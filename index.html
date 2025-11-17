@@ -45,7 +45,7 @@
             max-width: 440px;
             width: 90%;
             margin-bottom: 20px;
-            opacity: 0;
+            opacity: 1; /* visible */
         }
 
         h1 {
@@ -64,6 +64,16 @@
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        ul {
+            max-width: 800px;
+            margin: 10px auto;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
         }
 
         /* Cards */
@@ -106,6 +116,21 @@
             opacity: 0.7;
         }
 
+        .btn {
+            display: inline-block;
+            margin-bottom: 15px;
+            padding: 10px 20px;
+            background: var(--accent);
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background: #025f96;
+        }
+
     </style>
 </head>
 
@@ -113,26 +138,24 @@
 
 <header>
     <div class="logo-container">
-        <img src="assets/logo-dynamic.svg" alt="Data Science Logo" class="logo">
+        <img src="./assets/logo-dynamic.svg" alt="Data Science Logo" class="logo">
     </div>
     <h1>Data Scientist & Machine Learning Engineer</h1>
     <p>Expertise in machine learning, scientific computing, AI systems, generative models, and multi-omics data analysis.</p>
 </header>
 
-<div class="section" id="What I do">
-    <h2>About Me</h2>
-    <p>
-      - Machine Learning & Deep Learning
-      - Probability and statistics theory 
-      - Scientific Computing & Large-Scale Data Analysis  
-      - Python, R, SQL, distributed computing  
-      - Dashboards, visualisation & reproducible pipelines
-          
-
-    </p>
+<!-- SKILLS / EXPERTISE -->
+<div class="section" id="skills">
+    <h2>What I Do</h2>
+    <ul>
+        <li>Machine Learning & Deep Learning</li>
+        <li>Probability and Statistics Theory</li>
+        <li>Scientific Computing & Large-Scale Data Analysis</li>
+        <li>Python, R, SQL, distributed computing</li>
+        <li>Dashboards, Visualization & Reproducible Pipelines</li>
+    </ul>
 </div>
 
-    
 <!-- ABOUT SECTION -->
 <div class="section" id="about">
     <h2>About Me</h2>
@@ -154,8 +177,6 @@
         dimensionality reduction, and biological interpretation. Built with Python, Scanpy, NumPy, PyTorch.</p>
     </div>
 
- 
-
     <div class="project">
         <div class="project-title">📌 Forecasting & Time-Series Dashboard</div>
         <p>Developed interactive Plotly Dash dashboards for time-series forecasting, resource planning, 
@@ -172,17 +193,15 @@
 
 </div>
 
-<div class="section" id="CV and links">
-  <a class="btn" href="/assets/CV.pdf">Download my CV</a>
-    <p>
-        - Email: malek.senoussi@gmail.com
-        - GitHub: [Malek Snous](https://github.com/MalekSnous)
-        - LinkedIn: [Malek Sen](https://www.linkedin.com/in/maleksen)
-    </p>
+<!-- CONTACT / CV -->
+<div class="section" id="contact">
+    <a class="btn" href="./assets/CV.pdf">Download my CV</a>
+    <ul>
+        <li>Email: <a href="mailto:malek.senoussi@gmail.com">malek.senoussi@gmail.com</a></li>
+        <li>GitHub: <a href="https://github.com/MalekSnous" target="_blank">Malek Snous</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/maleksen" target="_blank">Malek Sen</a></li>
+    </ul>
 </div>
-## 📄 Curriculum Vitae  
-
-
 
 <footer>
     © 2025 – Portfolio Data Science & AI · Built with ♥ using GitHub Pages
@@ -208,3 +227,5 @@ ScrollReveal().reveal('.section', {
 
 </body>
 </html>
+
+
