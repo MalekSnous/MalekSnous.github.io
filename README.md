@@ -1,11 +1,12 @@
 # MalekSnous.github.io
 
-
 <p align="center">
-  <img src="assets/logo-dynamic.svg" width="260"/>
+  <img src="assets/logo-dynamic.svg" width="350">
 </p>
 
-<h1 align="center">📊 Malek Senoussi – Data Scientist & ML Engineer</h1>
+<h1 align="center">Welcome to my Data Science Portfolio</h1>
+
+<h1 align="center"> Malek Senoussi – Data Scientist & ML Engineer</h1>
 
 <p align="center">
 PhD in Applied Mathematics · Machine Learning · AI Engineering · Scientific Computing  
@@ -24,7 +25,7 @@ It includes:
 - Research pipelines  
 - Interactive visualizations  
 
-👉 **Live website:** `[https://yourusername.github.io](https://maleksnous.github.io/)`
+👉 **Live website:** [Portfolio](https://maleksnous.github.io/)
 
 ---
 
@@ -66,19 +67,3 @@ It includes:
 <p align="center">© 2025 – Designed & Built by Malek Senoussi</p>
 
 
-
-
-
-
-
-
-
-
-
-
-
-<p align="center">
-  <img src="assets/logo.svg" width="350">
-</p>
-
-<h1 align="center">Welcome to my Data Science Portfolio</h1>
