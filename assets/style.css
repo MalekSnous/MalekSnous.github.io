@@ -157,10 +157,6 @@ body {
     margin-top: 15px;
 }
 
-/* Push main content to the right */
-body {
-    margin-left: 20vw;      /* libère la place pour la sidebar */
-}
 
 
 /* ----------------------------
