@@ -60,7 +60,8 @@ body {
 ----------------------------- */
 
 .container {
-    display: flex;
+    /* Le container flexbox n'est plus nécessaire si la sidebar est fixed */
+    display: flex; 
     width: 100%;
 }
 
@@ -169,25 +170,25 @@ body {
 ----------------------------- */
 
 .main-content {
-    /* Pousser le contenu après la sidebar */
+    /* Décaler le contenu après la sidebar */
     margin-left: 20%; 
     
-    /* Occuper exactement l'espace restant */
+    /* Occuper l'espace restant */
     width: 80%; 
     
-    /* UTILISATION DE FLEXBOX POUR CENTRER LE WRAPPER INTERNE */
+    /* UTILISATION DE FLEXBOX POUR CENTRER LE WRAPPER INTERNE (Clé pour Chrome/Brave) */
     display: flex;
     justify-content: center; /* Centre horizontalement le content-wrapper */
-    align-items: flex-start; /* Aligne le contenu en haut (si la page est courte) */
+    align-items: flex-start; 
     
-    padding: 0;
+    padding: 0; /* Le padding est géré par le wrapper interne */
 }
 
 /* ----------------------------
    CONTENT WRAPPER (Centrage et Limite)
 ----------------------------- */
 .content-wrapper {
-    /* Limiter la largeur du contenu */
+    /* Limiter la largeur du contenu (ajustez 1200px si vous voulez plus ou moins) */
     max-width: 1200px; 
     
     /* Padding autour du contenu centré */
@@ -204,25 +205,15 @@ body {
 
 header {
     text-align: left; /* Assurer que le texte n'est pas centré */
-    padding: 40px 0 20px; 
+    padding: 40px 0 20px; /* Padding vertical ajusté */
     max-width: none; 
     margin: 0;
 }
 
 .section {
-    /* Retirer max-width et margin: auto */
     max-width: none; 
     margin: 0;
     padding: 20px 0; /* Padding vertical pour séparer les sections */
-}
-
-/* Nettoyage des sélecteurs redondants/conflictuels */
-header, .section {
-    /* Règle catch-all pour s'assurer que le centrage est supprimé */
-    max-width: none; 
-    margin: 0;
-    padding: 0;
-    text-align: left;
 }
 
 
@@ -250,7 +241,7 @@ header, .section {
 .main-logo-container {
     width: 100%;
     max-width: 820px;
-    margin: 0 auto; /* Conserver le centrage à l'intérieur du header/section */
+    margin: 0 auto; /* Conserver le centrage pour le bloc du logo lui-même */
 }
 
 .main-logo-container svg {
