@@ -147,7 +147,9 @@ body {
 .main-content {
     width: 80%;
   margin-left: 20%;         /* laisse la place pour la sidebar */
-  display: block;           /* pas de flex, donc le contenu garde ses dimensions */
+display: flex;
+    justify-content: center; /* Centre horizontalement le content-wrapper */
+    align-items: flex-start; /* Aligne le contenu en haut */          /* pas de flex, donc le contenu garde ses dimensions */
   padding: 0;   
 }
 
@@ -184,11 +186,12 @@ header, .section {
 }
 
 .content-wrapper {
+   box-sizing: border-box;
     /* Largeur maximale du contenu */
     max-width: 1200px; 
 
     /* Centrage à l'intérieur du bloc 80% */
-    margin: 0 auto;
+    margin: 0 ;
     
     /* Padding pour l'espace autour du contenu centré */
     padding: 20px; 
