@@ -145,12 +145,22 @@ body {
 ----------------------------- */
 
 .main-content {
-    width: 80%;
-   margin:0 auto;         /* laisse la place pour la sidebar */
+    width: auto;
+  margin-left: 20%;         /* laisse la place pour la sidebar */
   display: block;           /* pas de flex, donc le contenu garde ses dimensions */
   padding: 20px;   
 }
 
+header {
+    text-align: center; /* Pour centrer le titre/slogan s'ils sont en ligne */
+    padding: 40px 20px 20px;
+    
+    /* 3. Limite la largeur de l'entête */
+    max-width: 1000px; 
+    
+    /* 4. Centre l'entête dans l'espace restant */
+    margin-left: auto; 
+    margin-right: auto;
 /* Large motto under logo */
 .slogan {
     font-size: 1.6rem;
@@ -159,6 +169,12 @@ body {
     color: var(--accent-soft);
 }
 
+.section {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 20px; /* Ajoutez un padding si nécessaire */
+}
 /* Smaller 3-column slogans */
 .triple-slogan {
     margin-top: 20px;
