@@ -145,8 +145,8 @@ body {
 ----------------------------- */
 
 .main-content {
-    width: auto;
-   margin-left: 20%;         /* laisse la place pour la sidebar */
+    width: 80%;
+   margin:0 auto;         /* laisse la place pour la sidebar */
   display: block;           /* pas de flex, donc le contenu garde ses dimensions */
   padding: 20px;   
 }
@@ -239,14 +239,14 @@ body {
 
 .main-logo-container {
     width: 100%;
-    max-width: 820px;
+    max-width: auto;
     margin-left: auto; /* Centrer le bloc */
     margin-right: auto;
 }
 
 .main-logo-container svg {
     width: 100%;
-    max-height: 220px;
+    max-height: auto;
     display: block;
     margin: auto;
 }
