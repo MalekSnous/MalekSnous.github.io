@@ -91,14 +91,15 @@ footer{text-align:center;font-size:0.9rem;padding:20px;opacity:0.7;}
 
   <div class="sidebar" style="text-align: center;">
       <h2>Malek Senoussi</h2>
-      <img src="assets/profil.jpg" alt="My photo">
-
-      <div class="section" id="contact">
+      <img src="assets/profil.jpg" alt="My photo" **class="profile-pic"**>
+      <div id="contact">
         <h3>Contact</h3>
         <div class="social-icons">
+            <nav>
           <a href="mailto:malek.senoussi@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
           <a href="https://www.linkedin.com/in/maleksen" target="_blank"><i class="fab fa-linkedin"></i></a>
           <a href="https://github.com/MalekSnous" target="_blank"><i class="fab fa-github"></i></a>
+                </nav>
         </div>
         <a class="btn" href="./assets/CV.pdf">Download my CV</a>
       </div>
@@ -185,17 +186,27 @@ footer{text-align:center;font-size:0.9rem;padding:20px;opacity:0.7;}
     <div class="Publication" id="Publication">
       <h2>Publications</h2>
       <ul>
-        <li><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012006">Partial label learning for automated classification of single-cell transcriptomic profiles</a>, <i>PLOS Computational Biology</i>, 2024</li>
-        <div>I developed machine learning models to classify single-cell RNA sequencing data. I adapted several existing models for the partial label learning case and created new ones. Next, we created an experimental protocol to compare the accuracy of classification on real-world and artificial datasets.</div>
-
-        <li><a href="https://arxiv.org/abs/2409.05937">Hierarchical novel class discovery for single-cell transcriptomic profiles</a>, <i>Preprint arXiv</i>, 2024</li>
-        <div>My work focuses on the extreme learning scenario, where models are required to classify data without the knowledge of labels. I then use a hierarchical hypothesis on the label to complete the learning schema and make predictions on unlabelled data.</div>
-
-        <li><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011168">Random walk informed heterogeneity detection reveals how the lymph node conduit network influences T cells collective exploration behavior</a>, <i>PLOS Computational Biology</i>, 2023</li>
-        <div>I participated in the deployment of an interactive visualisation tool incorporating Plotly and Dash, with the objective of visualising a random walk on a large-scale network.</div>
-
-        <li><a href="https://hal.science/hal-04327608">Classification hiérarchique pour des données transcriptomiques faiblement supervisées</a>, <i>Conférence sur l’Apprentissage automatique</i>, 2022</li>
-        <div>I propose the extension of the hierarchical classification model to the weakly supervised classification problem. I developed three different algorithms to solve this problem and I made experiments on a real-world dataset composed of transcriptomic profiles of the worm <i>C. elegans</i>. I evaluate results on plusieurs classification metrics.</div>
+        <li>
+            <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012006">Partial label learning for automated classification of single-cell transcriptomic profiles</a>, <i>PLOS Computational Biology</i>, 2024
+            <p>I developed machine learning models to classify single-cell RNA sequencing data. I adapted several existing models for the partial label learning case and created new ones. Next, we created an experimental protocol to compare the accuracy of classification on real-world and artificial datasets.</p>
+        </li>
+            
+         
+        <li>
+            <a href="https://arxiv.org/abs/2409.05937">Hierarchical novel class discovery for single-cell transcriptomic profiles</a>, <i>Preprint arXiv</i>, 2024
+            <p>My work focuses on the extreme learning scenario, where models are required to classify data without the knowledge of labels. I then use a hierarchical hypothesis on the label to complete the learning schema and make predictions on unlabelled data.</p>
+        </li>
+        
+        <li>
+            <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011168">Random walk informed heterogeneity detection reveals how the lymph node conduit network influences T cells collective exploration behavior</a>, <i>PLOS Computational Biology</i>, 2023
+            <p>I participated in the deployment of an interactive visualisation tool incorporating Plotly and Dash, with the objective of visualising a random walk on a large-scale network.</p>
+        </li>
+     
+        <li>
+            <a href="https://hal.science/hal-04327608">Classification hiérarchique pour des données transcriptomiques faiblement supervisées</a>, <i>Conférence sur l’Apprentissage automatique</i>, 2022
+            <p>I propose the extension of the hierarchical classification model to the weakly supervised classification problem. I developed three different algorithms to solve this problem and I made experiments on a real-world dataset composed of transcriptomic profiles of the worm <i>C. elegans</i>. I evaluate results on plusieurs classification metrics.</p>
+        </li>
+        
       </ul>
     </div>
 
