@@ -33,73 +33,91 @@ body {
 /* ----------------------------
    SIDEBAR
 ----------------------------- */
-
+/* === SIDEBAR LEFT === */
 .sidebar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 85px;
+    width: 20vw;                  /* ~20% de la page */
     height: 100vh;
-    padding-top: 20px;
-    z-index: 20;
+    padding: 30px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 30px;
 
-    /* soft gradient */
-    background: linear-gradient(180deg, #dfefff 0%, #c4dcff 100%);
-    border-right: 1px solid rgba(0,0,0,0.08);
+    /* Dégradé doux + motifs */
+    background: linear-gradient(
+        180deg,
+        rgba(2, 119, 189, 0.12),
+        rgba(2, 119, 189, 0.04)
+    ),
+    radial-gradient(circle at 20% 10%, rgba(2, 119, 189, 0.10), transparent 60%),
+    url("data:image/svg+xml;utf8,\
+    <svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 10 10'>\
+        <circle cx='1' cy='1' r='0.2' fill='rgba(255,255,255,0.15)' />\
+        <circle cx='5' cy='6' r='0.15' fill='rgba(255,255,255,0.1)' />\
+        <circle cx='8' cy='3' r='0.1' fill='rgba(255,255,255,0.12)' />\
+    </svg>"
+    );
+    background-size: cover, cover, 160px;
+    background-blend-mode: soft-light;
+    border-right: 1px solid rgba(0,0,0,0.05);
 }
 
+/* Dark mode support */
 @media (prefers-color-scheme: dark) {
     .sidebar {
-        background: linear-gradient(180deg, #0b2c45 0%, #064a7c 100%);
-        border-right: 1px solid rgba(255,255,255,0.08);
+        background: linear-gradient(
+            180deg,
+            rgba(90, 186, 255, 0.12),
+            rgba(90, 186, 255, 0.04)
+        ),
+        radial-gradient(circle at 20% 10%, rgba(90,186,255,0.09), transparent 60%),
+        url("data:image/svg+xml;utf8,\
+        <svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 10 10'>\
+            <circle cx='1' cy='1' r='0.2' fill='rgba(255,255,255,0.12)' />\
+            <circle cx='5' cy='6' r='0.15' fill='rgba(255,255,255,0.09)' />\
+            <circle cx='8' cy='3' r='0.1' fill='rgba(255,255,255,0.10)' />\
+        </svg>"
+        );
     }
 }
 
-/* photo in sidebar */
-.sidebar img {
-    width: 62px;
-    height: 62px;
+/* Profile photo */
+.sidebar .profile-pic {
+    width: 150px;                /* agrandi */
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--accent);
-    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    border: 3px solid rgba(255,255,255,0.5);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* Contact + CV block */
-.sidebar-section-title {
-    font-size: 0.78rem;
-    letter-spacing: 0.5px;
-    margin-top: 15px;
-    text-transform: uppercase;
-    opacity: 0.75;
+/* Sidebar text */
+.sidebar h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
 .sidebar a {
     text-decoration: none;
-    color: inherit;
-    font-size: 0.85rem;
-    margin: 5px 0;
+    color: var(--fg);
+    font-weight: 600;
 }
 
-.download-btn {
-    margin-top: 6px;
-    padding: 6px 10px;
-    font-size: 0.78rem;
-    border-radius: 6px;
-    border: 1px solid var(--accent);
-    background: rgba(0,0,0,0);
-    cursor: pointer;
-    transition: 0.25s;
+.sidebar a.btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
 }
 
-.download-btn:hover {
-    background: var(--accent);
-    color: white;
+/* Push main content to the right */
+body {
+    margin-left: 20vw;      /* libère la place pour la sidebar */
 }
+
 
 /* ----------------------------
    MAIN CONTENT AREA
