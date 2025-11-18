@@ -1,0 +1,64 @@
+/* --- LEFT SIDEBAR --- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 230px;
+    height: 100vh;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 20;
+
+    /* Dégradé discret clair */
+    background: linear-gradient(
+        180deg,
+        rgba(2, 119, 189, 0.14),
+        rgba(2, 119, 189, 0.04)
+    );
+    border-right: 1px solid rgba(0,0,0,0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+    .sidebar {
+        background: linear-gradient(
+            180deg,
+            rgba(90, 186, 255, 0.15),
+            rgba(90, 186, 255, 0.05)
+        );
+        border-right: 1px solid rgba(255,255,255,0.06);
+    }
+}
+
+/* Photo ronde */
+.sidebar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Contact links */
+.sidebar h3{
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.sidebar a{
+    color: var(--fg);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.sidebar a:hover{
+    color: var(--accent);
+}
+
+/* Décale toute la page pour laisser la place à la sidebar */
+body {
+    margin-left: 230px;
+}
