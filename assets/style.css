@@ -168,7 +168,31 @@ body {
     text-align: center;
 }
 
+.header {
+    text-align: center;
+    padding: 40px 20px 20px;
+    /* NOUVELLES LIGNES POUR CENTRAGE ET LARGEUR MAXIMALE */
+    max-width: 1000px; /* Limiter la largeur comme les sections */
+    margin-left: auto; /* Centrer le bloc */
+    margin-right: auto;
+}
 
+.main-logo-container {
+    width: 100%;
+    max-width: 820px;
+   margin-left: auto; /* Centrer le bloc */
+    margin-right: auto;
+}
+
+.main-logo-container svg {
+    width: 100%;
+    max-height: 220px;
+    display: block;
+    margin: auto;
+    /* Assurez-vous que le SVG est responsive */
+    height: auto; 
+    max-width: 100%;
+}
 /* ----------------------------
    PROJECT CARDS
 ----------------------------- */
@@ -216,7 +240,8 @@ body {
 .main-logo-container {
     width: 100%;
     max-width: 820px;
-    margin: 0 auto;
+    margin-left: auto; /* Centrer le bloc */
+    margin-right: auto;
 }
 
 .main-logo-container svg {
