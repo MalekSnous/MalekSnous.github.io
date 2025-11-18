@@ -145,13 +145,10 @@ body {
 ----------------------------- */
 
 .main-content {
-    width: 80%;
-    margin-left: 20%;       /* décalage pour sidebar */
-    display: flex;
-    flex-direction: column;
-    align-items: center;     /* centre horizontalement les éléments */
-    text-align: center;      /* centre le texte à l’intérieur */
-    justify-content: flex-start;
+    width: auto;
+   margin-left: 20%;         /* laisse la place pour la sidebar */
+  display: block;           /* pas de flex, donc le contenu garde ses dimensions */
+  padding: 20px;   
 }
 
 /* Large motto under logo */
