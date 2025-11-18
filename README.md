@@ -1,4 +1,3 @@
-# MalekSnous.github.io
 
 <p align="center">
   <img src="assets/logo-dynamic.svg" width="350">
