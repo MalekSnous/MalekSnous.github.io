@@ -20,36 +20,16 @@ body {
     background: var(--bg-light);
     color: var(--text-light);
     line-height: 1.7;
-    
-    /* AJOUT DES FONDS DANS L'ORDRE : MOTIF, PUIS DÉGRADÉ */
-    background-image: 
-        url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Crect width='8' height='8' fill='none'/%3E%3Cpath d='M0 0h1v1H0zM2 2h1v1H2zM4 4h1v1H4zM6 6h1v1H6z' fill='rgba(0, 0, 0, 0.04)'/%3E%3C/svg%3E"), 
-        radial-gradient(circle at 10% 10%, var(--accent-soft) 0%, transparent 45%);
-    
-    background-size: 8px 8px, cover; /* Taille du motif et du dégradé */
-    background-repeat: repeat, no-repeat;
 }
 
-
 /* Dark mode */
-
 @media (prefers-color-scheme: dark) {
     body {
         background: var(--bg-dark);
         color: var(--text-dark);
-        
-        /* AJOUT DES FONDS EN MODE SOMBRE */
-        background-image: 
-            /* Motif : Utilisation d'une couleur très claire pour le motif */
-            url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Crect width='8' height='8' fill='none'/%3E%3Cpath d='M0 0h1v1H0zM2 2h1v1H2zM4 4h1v1H4zM6 6h1v1H6z' fill='rgba(255, 255, 255, 0.03)'/%3E%3C/svg%3E"), 
-            
-            /* Dégradé : Utilisation d'une couleur d'accent plus profonde */
-            radial-gradient(circle at 90% 90%, var(--accent) 0%, transparent 45%);
-            
-        background-size: 8px 8px, cover;
-        background-repeat: repeat, no-repeat;
     }
 }
+
 
 /* ----------------------------
    CONTAINER
