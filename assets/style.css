@@ -30,16 +30,41 @@ body {
     }
 }
 
+
+/* ----------------------------
+   CONTAINER
+----------------------------- */
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+
+}
+
+.main-content {
+  width: 80%;
+  
+  /* centrer le contenu à l'intérieur de ce bloc */
+  display: flex;
+  flex-direction: column; /* si tu as plusieurs lignes */
+  align-items: center;    /* centre horizontalement */
+  justify-content: flex-start; /* tu peux mettre center si tu veux centrer verticalement */
+}
+
+
 /* ----------------------------
    SIDEBAR
 ----------------------------- */
 /* === SIDEBAR LEFT === */
 /* === SIDEBAR GLASSMORPHISM === */
 .sidebar {
+     width: 20%;
     position: fixed;
     top: 0;
     left: 0;
-    width: 20vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
