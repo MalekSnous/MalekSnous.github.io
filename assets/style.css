@@ -255,21 +255,3 @@ footer {
 }
 
 
-
-/* Media Query for Mobile/Tablet Screens */
-@media (max-width: 900px) {
-    .sidebar {
-        position: relative; /* Ne plus fixer la sidebar */
-        width: 100%;       /* Elle prend toute la largeur */
-        height: auto;      /* Hauteur automatique */
-        border-right: none;
-        box-shadow: none;
-        padding-bottom: 20px;
-    }
-
-    .main-content {
-        margin-left: 0;    /* Supprime la marge de 20% */
-        width: 100%;
-        padding-top: 0;
-    }
-}
