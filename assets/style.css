@@ -38,7 +38,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 20vw;                  /* ~20% de la page */
+    width: 30vw;                  /* ~20% de la page */
     height: 100vh;
     padding: 30px 20px;
     display: flex;
