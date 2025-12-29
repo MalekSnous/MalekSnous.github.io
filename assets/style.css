@@ -3,24 +3,28 @@
 ----------------------------- */
 :root{
     --font-main: "Inter", sans-serif;
-    --bg-light: #fefefe; /* Quasi blanc */
-    --bg-card: #ffffff; /* Blanc pur pour les cartes */
-    --bg-accent-soft: #f0f7ff; /* Fond bleu très pâle pour le dégradé */
-    --text-main: #303030; /* Gris foncé doux */
+    --bg-light: #fefefe;
+    --bg-card: #ffffff;
+    --bg-accent-soft: #f0f7ff;
+    --text-main: #303030;
     --text-secondary: #5a5a5a;
-    --accent: #0077b6; /* Bleu primaire */
-    --accent-soft-badge: #d9eaff; /* Bleu très clair pour les badges */
-    --border: #e8e8e8; /* Bordure très claire */
+    --accent: #0077b6;
+    --accent-soft-badge: #d9eaff;
+    --border: #e8e8e8;
     --shadow: rgba(0, 0, 0, 0.05);
+    --gradient-purple: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 /* Reset & body */
 *{box-sizing:border-box}
 html,body{height:100%}
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin:0;
     font-family:var(--font-main);
-    background: var(--bg-accent-soft); /* Nouveau fond général très clair et légèrement bleuté */
+    background: var(--bg-accent-soft);
     color: var(--text-main);
     line-height:1.6;
     background-image: none;
@@ -49,7 +53,6 @@ body {
     text-align: center;
     padding:30px 20px;
     gap:20px;
-    /* Dégradé de fond léger pour la sidebar */
     background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-accent-soft) 100%);
     border-right:1px solid var(--border);
     box-shadow:2px 0 15px var(--shadow);
@@ -58,13 +61,12 @@ body {
 
 /* Sidebar content */
 .sidebar h2{margin:6px 0 4px;font-size:1.4rem}
-/* Photo de profil (inchangée, toujours non-ronde) */
 .sidebar img.profile-pic{
     width:180px;
     height:auto;
     border-radius:10px;
     object-fit:cover;
-    border:3px solid var(--border); /* Ajout d'une bordure claire */
+    border:3px solid var(--border);
     box-shadow:0 4px 12px var(--shadow);
 }
 .sidebar .section{width:100%;padding:0;margin:0}
@@ -72,8 +74,54 @@ body {
 .sidebar .social-icons{display:flex;gap:12px;justify-content:center;align-items:center}
 .sidebar .social-icons a{font-size:24px;color:var(--text-main);text-decoration:none;transition:color .2s}
 .sidebar .social-icons a:hover{color:var(--accent)}
-.sidebar a.btn{display:inline-block;margin-top:20px;padding:12px 18px;background:var(--accent);color:white;border-radius:8px;text-decoration:none;font-weight:600;width:90%;max-width:200px;text-align:center; transition: background 0.3s;}
-.sidebar a.btn:hover{background:#005f96}
+.sidebar a.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 18px;
+    background:var(--accent);
+    color:white;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    width:90%;
+    max-width:200px;
+    text-align:center;
+    transition: background 0.3s, transform 0.2s;
+}
+.sidebar a.btn:hover{
+    background:#005f96;
+    transform: translateY(-2px);
+}
+
+/* Sidebar Navigation (NEW) */
+.sidebar-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.sidebar-nav a {
+    padding: 10px 15px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+.sidebar-nav a:hover {
+    background: var(--bg-accent-soft);
+    color: var(--accent);
+}
+
+.sidebar-nav a.active {
+    background: var(--accent-soft-badge);
+    color: var(--accent);
+    font-weight: 600;
+}
 
 /* ----------------------------
     MAIN CONTENT
@@ -92,7 +140,7 @@ body {
     width: calc(100% - 40px);
     margin: 0 auto;
     padding:30px 40px;
-    background: var(--bg-card); /* Blanc pur */
+    background: var(--bg-card);
     border-radius:12px;
     box-shadow:0 8px 25px var(--shadow);
     border: 1px solid var(--border);
@@ -104,18 +152,126 @@ header{padding:0 0 20px;margin:0;text-align:left}
 .main-logo-container svg{width:100%;height:auto;display:block}
 
 /* Titles & text */
-h1{font-weight:700;font-size:2.4rem;margin:6px 0 10px;color:var(--accent)} /* Titre principal en bleu accent */
+h1{font-weight:700;font-size:2.4rem;margin:6px 0 10px;color:var(--accent)}
+h2{font-weight:600;font-size:1.8rem;margin:0 0 15px;color:var(--text-main)}
+h3{font-weight:600;font-size:1.3rem;margin:15px 0 8px;color:var(--text-main)}
 p{font-size:1.1rem;margin:0 0 15px;color:var(--text-secondary);line-height:1.5}
 .section{padding:35px 0;border-top:1px solid var(--border);margin:0}
 
+/* Skills Section (NEW) */
+.skill-category {
+    margin-bottom: 25px;
+}
+
+.skill-category h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.15rem;
+    color: var(--accent);
+    margin-bottom: 12px;
+}
+
+.skill-category i {
+    font-size: 1.2rem;
+}
+
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tech-badge {
+    background: var(--accent-soft-badge);
+    color: var(--accent);
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid var(--accent-soft-badge);
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.tech-badge:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 119, 182, 0.2);
+}
+
 /* Projects, cards and badges */
-.project{border:1px solid var(--border);background:var(--bg-card);padding:25px;border-radius:12px;margin-bottom:20px;transition:all .35s ease}
-.project:hover{transform:translateY(-4px);box-shadow:0 10px 20px rgba(0,0,0,0.1);border-color:var(--accent)}
-.project-title{font-size:1.25rem;font-weight:600;margin-bottom:10px; color:var(--text-main);}
+.project{
+    border:1px solid var(--border);
+    background:var(--bg-card);
+    padding:25px;
+    border-radius:12px;
+    margin-bottom:20px;
+    transition:all .35s ease;
+    position: relative;
+}
+.project:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+    border-color:var(--accent);
+}
+
+/* Featured Project (NEW) */
+.project.featured {
+    border: 2px solid var(--accent);
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.02) 0%, rgba(118, 75, 162, 0.02) 100%);
+}
+
+.project-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: var(--gradient-purple);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.project-title{
+    font-size:1.25rem;
+    font-weight:600;
+    margin-bottom:10px;
+    color:var(--text-main);
+}
+
+.project-highlights {
+    background: var(--bg-accent-soft);
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.project-highlights h4 {
+    margin: 0 0 8px 0;
+    font-size: 0.95rem;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.project-highlights ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 0.9rem;
+}
+
+.project-highlights li {
+    margin: 4px 0;
+    line-height: 1.5;
+}
+
 .project-tech{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .project-tech span{
-    background:var(--accent-soft-badge); /* Fond bleu très clair pour les badges */
-    color:var(--accent); /* Texte bleu sur le badge */
+    background:var(--accent-soft-badge);
+    color:var(--accent);
     font-size:0.85rem;
     padding:5px 10px;
     border-radius:20px;
@@ -125,17 +281,82 @@ p{font-size:1.1rem;margin:0 0 15px;color:var(--text-secondary);line-height:1.5}
     border: 1px solid var(--accent-soft-badge);
 }
 .project:hover .project-tech span{opacity:1;transform:translateY(0)}
-.btn{display:inline-block;padding:10px 18px;background:var(--accent);color:#fff;border-radius:8px;text-decoration:none;font-weight:600}
-.btn:hover{background:#005f96}
+
+.project a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.project a:hover {
+    color: #005f96;
+    text-decoration: underline;
+}
+
+.btn{
+    display:inline-block;
+    padding:10px 18px;
+    background:var(--accent);
+    color:#fff;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    transition: all 0.3s;
+}
+.btn:hover{
+    background:#005f96;
+    transform: translateY(-2px);
+}
 
 /* Publications & lists */
 .Publication ul, .Education ul, .section ul{padding-left:22px;margin:12px 0}
+.Publication li, .Education li {
+    margin-bottom: 20px;
+}
 .Publication li p{margin:8px 0 16px;color:var(--text-secondary)}
+.Publication a, .Education a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.Publication a:hover, .Education a:hover {
+    text-decoration: underline;
+}
+
+/* Scroll to top button (NEW) */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--accent);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 119, 182, 0.3);
+    z-index: 1000;
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    background: #005f96;
+    transform: translateY(-3px);
+}
 
 /* Footer */
 footer{padding:30px 0;text-align:center;font-size:0.9rem;opacity:0.6}
 
-/* SVG animations (inchangées) */
+/* SVG animations */
 @keyframes pulse{0%{transform:scale(1);opacity:1}50%{transform:scale(1.06);opacity:.86}100%{transform:scale(1);opacity:1}}
 @keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
 .pulse{animation:pulse 3.6s infinite ease-in-out;transform-origin:center}
@@ -143,30 +364,55 @@ footer{padding:30px 0;text-align:center;font-size:0.9rem;opacity:0.6}
 
 /* small screens */
 @media (max-width:1000px){
-    .sidebar{position:relative;width:100%;height:auto;border-right:none;box-shadow:none;padding:20px}
-    .main-content{margin-left:0;padding:20px}
-    .content-wrapper{width:100%;padding:20px;border-radius:12px}
+    .sidebar{
+        position:relative;
+        width:100%;
+        height:auto;
+        border-right:none;
+        box-shadow:none;
+        padding:20px;
+    }
+    .main-content{
+        margin-left:0;
+        padding:20px;
+    }
+    .content-wrapper{
+        width:100%;
+        padding:20px;
+        border-radius:12px;
+    }
     .sidebar a.btn{max-width:250px;}
+    .sidebar-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .scroll-top {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    }
 }
 
 /* Social icons appearance */
 .social-icons a{font-size:24px;color:var(--text-main);text-decoration:none;transition:color .2s}
 .social-icons a:hover{color:var(--accent)}
 
-
 /* ----------------------------
-    DARK MODE (Thème clair forcé)
+    DARK MODE
 ----------------------------- */
-/* Si l'utilisateur a le mode sombre activé, on maintient un thème clair/gris neutre pour éviter les problèmes de contraste. */
 @media (prefers-color-scheme: dark){
     :root{
-        --bg-light: #eeeeee;
-        --bg-card: #ffffff;
-        --bg-accent-soft: #f8f8f8;
-        --text-main: #333333;
-        --text-secondary: #555555;
-        --border: #dddddd;
-        --shadow: rgba(0, 0, 0, 0.1);
+        --bg-light: #1a1a1a;
+        --bg-card: #2a2a2a;
+        --bg-accent-soft: #1e1e1e;
+        --text-main: #e0e0e0;
+        --text-secondary: #b0b0b0;
+        --border: #404040;
+        --shadow: rgba(0, 0, 0, 0.3);
+        --accent: #4da6ff;
+        --accent-soft-badge: #1a3a5a;
     }
     body {
         background: var(--bg-accent-soft);
@@ -184,9 +430,17 @@ footer{padding:30px 0;text-align:center;font-size:0.9rem;opacity:0.6}
     }
     .project{
         border-color: var(--border);
+        background: var(--bg-card);
     }
-    .project-tech span{
+    .project-tech span, .tech-badge{
         background:var(--accent-soft-badge);
         color:var(--accent);
+        border-color: var(--accent-soft-badge);
+    }
+    .project-highlights {
+        background: rgba(77, 166, 255, 0.05);
+    }
+    .sidebar-nav a:hover {
+        background: rgba(77, 166, 255, 0.1);
     }
 }
