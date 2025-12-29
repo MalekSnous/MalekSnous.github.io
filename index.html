@@ -3,7 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio – Data Science & AI</title>
+  <title>Malek Senoussi - Data Scientist & ML Engineer | PhD in Applied Mathematics</title>
+  <meta name="description" content="PhD in applied mathematics specializing in single-cell transcriptomic data classification, machine learning and bioinformatics. Publications in PLOS Computational Biology.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Malek Senoussi - Data Scientist Portfolio">
+  <meta property="og:description" content="Explore my projects in machine learning, bioinformatics and data visualization">
+  <meta property="og:url" content="https://maleksnous.github.io">
+  <meta property="og:type" content="website">
 
   <!-- Fonts & icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -20,14 +27,29 @@
     <!-- SIDEBAR (fixed) -->
     <aside class="sidebar" aria-label="Sidebar">
       <h2>Malek Senoussi</h2>
-      <img src="assets/profil.jpg" alt="Malek Senoussi" class="profile-pic">
+      <img src="assets/profil.jpg" alt="Malek Senoussi profile picture" class="profile-pic" width="180" height="auto">
+
+      <!-- Navigation -->
+      <nav class="sidebar-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
+      </nav>
 
       <div class="section" id="contact">
         <h3>Contact</h3>
-        <div class="social-icons" role="navigation" aria-label="Social links">
-          <a href="mailto:malek.senoussi@gmail.com" title="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
-          <a href="https://www.linkedin.com/in/maleksen" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-          <a href="https://github.com/MalekSnous" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+        <div class="social-icons" role="navigation" aria-label="Social media links">
+          <a href="mailto:malek.senoussi@gmail.com" title="Email" aria-label="Send an email">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/maleksen" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="View LinkedIn profile">
+            <i class="fab fa-linkedin" aria-hidden="true"></i>
+          </a>
+          <a href="https://github.com/MalekSnous" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="View GitHub profile">
+            <i class="fab fa-github" aria-hidden="true"></i>
+          </a>
         </div>
 
         <a class="btn" href="./assets/CV.pdf" target="_blank" rel="noopener">Download my CV</a>
@@ -78,72 +100,160 @@
           <p>PhD in applied mathematics and computer science, I am a data scientist working on multi-disciplinary data and fields, building AI and ML solutions across biology, graphs, and large-scale datasets.</p>
         </header>
 
+        <!-- About Section (NEW) -->
+        <section class="section" id="about">
+          <h2>About Me</h2>
+          <p>With a PhD in applied mathematics and computer science from Aix-Marseille University, I specialize in single-cell transcriptomic data classification and machine learning applied to computational biology.</p>
+          <p>My work focuses on developing innovative machine learning models to tackle complex problems in weakly supervised learning scenarios. I am passionate about the intersection of mathematics, machine learning, and real-world applications in life sciences.</p>
+        </section>
+
         <!-- Skills -->
         <section class="section" id="skills">
           <h2>What I Do</h2>
-          <ul>
-            <li>Machine Learning & Deep Learning</li>
-            <li>Probability and Statistics Theory</li>
-            <li>Scientific Computing & Large-Scale Data Analysis</li>
-            <li>Python, R, SQL, Excel, Docker & Git</li>
-            <li>Dashboards, Visualization & Reproducible Pipelines</li>
-          </ul>
+          
+          <div class="skill-category">
+            <h3><i class="fas fa-brain"></i> Machine Learning & Deep Learning</h3>
+            <div class="tech-badges">
+              <span class="tech-badge">PyTorch</span>
+              <span class="tech-badge">Scikit-learn</span>
+              <span class="tech-badge">TensorFlow</span>
+            </div>
+          </div>
+          
+          <div class="skill-category">
+            <h3><i class="fas fa-code"></i> Languages & Tools</h3>
+            <div class="tech-badges">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">R</span>
+              <span class="tech-badge">SQL</span>
+              <span class="tech-badge">Git</span>
+              <span class="tech-badge">Docker</span>
+            </div>
+          </div>
+          
+          <div class="skill-category">
+            <h3><i class="fas fa-chart-bar"></i> Visualization & Dashboards</h3>
+            <div class="tech-badges">
+              <span class="tech-badge">Plotly</span>
+              <span class="tech-badge">Dash</span>
+              <span class="tech-badge">Streamlit</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3><i class="fas fa-flask"></i> Domain Expertise</h3>
+            <div class="tech-badges">
+              <span class="tech-badge">Bioinformatics</span>
+              <span class="tech-badge">Single-cell RNA-seq</span>
+              <span class="tech-badge">Graph Theory</span>
+              <span class="tech-badge">Statistics</span>
+            </div>
+          </div>
         </section>
 
         <!-- Projects -->
         <section class="section" id="projects">
           <h2>Selected Projects</h2>
 
-          <article class="project">
-            <div class="project-title">📌 Energy Forecasting</div>
-            <p>Machine Learning project for real-world energy management systems.</p>
-              <a href="https://github.com/MalekSnous/energy_forecasting/tree/main?tab=readme-ov-file">→ View Project</a>
-            <div class="project-tech"><span>Python</span><span>Scikitlearn</span><span>Streamlit</span><span>Buisness</span><span>Real-world</span></div>
-          </article>
-          
-          <article class="project">
-            <div class="project-title">📌 Multi-Omics Single-Cell Analysis classification</div>
-            <p>Develop models to classify single-cell RNA-seq data (+20K features), improving cell type and gene expression identification.</p>
-              <a href="#">→ View Project: Upcoming</a>
-            <div class="project-tech"><span>Python</span><span>Bioinformatic</span><span>PyTorch</span><span>NumPy</span></div>
+          <!-- NEW PROJECT: LLM Diagnostic Framework -->
+          <article class="project featured">
+            <div class="project-badge">🌟 New</div>
+            <div class="project-title">📌 LLM Diagnostic Framework</div>
+            <p>Systematic framework for diagnosing Large Language Model (LLM) failures and testing optimization strategies. This project explores methodologies to improve LLM reliability and performance in production environments.</p>
+            
+            <div class="project-highlights">
+              <h4>Key Features:</h4>
+              <ul>
+                <li>Case study on medical entity extraction</li>
+                <li>Modular and extensible framework for diverse use cases</li>
+                <li>Docker deployment for reproducibility</li>
+                <li>Implementation of prompt engineering and optimization strategies</li>
+              </ul>
+            </div>
+            
+            <a href="https://github.com/MalekSnous/llm-diagnostic-framework" target="_blank" rel="noopener noreferrer">→ View Project on GitHub</a>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>LLMs</span>
+              <span>Docker</span>
+              <span>Medical NLP</span>
+              <span>Diagnostics</span>
+              <span>Prompt Engineering</span>
+            </div>
           </article>
 
           <article class="project">
-            <div class="project-title">📌 Visualisation of high dimensional data</div>
+            <div class="project-title">📌 Energy Forecasting</div>
+            <p>Machine Learning project for real-world energy management systems. Development of an energy forecasting system deployed via Streamlit.</p>
+            <a href="https://github.com/MalekSnous/energy_forecasting/tree/main?tab=readme-ov-file" target="_blank" rel="noopener noreferrer">→ View Project</a>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>Scikit-learn</span>
+              <span>Streamlit</span>
+              <span>Business</span>
+              <span>Production</span>
+            </div>
+          </article>
+          
+          <article class="project">
+            <div class="project-title">📌 Multi-Omics Single-Cell Analysis</div>
+            <p>Develop models to classify single-cell RNA-seq data (+20K features), improving cell type and gene expression identification.</p>
+            <a href="#publications">→ View Associated Publications</a>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>Bioinformatics</span>
+              <span>PyTorch</span>
+              <span>NumPy</span>
+              <span>Single-cell</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-title">📌 High-Dimensional Data Visualization</div>
             <p>Dimensionality reduction through feature extraction. Produce interactive and interpretable Plotly Dash dashboards.</p>
-            <a href="#">→ View Project: Upcoming</a>
-            <div class="project-tech"><span>Python</span><span>Dash</span><span>Plotly</span><span>Docker</span></div>
+            <a href="#">→ Documentation Coming Soon</a>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>Dash</span>
+              <span>Plotly</span>
+              <span>Docker</span>
+            </div>
           </article>
 
           <article class="project">
             <div class="project-title">📌 Graph Exploration WebApp</div>
-            <p>Visualization of large-scale random walks and graph structures.</p>
-            <a href="#">→ View Project: Upcoming</a>
-            <div class="project-tech"><span>Python</span><span>Dash</span><span>NetworkX</span><span>Docker</span></div>
+            <p>Visualization of large-scale random walks and complex graph structures.</p>
+            <a href="#">→ Documentation Coming Soon</a>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>Dash</span>
+              <span>NetworkX</span>
+              <span>Docker</span>
+            </div>
           </article>
         </section>
 
         <!-- Publications -->
-        <section class="Publication section" id="Publication">
+        <section class="Publication section" id="publications">
           <h2>Publications</h2>
           <ul>
             <li>
-              <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012006" target="_blank" rel="noopener">Partial label learning for automated classification of single-cell transcriptomic profiles</a>, <i>PLOS Computational Biology</i>, 2024
+              <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012006" target="_blank" rel="noopener noreferrer">Partial label learning for automated classification of single-cell transcriptomic profiles</a>, <i>PLOS Computational Biology</i>, 2024
               <p>I developed machine learning models to classify single-cell RNA sequencing data. I adapted several existing models for the partial label learning case and created new ones. Next, we created an experimental protocol to compare the accuracy of classification on real-world and artificial datasets.</p>
             </li>
 
             <li>
-              <a href="https://arxiv.org/abs/2409.05937" target="_blank" rel="noopener">Hierarchical novel class discovery for single-cell transcriptomic profiles</a>, <i>Preprint arXiv</i>, 2024
+              <a href="https://arxiv.org/abs/2409.05937" target="_blank" rel="noopener noreferrer">Hierarchical novel class discovery for single-cell transcriptomic profiles</a>, <i>Preprint arXiv</i>, 2024
               <p>My work focuses on the extreme learning scenario, where models are required to classify data without the knowledge of labels. I then use a hierarchical hypothesis on the label to complete the learning schema and make predictions on unlabelled data.</p>
             </li>
 
             <li>
-              <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011168" target="_blank" rel="noopener">Random walk informed heterogeneity detection reveals how the lymph node conduit network influences T cells collective exploration behavior</a>, <i>PLOS Computational Biology</i>, 2023
+              <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011168" target="_blank" rel="noopener noreferrer">Random walk informed heterogeneity detection reveals how the lymph node conduit network influences T cells collective exploration behavior</a>, <i>PLOS Computational Biology</i>, 2023
               <p>I participated in the deployment of an interactive visualisation tool incorporating Plotly and Dash, with the objective of visualising a random walk on a large-scale network.</p>
             </li>
 
             <li>
-              <a href="https://hal.science/hal-04327608" target="_blank" rel="noopener">Classification hiérarchique pour des données transcriptomiques faiblement supervisées</a>, <i>Conférence sur l’Apprentissage automatique</i>, 2022
+              <a href="https://hal.science/hal-04327608" target="_blank" rel="noopener noreferrer">Classification hiérarchique pour des données transcriptomiques faiblement supervisées</a>, <i>Conférence sur l'Apprentissage automatique</i>, 2022
               <p>I propose the extension of the hierarchical classification model to the weakly supervised classification problem. I developed three different algorithms to solve this problem and I made experiments on a real-world dataset composed of transcriptomic profiles of the worm <i>C. elegans</i>. I evaluate results on several classification metrics.</p>
             </li>
           </ul>
@@ -153,8 +263,12 @@
         <section class="Education section" id="education">
           <h2>Education</h2>
           <ul>
-            <li>PhD in Mathematics and Computer Science, <a href="https://theses.hal.science/tel-04968112" target="_blank" rel="noopener">Classification of single cell RNA sequencing</a>, <i>Aix Marseille University</i>, 2024</li>
-            <li>Master 2 Mathematics and Applications CEPS, <i>Aix Marseille University</i>, 2020</li>
+            <li>
+              <strong>PhD in Mathematics and Computer Science</strong>, <a href="https://theses.hal.science/tel-04968112" target="_blank" rel="noopener noreferrer">Classification of single cell RNA sequencing</a>, <i>Aix-Marseille University</i>, 2024
+            </li>
+            <li>
+              <strong>Master 2 Mathematics and Applications CEPS</strong>, <i>Aix-Marseille University</i>, 2020
+            </li>
           </ul>
         </section>
 
@@ -163,9 +277,14 @@
 
   </div> <!-- .container -->
 
-  <footer>© 2025 – Portfolio Data Science & AI · Built with ♥ using GitHub Pages</footer>
+  <!-- Scroll to top button -->
+  <button id="scrollTopBtn" class="scroll-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
-  <!-- scroll reveal (kept) -->
+  <footer>© 2025 – Portfolio Data Science & AI · Malek Senoussi</footer>
+
+  <!-- scroll reveal -->
   <script src="https://unpkg.com/scrollreveal"></script>
   <script>
     ScrollReveal().reveal('.project', {
@@ -175,6 +294,46 @@
       interval:150,
       easing:'ease-in-out',
       opacity:0
+    });
+
+    // Scroll to top button
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Active navigation
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.sidebar-nav a');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+          link.classList.add('active');
+        }
+      });
     });
   </script>
 </body>
