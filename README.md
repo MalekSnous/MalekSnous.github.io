@@ -63,6 +63,6 @@ It includes:
 
 ---
 
-<p align="center">© 2025 – Designed & Built by Malek Senoussi</p>
+<p align="center">© 2026 – Designed & Built by Malek Senoussi</p>
 
 
