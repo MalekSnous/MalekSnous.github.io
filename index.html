@@ -100,7 +100,7 @@
           <p>PhD in Applied Mathematics & ML specializing in classification systems. I transform complex data challenges into production-ready ML solutions, combining rigorous mathematical foundations with practical engineering to deliver AI systems that drive business value across diverse industries.</p>
         </header>
 
-        <!-- About Section (NEW) -->
+        <!-- About Section -->
         <section class="section" id="about">
           <h2>About Me</h2>
           <p>Machine Learning Engineer with a PhD in Applied Mathematics and Computer Science, specializing in advanced classification methods and production ML systems. I bridge the gap between theoretical research and practical implementation, designing and deploying scalable AI solutions that solve real-world business challenges.</p>
@@ -131,6 +131,19 @@
               <span class="tech-badge">RAG Systems</span>
               <span class="tech-badge">OpenAI API</span>
               <span class="tech-badge">LangChain</span>
+            </div>
+          </div>
+
+          <!-- NEW: Reinforcement Learning -->
+          <div class="skill-category">
+            <h3><i class="fas fa-sync-alt"></i> Reinforcement Learning</h3>
+            <div class="tech-badges">
+              <span class="tech-badge">RL Environment Design</span>
+              <span class="tech-badge">Reward Shaping</span>
+              <span class="tech-badge">PPO / GRPO</span>
+              <span class="tech-badge">RLHF / RLAIF</span>
+              <span class="tech-badge">LLM-as-Agent</span>
+              <span class="tech-badge">Offline RL</span>
             </div>
           </div>
 
@@ -194,9 +207,36 @@
         <section class="section" id="projects">
           <h2>Selected Projects</h2>
 
-          <!-- NEW PROJECT: LLM Diagnostic Framework -->
+          <!-- NEW PROJECT: KAN RL Environment -->
           <article class="project featured">
             <div class="project-badge">🌟 New</div>
+            <div class="project-title">📌 KAN RL Environment — LLM Agent for Scientific Law Discovery</div>
+            <p>An LLM agent trained via a Reinforcement Learning loop to autonomously train Kolmogorov-Arnold Networks (KANs) for symbolic scientific law discovery. Each round, the agent writes training code, receives structured feedback on generalization, expression complexity, and OOD extrapolation, and iteratively improves its strategy — with no gradient flowing through the LLM.</p>
+
+            <div class="project-highlights">
+              <h4>Key Features:</h4>
+              <ul>
+                <li>Full RL environment with a 7-step instrumented judge (generalization, parsimony, consistency, KAN conformity)</li>
+                <li>Structured feedback loop: stale model detection, OOD-2 collapse diagnosis, divergence recovery</li>
+                <li>Multi-model benchmark: GPT-OSS 120B reaches score 0.6936 (threshold 0.65) at round 5 / 20</li>
+                <li>Reward hacking prevention via triple orthogonal constraints — expression must match KAN activations</li>
+              </ul>
+            </div>
+
+            <a href="https://github.com/MalekSnous/kan-rl-env" target="_blank" rel="noopener noreferrer">→ View Project on GitHub</a>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>Reinforcement Learning</span>
+              <span>KAN</span>
+              <span>LLM Agent</span>
+              <span>PyTorch</span>
+              <span>Docker</span>
+              <span>Symbolic Regression</span>
+            </div>
+          </article>
+
+          <!-- EXISTING PROJECT: LLM Diagnostic Framework -->
+          <article class="project featured">
             <div class="project-title">📌 LLM Diagnostic Framework</div>
             <p>Systematic framework for diagnosing Large Language Model (LLM) failures and testing optimization strategies. This project explores methodologies to improve LLM reliability and performance in production environments.</p>
             
@@ -371,3 +411,12 @@
 
       navLinks.forEach(link => {
         link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
