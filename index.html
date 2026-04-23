@@ -3,419 +3,582 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Malek Senoussi - ML Engineer PhD | Classification Systems & Production AI</title>
-  <meta name="description" content="PhD in Applied Mathematics & ML specializing in classification, LLMs, and production ML pipelines. Building scalable AI systems from research to deployment.">
-  
+  <title>Malek Senoussi — ML Engineer & PhD</title>
+  <meta name="description" content="ML engineer with PhD in applied mathematics. Classification systems, LLM agents, and production AI — from single-cell biology to scientific law discovery.">
+
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0a0a0b">
+
   <!-- Open Graph -->
-  <meta property="og:title" content="Malek Senoussi - ML Engineer & AI Solutions">
-  <meta property="og:description" content="Explore my ML engineering projects: LLM systems, production pipelines, and end-to-end AI solutions">
+  <meta property="og:title" content="Malek Senoussi — ML Engineer & PhD">
+  <meta property="og:description" content="Classification systems, LLM agents, and production AI. From single-cell biology to scientific law discovery.">
   <meta property="og:url" content="https://maleksnous.github.io">
   <meta property="og:type" content="website">
 
-  <!-- Fonts & icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Your consolidated stylesheet -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
   <div class="container">
 
-    <!-- SIDEBAR (fixed) -->
+    <!-- ============================================
+         SIDEBAR
+         ============================================ -->
     <aside class="sidebar" aria-label="Sidebar">
-      <h2>Malek Senoussi</h2>
-      <img src="assets/profil.jpg" alt="Malek Senoussi profile picture" class="profile-pic" width="180" height="auto">
+      <div class="sidebar-top">
+        <img src="assets/profil.jpg" alt="Malek Senoussi" class="profile-pic" width="44" height="44" loading="lazy">
+        <div>
+          <p class="sidebar-name">Malek Senoussi</p>
+          <p class="sidebar-role">ML engineer · PhD</p>
+        </div>
+      </div>
 
-      <!-- Navigation -->
       <nav class="sidebar-nav" aria-label="Main navigation">
         <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#work">Selected work</a>
         <a href="#publications">Publications</a>
         <a href="#education">Education</a>
+        <a href="#looking-for">Looking for</a>
       </nav>
 
-      <div class="section" id="contact">
-        <h3>Contact</h3>
-        <div class="social-icons" role="navigation" aria-label="Social media links">
-          <a href="/cdn-cgi/l/email-protection#fb969a979e90d5889e95948e888892bb9c969a9297d5989496" title="Email" aria-label="Send an email">
-            <i class="fas fa-envelope" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/maleksen" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="View LinkedIn profile">
-            <i class="fab fa-linkedin" aria-hidden="true"></i>
-          </a>
-          <a href="https://github.com/MalekSnous" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="View GitHub profile">
-            <i class="fab fa-github" aria-hidden="true"></i>
-          </a>
+      <div class="sidebar-footer">
+        <div class="sidebar-links" aria-label="External links">
+          <a href="https://www.linkedin.com/in/maleksen" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a href="https://github.com/MalekSnous" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="/cdn-cgi/l/email-protection#fb969a979e90d5889e95948e888892bb9c969a9297d5989496">Email ↗</a>
         </div>
-
-        <a class="btn" href="./assets/CV.pdf" target="_blank" rel="noopener">Download my CV</a>
+        <a class="btn-secondary btn-sidebar" href="./assets/CV.pdf" target="_blank" rel="noopener">Download CV ↓</a>
       </div>
     </aside>
 
-    <!-- MAIN CONTENT (starts after the fixed sidebar) -->
+    <!-- ============================================
+         MAIN CONTENT
+         ============================================ -->
     <main class="main-content" role="main">
-      <div class="content-wrapper">
 
-        <!-- Header -->
-        <header>
-          <div class="main-logo-container" aria-hidden="false">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 200" role="img" aria-label="Malek Senoussi logo">
-              <rect x="2" y="2" width="516" height="196" rx="12" fill="#f4f6f8"/>
-              <!-- LEFT -->
-              <g class="floaty" style="animation: floaty 6s infinite ease-in-out;">
-                <ellipse cx="75" cy="100" rx="30" ry="25" stroke="#0d1b2a" stroke-width="3" fill="none"/>
-                <circle cx="75" cy="100" r="14" fill="#0277bd" class="pulse"/>
-                <circle cx="40" cy="70" r="10" fill="#0277bd"/>
-                <circle cx="50" cy="140" r="8" fill="#0277bd"/>
-                <circle cx="115" cy="78" r="9" fill="#0277bd"/>
-                <text x="75" y="180" style="font-family:Caveat, cursive; font-size:1rem; fill:#5a9edc; text-anchor:middle">Data</text>
-              </g>
-              <!-- CENTER -->
-              <g style="animation: floaty 8s infinite ease-in-out alternate;">
-                <line x1="210" y1="92" x2="245" y2="132" stroke="#0d1b2a" stroke-width="3"/>
-                <line x1="245" y1="132" x2="275" y2="78" stroke="#0d1b2a" stroke-width="3"/>
-                <line x1="275" y1="78" x2="305" y2="118" stroke="#0d1b2a" stroke-width="3"/>
-                <circle cx="210" cy="92" r="7" fill="#0277bd" stroke="#0d1b2a" stroke-width="1.6"/>
-                <circle cx="245" cy="132" r="7" fill="#0277bd" stroke="#0d1b2a" stroke-width="1.6"/>
-                <circle cx="275" cy="78" r="7" fill="#0277bd" stroke="#0d1b2a" stroke-width="1.6" class="pulse"/>
-                <circle cx="305" cy="118" r="7" fill="#0277bd" stroke="#0d1b2a" stroke-width="1.6"/>
-                <text x="245" y="180" style="font-family:Caveat, cursive; font-size:1rem; fill:#5a9edc; text-anchor:middle">Model</text>
-              </g>
-              <!-- RIGHT -->
-              <g style="animation: floaty 5s infinite ease-in-out alternate-reverse;">
-                <path d="M380 140 Q405 160 445 140" stroke="#0d1b2a" stroke-width="3" fill="none"/>
-                <line x1="410" y1="140" x2="410" y2="72" stroke="#0d1b2a" stroke-width="3"/>
-                <path d="M410 72 L453 118 L410 118 Z" stroke="#0277bd" stroke-width="2.5" fill="none"/>
-                <path d="M410 72 L375 118 L410 118 Z" stroke="#0277bd" stroke-width="2.5" fill="none"/>
-                <text x="410" y="180" style="font-family:Caveat, cursive; font-size:1rem; fill:#5a9edc; text-anchor:middle">& Beyond</text>
-              </g>
+      <!-- HERO -->
+      <section class="section hero" id="about">
+        <svg class="motif-bg motif-hero" viewBox="0 0 190 105" aria-hidden="true">
+          <line x1="15" y1="22" x2="95" y2="15" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
+          <line x1="15" y1="22" x2="95" y2="42" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
+          <line x1="15" y1="22" x2="95" y2="68" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
+          <line x1="15" y1="22" x2="95" y2="92" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
+          <line x1="15" y1="52" x2="95" y2="15" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
+          <line x1="15" y1="52" x2="95" y2="42" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
+          <line x1="15" y1="52" x2="95" y2="68" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
+          <line x1="15" y1="52" x2="95" y2="92" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
+          <line x1="15" y1="82" x2="95" y2="15" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
+          <line x1="15" y1="82" x2="95" y2="42" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
+          <line x1="15" y1="82" x2="95" y2="68" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
+          <line x1="15" y1="82" x2="95" y2="92" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
+          <line x1="95" y1="15" x2="175" y2="37" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
+          <line x1="95" y1="15" x2="175" y2="72" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
+          <line x1="95" y1="42" x2="175" y2="37" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
+          <line x1="95" y1="42" x2="175" y2="72" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
+          <line x1="95" y1="68" x2="175" y2="37" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
+          <line x1="95" y1="68" x2="175" y2="72" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
+          <line x1="95" y1="92" x2="175" y2="37" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
+          <line x1="95" y1="92" x2="175" y2="72" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
+          <circle class="node" cx="15" cy="22" r="3.2" fill="var(--accent)"/>
+          <circle class="node" cx="15" cy="52" r="3.2" fill="var(--accent)"/>
+          <circle class="node" cx="15" cy="82" r="3.2" fill="var(--accent)"/>
+          <circle class="node" cx="95" cy="15" r="3.2" fill="var(--accent)"/>
+          <circle class="node" cx="95" cy="42" r="3.2" fill="var(--accent)"/>
+          <circle class="node" cx="95" cy="68" r="3.2" fill="var(--accent)"/>
+          <circle class="node" cx="95" cy="92" r="3.2" fill="var(--accent)"/>
+          <circle class="node" cx="175" cy="37" r="3.2" fill="var(--accent)"/>
+          <circle class="node" cx="175" cy="72" r="3.2" fill="var(--accent)"/>
+        </svg>
+        <p class="meta-label">ML engineer · PhD applied mathematics</p>
+        <h1 class="hero-name">Malek Senoussi</h1>
+        <p class="hero-tagline">I engineer ML systems that survive the distance from research to production. PhD in applied mathematics (single-cell classification); now building LLM evaluation frameworks, agent training loops, and high-dimensional classification pipelines.</p>
+
+        <div class="hero-ctas">
+          <a href="#work" class="btn-primary">Selected work →</a>
+          <a href="./assets/CV.pdf" target="_blank" rel="noopener" class="btn-secondary">Download CV</a>
+        </div>
+
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <p class="metric-label">Doctorate</p>
+            <p class="metric-value">2024</p>
+          </div>
+          <div class="metric-card">
+            <p class="metric-label">Peer-reviewed</p>
+            <p class="metric-value">4 papers</p>
+          </div>
+          <div class="metric-card">
+            <p class="metric-label">PLOS Comp Bio</p>
+            <p class="metric-value">2×</p>
+          </div>
+          <div class="metric-card">
+            <p class="metric-label">Focus</p>
+            <p class="metric-value">LLM eval &amp; agents</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- THREAD / POSITIONING -->
+      <section class="section">
+        <p class="meta-label">The thread</p>
+        <p class="thread-text">Three years teaching models to classify cells they'd never seen. The same muscle — rigorous evaluation, principled uncertainty, systems that survive messy real data — is what makes LLM agents useful in production.</p>
+      </section>
+
+      <!-- EXPERTISE -->
+      <section class="section" id="expertise">
+        <h2>Core expertise</h2>
+
+        <div class="pillars-grid">
+          <article class="pillar-card">
+            <svg class="motif-bg motif-classification" viewBox="0 0 180 96" aria-hidden="true">
+              <path d="M 14 66 Q 90 38 168 52" stroke="var(--accent)" stroke-width="1.1" fill="none" stroke-dasharray="2 4" opacity="0.6"/>
+              <circle class="pt" cx="22" cy="22" r="2.4" fill="var(--accent)"/>
+              <circle class="pt" cx="34" cy="28" r="2.4" fill="var(--accent)"/>
+              <circle class="pt" cx="46" cy="20" r="2.4" fill="var(--accent)"/>
+              <circle class="pt" cx="28" cy="38" r="2.4" fill="var(--accent)"/>
+              <circle class="pt" cx="42" cy="36" r="2.4" fill="var(--accent)"/>
+              <circle class="pt" cx="18" cy="32" r="2.4" fill="var(--accent)"/>
+              <circle class="pt" cx="54" cy="32" r="2.4" fill="var(--accent)"/>
+              <circle class="pt" cx="38" cy="46" r="2.4" fill="var(--accent)"/>
+              <circle class="pt" cx="122" cy="68" r="2.4" fill="var(--text-primary)"/>
+              <circle class="pt" cx="134" cy="62" r="2.4" fill="var(--text-primary)"/>
+              <circle class="pt" cx="146" cy="72" r="2.4" fill="var(--text-primary)"/>
+              <circle class="pt" cx="118" cy="78" r="2.4" fill="var(--text-primary)"/>
+              <circle class="pt" cx="140" cy="82" r="2.4" fill="var(--text-primary)"/>
+              <circle class="pt" cx="158" cy="66" r="2.4" fill="var(--text-primary)"/>
+              <circle class="pt" cx="128" cy="82" r="2.4" fill="var(--text-primary)"/>
+              <circle class="pt" cx="152" cy="78" r="2.4" fill="var(--text-primary)"/>
+            </svg>
+            <div class="pillar-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 22 22" fill="currentColor">
+                <circle cx="5" cy="7" r="1.6"/>
+                <circle cx="11" cy="4" r="1.6" opacity="0.55"/>
+                <circle cx="17" cy="7" r="1.6" opacity="0.35"/>
+                <circle cx="6" cy="15" r="1.6" opacity="0.55"/>
+                <circle cx="13" cy="16" r="1.6"/>
+                <circle cx="17" cy="13" r="1.6" opacity="0.35"/>
+              </svg>
+            </div>
+            <h3 class="pillar-title">Classification at scale</h3>
+            <p class="pillar-desc">High-dim data (20K+ features), weakly-supervised and hierarchical learning. Partial labels, novel-class discovery, single-cell RNA-seq.</p>
+          </article>
+
+          <article class="pillar-card">
+            <svg class="motif-bg motif-llm" viewBox="0 0 200 62" aria-hidden="true">
+              <rect class="tok" x="4" y="22" width="15" height="18" rx="2" fill="var(--accent)"/>
+              <rect class="tok" x="24" y="22" width="20" height="18" rx="2" fill="var(--accent)"/>
+              <rect class="tok" x="50" y="22" width="13" height="18" rx="2" fill="var(--accent)"/>
+              <rect class="tok" x="68" y="22" width="22" height="18" rx="2" fill="var(--accent)"/>
+              <rect class="tok" x="96" y="22" width="17" height="18" rx="2" fill="var(--accent)"/>
+              <rect class="tok" x="118" y="22" width="15" height="18" rx="2" fill="var(--accent)"/>
+              <rect class="tok" x="138" y="22" width="19" height="18" rx="2" fill="var(--accent)"/>
+              <rect class="tok" x="162" y="22" width="14" height="18" rx="2" fill="var(--accent)"/>
+              <rect class="tok" x="181" y="22" width="16" height="18" rx="2" fill="var(--accent)"/>
+            </svg>
+            <div class="pillar-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6">
+                <line x1="6" y1="11" x2="16" y2="11"/>
+                <line x1="11" y1="7" x2="11" y2="15"/>
+                <circle cx="4" cy="11" r="2"/>
+                <circle cx="18" cy="11" r="2" fill="currentColor"/>
+                <circle cx="11" cy="5" r="2"/>
+                <circle cx="11" cy="17" r="2"/>
+              </svg>
+            </div>
+            <h3 class="pillar-title">LLM systems & agents</h3>
+            <p class="pillar-desc">RAG, prompt engineering, RL loops for agent training. Instrumented evaluation, reward-hacking prevention, reliability-focused design.</p>
+          </article>
+
+          <article class="pillar-card">
+            <svg class="motif-bg motif-production" viewBox="0 0 180 76" aria-hidden="true">
+              <line class="pipe-line" x1="5" y1="10" x2="145" y2="10" stroke="var(--accent)" stroke-width="1.3" opacity="0.75"/>
+              <line class="pipe-line" x1="5" y1="24" x2="95" y2="24" stroke="var(--accent)" stroke-width="1.3" opacity="0.75"/>
+              <line class="pipe-line" x1="5" y1="38" x2="165" y2="38" stroke="var(--accent)" stroke-width="1.3" opacity="0.75"/>
+              <line class="pipe-line" x1="5" y1="52" x2="115" y2="52" stroke="var(--accent)" stroke-width="1.3" opacity="0.75"/>
+              <line class="pipe-line" x1="5" y1="66" x2="80" y2="66" stroke="var(--accent)" stroke-width="1.3" opacity="0.75"/>
+            </svg>
+            <div class="pillar-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 22 22" fill="currentColor">
+                <rect x="3" y="4" width="16" height="3" rx="1" opacity="0.4"/>
+                <rect x="3" y="9.5" width="16" height="3" rx="1" opacity="0.7"/>
+                <rect x="3" y="15" width="16" height="3" rx="1"/>
+              </svg>
+            </div>
+            <h3 class="pillar-title">Production & MLOps</h3>
+            <p class="pillar-desc">Docker, CI/CD, experiment tracking, Streamlit dashboards, model monitoring. Research systems built to be reproducible and deployed — internal tools serving researcher workflows.</p>
+          </article>
+        </div>
+
+        <p class="meta-label meta-label-small">Core ML</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">PyTorch</span>
+          <span class="tech-tag">Scikit-learn</span>
+          <span class="tech-tag">Docker</span>
+          <span class="tech-tag">SQL</span>
+          <span class="tech-tag">Git</span>
+          <span class="tech-tag">Bash</span>
+        </div>
+
+        <p class="meta-label meta-label-small">LLM, evaluation &amp; infra</p>
+        <div class="tech-tags">
+          <span class="tech-tag">LangChain</span>
+          <span class="tech-tag">MLflow</span>
+          <span class="tech-tag">Streamlit</span>
+          <span class="tech-tag">AWS</span>
+          <span class="tech-tag">SLURM</span>
+        </div>
+      </section>
+
+      <!-- SELECTED WORK -->
+      <section class="section" id="work">
+        <h2>Selected work</h2>
+
+        <!-- KAN RL — Featured latest -->
+        <article class="project featured">
+          <span class="badge">Featured · latest</span>
+          <h3 class="project-title">KAN RL Environment — LLM agent for scientific law discovery</h3>
+          <p class="project-desc">An LLM agent trained via a reinforcement learning loop to autonomously fit Kolmogorov-Arnold Networks for symbolic regression. Structured feedback on generalization, OOD extrapolation, and expression parsimony — with no gradient flowing through the LLM.</p>
+
+          <div class="project-diagram" aria-label="Architecture: LLM agent writes training code, model trains, 7-step judge returns structured feedback to the agent">
+            <svg viewBox="0 0 500 110" xmlns="http://www.w3.org/2000/svg" role="img">
+              <defs>
+                <marker id="arr-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                  <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--text-tertiary)"/>
+                </marker>
+              </defs>
+
+              <rect x="10" y="42" width="85" height="30" rx="4" fill="var(--bg-subtle)" stroke="var(--border-strong)" stroke-width="1"/>
+              <text x="52" y="61" font-size="11" fill="var(--text-primary)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">LLM agent</text>
+
+              <path class="arch-flow" d="M 100 57 L 132 57" stroke="var(--text-tertiary)" stroke-width="1" fill="none" marker-end="url(#arr-head)"/>
+              <text x="117" y="49" font-size="9" fill="var(--text-secondary)" text-anchor="middle" font-family="Inter, sans-serif">writes</text>
+
+              <rect x="140" y="42" width="90" height="30" rx="4" fill="var(--bg-subtle)" stroke="var(--border-strong)" stroke-width="1"/>
+              <text x="185" y="61" font-size="11" fill="var(--text-primary)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">training code</text>
+
+              <path class="arch-flow" d="M 232 57 L 264 57" stroke="var(--text-tertiary)" stroke-width="1" fill="none" marker-end="url(#arr-head)"/>
+
+              <rect x="270" y="42" width="80" height="30" rx="4" fill="var(--bg-subtle)" stroke="var(--border-strong)" stroke-width="1"/>
+              <text x="310" y="61" font-size="11" fill="var(--text-primary)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">KAN model</text>
+
+              <path class="arch-flow" d="M 352 57 L 384 57" stroke="var(--text-tertiary)" stroke-width="1" fill="none" marker-end="url(#arr-head)"/>
+
+              <rect class="arch-pulse" x="390" y="42" width="95" height="30" rx="4" fill="var(--accent-soft)" stroke="var(--accent-border)" stroke-width="1"/>
+              <text x="438" y="61" font-size="11" fill="var(--accent)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">7-step judge</text>
+
+              <path class="arch-loop" d="M 437 42 Q 437 14 245 14 Q 52 14 52 39" stroke="var(--text-tertiary)" stroke-width="1" fill="none" stroke-dasharray="3,3" marker-end="url(#arr-head)"/>
+              <text x="250" y="10" font-size="9" fill="var(--text-secondary)" text-anchor="middle" font-family="Inter, sans-serif">structured feedback</text>
             </svg>
           </div>
 
-          <h1>Machine Learning Engineer & AI Solutions Architect</h1>
-          <p>PhD in Applied Mathematics & ML specializing in classification systems. I transform complex data challenges into production-ready ML solutions, combining rigorous mathematical foundations with practical engineering to deliver AI systems that drive business value across diverse industries.</p>
-        </header>
-
-        <!-- About Section -->
-        <section class="section" id="about">
-          <h2>About Me</h2>
-          <p>Machine Learning Engineer with a PhD in Applied Mathematics and Computer Science, specializing in advanced classification methods and production ML systems. I bridge the gap between theoretical research and practical implementation, designing and deploying scalable AI solutions that solve real-world business challenges.</p>
-          <p>My doctoral research focused on developing novel classification algorithms for high-dimensional data, with expertise in weakly-supervised learning, hierarchical classification, and deep learning architectures. This strong mathematical foundation enables me to tackle complex ML problems with rigor while maintaining a pragmatic focus on deployability and business impact.</p>
-          <p>Today, I leverage this expertise to build end-to-end ML workflows—from data preprocessing and model development to deployment and monitoring—with a particular focus on LLM applications, automated ML pipelines, and production-grade systems. I excel at translating cutting-edge research into robust, maintainable solutions that drive measurable business value.</p>
-        </section>
-
-        <!-- Skills -->
-        <section class="section" id="skills">
-          <h2>What I Do</h2>
-
-          <div class="skill-category">
-            <h3><i class="fas fa-calculator"></i> Applied Mathematics & ML Theory</h3>
-            <div class="tech-badges">
-              <span class="tech-badge">Classification Algorithms</span>
-              <span class="tech-badge">Statistical Learning</span>
-              <span class="tech-badge">Optimization</span>
-              <span class="tech-badge">Probability Theory</span>
-              <span class="tech-badge">Algorithm Design</span>
+          <div class="result-grid">
+            <div class="result-card">
+              <p class="result-label">Best score (GPT-OSS 120B)</p>
+              <p class="result-value">0.694</p>
             </div>
-          </div>
-          
-          <div class="skill-category">
-            <h3><i class="fas fa-robot"></i> LLMs & GenAI</h3>
-            <div class="tech-badges">
-              <span class="tech-badge">LLM Fine-tuning</span>
-              <span class="tech-badge">Prompt Engineering</span>
-              <span class="tech-badge">RAG Systems</span>
-              <span class="tech-badge">OpenAI API</span>
-              <span class="tech-badge">LangChain</span>
+            <div class="result-card">
+              <p class="result-label">Threshold 0.65 reached at</p>
+              <p class="result-value">round 5 / 20</p>
             </div>
           </div>
 
-          <!-- NEW: Reinforcement Learning -->
-          <div class="skill-category">
-            <h3><i class="fas fa-sync-alt"></i> Reinforcement Learning</h3>
-            <div class="tech-badges">
-              <span class="tech-badge">RL Environment Design</span>
-              <span class="tech-badge">Reward Shaping</span>
-              <span class="tech-badge">PPO / GRPO</span>
-              <span class="tech-badge">RLHF / RLAIF</span>
-              <span class="tech-badge">LLM-as-Agent</span>
-              <span class="tech-badge">Offline RL</span>
-            </div>
+          <p class="result-meaning">→ Evaluation loop architecture for autonomous agent training. A building block for research systems where LLMs train specialized models without human supervision.</p>
+
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">RL</span>
+            <span class="tech-tag">KAN</span>
+            <span class="tech-tag">LLM agents</span>
+            <span class="tech-tag">Symbolic regression</span>
+            <span class="tech-tag">Docker</span>
           </div>
 
-          <div class="skill-category">
-            <h3><i class="fas fa-brain"></i> Machine Learning & Deep Learning</h3>
-            <div class="tech-badges">
-              <span class="tech-badge">PyTorch</span>
-              <span class="tech-badge">Scikit-learn</span>
-              <span class="tech-badge">TensorFlow</span>
-              <span class="tech-badge">Keras</span>
-              <span class="tech-badge">XGBoost</span>
-            </div>
+          <a href="https://github.com/MalekSnous/kan-rl-env" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub →</a>
+        </article>
+
+        <!-- LLM Diagnostic Framework — Featured -->
+        <article class="project featured">
+          <span class="badge">Featured</span>
+          <h3 class="project-title">LLM Diagnostic Framework</h3>
+          <p class="project-desc">Systematic framework for diagnosing LLM failures and testing optimization strategies in production. Case study on medical entity extraction; modular and extensible to other use cases.</p>
+
+          <p class="project-impact">→ Reduced inference cost by 10× while maintaining accuracy (91% vs 92%) on medical entity extraction.</p>
+
+          <p class="project-result-tagline">Pick the right model for the right complexity and cost.</p>
+
+          <div class="project-visual">
+            <svg viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Benchmark: GPT-4o and GPT-4o mini deliver comparable accuracy (92% vs 91%), but GPT-4o mini costs 10 times less.">
+              <text x="0" y="14" font-size="10" letter-spacing="0.08em" fill="var(--text-secondary)" font-weight="500" font-family="Inter, sans-serif">COST COMPARISON</text>
+
+              <text x="0" y="44" font-size="13" font-weight="500" fill="var(--text-primary)" font-family="Inter, sans-serif">GPT-4o</text>
+              <rect x="120" y="34" width="240" height="12" rx="2" fill="var(--bg-subtle)"/>
+              <rect class="bench-bar-slow" x="120" y="34" width="225" height="12" rx="2" fill="var(--accent)"/>
+              <text x="350" y="43" font-size="10" fill="var(--text-tertiary)" font-family="Inter, sans-serif">10×</text>
+              <text x="378" y="43" font-size="11" font-weight="500" fill="var(--accent)" font-family="Inter, sans-serif">92% acc</text>
+
+              <text x="0" y="89" font-size="13" font-weight="500" fill="var(--text-primary)" font-family="Inter, sans-serif">GPT-4o mini</text>
+              <rect x="120" y="79" width="240" height="12" rx="2" fill="var(--bg-subtle)"/>
+              <rect class="bench-bar-fast" x="120" y="79" width="24" height="12" rx="2" fill="var(--accent)"/>
+              <text x="150" y="88" font-size="10" fill="var(--text-tertiary)" font-family="Inter, sans-serif">1×</text>
+              <text x="378" y="88" font-size="11" font-weight="500" fill="var(--accent)" font-family="Inter, sans-serif">91% acc</text>
+
+              <rect x="120" y="112" width="260" height="24" rx="4" fill="var(--accent-soft)" stroke="var(--accent-border)" stroke-width="0.5"/>
+              <text x="250" y="128" font-size="11" font-weight="500" fill="var(--accent)" text-anchor="middle" font-family="Inter, sans-serif">Same output · 10× cheaper</text>
+            </svg>
           </div>
 
-          <div class="skill-category">
-            <h3><i class="fas fa-cogs"></i> MLOps & Production</h3>
-            <div class="tech-badges">
-              <span class="tech-badge">Docker</span>
-              <span class="tech-badge">Git/GitHub</span>
-              <span class="tech-badge">CI/CD</span>
-              <span class="tech-badge">MLflow</span>
-              <span class="tech-badge">Model Monitoring</span>
-            </div>
-          </div>
-          
-          <div class="skill-category">
-            <h3><i class="fas fa-code"></i> Engineering & Development</h3>
-            <div class="tech-badges">
-              <span class="tech-badge">Python</span>
-              <span class="tech-badge">SQL</span>
-              <span class="tech-badge">R</span>
-              <span class="tech-badge">REST APIs</span>
-              <span class="tech-badge">Cloud (AWS/GCP)</span>
-            </div>
-          </div>
-          
-          <div class="skill-category">
-            <h3><i class="fas fa-chart-bar"></i> Data Engineering & Visualization</h3>
-            <div class="tech-badges">
-              <span class="tech-badge">Pandas</span>
-              <span class="tech-badge">NumPy</span>
-              <span class="tech-badge">Plotly/Dash</span>
-              <span class="tech-badge">Streamlit</span>
-              <span class="tech-badge">ETL Pipelines</span>
-            </div>
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">LLMs</span>
+            <span class="tech-tag">Prompt engineering</span>
+            <span class="tech-tag">Medical NLP</span>
+            <span class="tech-tag">Docker</span>
           </div>
 
-          <div class="skill-category">
-            <h3><i class="fas fa-flask"></i> Domain Expertise</h3>
-            <div class="tech-badges">
-              <span class="tech-badge">NLP</span>
-              <span class="tech-badge">Computer Vision</span>
-              <span class="tech-badge">Time Series</span>
-              <span class="tech-badge">Bioinformatics</span>
-              <span class="tech-badge">Graph Analytics</span>
-            </div>
+          <a href="https://github.com/MalekSnous/llm-diagnostic-framework" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub →</a>
+        </article>
+
+        <!-- High-dim Classification Pipeline — Featured with pipeline visual -->
+        <article class="project featured">
+          <span class="badge">Featured</span>
+          <h3 class="project-title">High-dimensional classification pipeline</h3>
+          <p class="project-desc">Deep learning models for biological data with 20K+ features. Custom PyTorch architectures with automated feature selection and dimensionality reduction, achieving state-of-the-art performance on complex scRNA-seq classification.</p>
+
+          <p class="project-impact">→ State-of-the-art performance on real scRNA-seq datasets. Benchmarked against existing methods in peer-reviewed work (see Publications).</p>
+
+          <div class="project-visual">
+            <svg viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pipeline: 20K features are projected to 2D, then classified via a decision boundary.">
+              <defs>
+                <marker id="pipe-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                  <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--text-tertiary)"/>
+                </marker>
+              </defs>
+
+              <g transform="translate(5, 22)" opacity="0.85">
+                <rect x="0" y="0" width="102" height="52" rx="4" fill="var(--bg-subtle)" stroke="var(--border)" stroke-width="0.5"/>
+                <g fill="var(--accent)">
+                  <circle cx="8" cy="8" r="0.9"/><circle cx="16" cy="8" r="0.9"/><circle cx="24" cy="8" r="0.9"/><circle cx="32" cy="8" r="0.9"/><circle cx="40" cy="8" r="0.9"/><circle cx="48" cy="8" r="0.9"/><circle cx="56" cy="8" r="0.9"/><circle cx="64" cy="8" r="0.9"/><circle cx="72" cy="8" r="0.9"/><circle cx="80" cy="8" r="0.9"/><circle cx="88" cy="8" r="0.9"/><circle cx="96" cy="8" r="0.9"/>
+                  <circle cx="8" cy="16" r="0.9"/><circle cx="16" cy="16" r="0.9"/><circle cx="24" cy="16" r="0.9"/><circle cx="32" cy="16" r="0.9"/><circle cx="40" cy="16" r="0.9"/><circle cx="48" cy="16" r="0.9"/><circle cx="56" cy="16" r="0.9"/><circle cx="64" cy="16" r="0.9"/><circle cx="72" cy="16" r="0.9"/><circle cx="80" cy="16" r="0.9"/><circle cx="88" cy="16" r="0.9"/><circle cx="96" cy="16" r="0.9"/>
+                  <circle cx="8" cy="24" r="0.9"/><circle cx="16" cy="24" r="0.9"/><circle cx="24" cy="24" r="0.9"/><circle cx="32" cy="24" r="0.9"/><circle cx="40" cy="24" r="0.9"/><circle cx="48" cy="24" r="0.9"/><circle cx="56" cy="24" r="0.9"/><circle cx="64" cy="24" r="0.9"/><circle cx="72" cy="24" r="0.9"/><circle cx="80" cy="24" r="0.9"/><circle cx="88" cy="24" r="0.9"/><circle cx="96" cy="24" r="0.9"/>
+                  <circle cx="8" cy="32" r="0.9"/><circle cx="16" cy="32" r="0.9"/><circle cx="24" cy="32" r="0.9"/><circle cx="32" cy="32" r="0.9"/><circle cx="40" cy="32" r="0.9"/><circle cx="48" cy="32" r="0.9"/><circle cx="56" cy="32" r="0.9"/><circle cx="64" cy="32" r="0.9"/><circle cx="72" cy="32" r="0.9"/><circle cx="80" cy="32" r="0.9"/><circle cx="88" cy="32" r="0.9"/><circle cx="96" cy="32" r="0.9"/>
+                  <circle cx="8" cy="40" r="0.9"/><circle cx="16" cy="40" r="0.9"/><circle cx="24" cy="40" r="0.9"/><circle cx="32" cy="40" r="0.9"/><circle cx="40" cy="40" r="0.9"/><circle cx="48" cy="40" r="0.9"/><circle cx="56" cy="40" r="0.9"/><circle cx="64" cy="40" r="0.9"/><circle cx="72" cy="40" r="0.9"/><circle cx="80" cy="40" r="0.9"/><circle cx="88" cy="40" r="0.9"/><circle cx="96" cy="40" r="0.9"/>
+                  <circle cx="8" cy="48" r="0.9"/><circle cx="16" cy="48" r="0.9"/><circle cx="24" cy="48" r="0.9"/><circle cx="32" cy="48" r="0.9"/><circle cx="40" cy="48" r="0.9"/><circle cx="48" cy="48" r="0.9"/><circle cx="56" cy="48" r="0.9"/><circle cx="64" cy="48" r="0.9"/><circle cx="72" cy="48" r="0.9"/><circle cx="80" cy="48" r="0.9"/><circle cx="88" cy="48" r="0.9"/><circle cx="96" cy="48" r="0.9"/>
+                </g>
+              </g>
+              <text x="56" y="95" font-size="10" fill="var(--text-secondary)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">20K features</text>
+
+              <path class="pipe-arrow" d="M 115 48 L 160 48" stroke="var(--text-tertiary)" stroke-width="1" fill="none" marker-end="url(#pipe-arr)"/>
+
+              <g transform="translate(170, 22)" fill="var(--accent)">
+                <circle cx="12" cy="10" r="2"/>
+                <circle cx="20" cy="14" r="2"/>
+                <circle cx="14" cy="20" r="2"/>
+                <circle cx="24" cy="8" r="2"/>
+                <circle cx="8" cy="16" r="2"/>
+                <circle cx="52" cy="34" r="2" fill="var(--text-primary)"/>
+                <circle cx="60" cy="30" r="2" fill="var(--text-primary)"/>
+                <circle cx="56" cy="42" r="2" fill="var(--text-primary)"/>
+                <circle cx="48" cy="38" r="2" fill="var(--text-primary)"/>
+                <circle cx="64" cy="40" r="2" fill="var(--text-primary)"/>
+                <circle cx="82" cy="16" r="2"/>
+                <circle cx="88" cy="10" r="2"/>
+                <circle cx="84" cy="22" r="2"/>
+                <circle cx="74" cy="14" r="2"/>
+                <circle cx="90" cy="24" r="2"/>
+              </g>
+              <text x="215" y="95" font-size="10" fill="var(--text-secondary)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">2D projection</text>
+
+              <path class="pipe-arrow" d="M 268 48 L 325 48" stroke="var(--text-tertiary)" stroke-width="1" fill="none" marker-end="url(#pipe-arr)"/>
+
+              <g transform="translate(333, 15)">
+                <path class="pipe-boundary" d="M 10 12 Q 75 38 150 22" stroke="var(--accent)" stroke-width="1.2" fill="none" stroke-dasharray="3 3" opacity="0.7"/>
+                <circle cx="20" cy="10" r="2" fill="var(--accent)"/>
+                <circle cx="30" cy="16" r="2" fill="var(--accent)"/>
+                <circle cx="26" cy="6" r="2" fill="var(--accent)"/>
+                <circle cx="42" cy="14" r="2" fill="var(--accent)"/>
+                <circle cx="38" cy="4" r="2" fill="var(--accent)"/>
+                <circle cx="50" cy="20" r="2" fill="var(--accent)"/>
+                <circle cx="60" cy="10" r="2" fill="var(--accent)"/>
+                <circle cx="70" cy="16" r="2" fill="var(--accent)"/>
+                <circle cx="90" cy="46" r="2" fill="var(--text-primary)"/>
+                <circle cx="100" cy="52" r="2" fill="var(--text-primary)"/>
+                <circle cx="110" cy="42" r="2" fill="var(--text-primary)"/>
+                <circle cx="120" cy="50" r="2" fill="var(--text-primary)"/>
+                <circle cx="130" cy="46" r="2" fill="var(--text-primary)"/>
+                <circle cx="140" cy="38" r="2" fill="var(--text-primary)"/>
+                <circle cx="105" cy="58" r="2" fill="var(--text-primary)"/>
+                <circle cx="125" cy="40" r="2" fill="var(--text-primary)"/>
+              </g>
+              <text x="414" y="95" font-size="10" fill="var(--text-secondary)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">classified</text>
+            </svg>
           </div>
-        </section>
 
-        <!-- Projects -->
-        <section class="section" id="projects">
-          <h2>Selected Projects</h2>
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">PyTorch</span>
+            <span class="tech-tag">Deep learning</span>
+            <span class="tech-tag">Bioinformatics</span>
+            <span class="tech-tag">scRNA-seq</span>
+          </div>
 
-          <!-- NEW PROJECT: KAN RL Environment -->
-          <article class="project featured">
-            <div class="project-badge">🌟 New</div>
-            <div class="project-title">📌 KAN RL Environment — LLM Agent for Scientific Law Discovery</div>
-            <p>An LLM agent trained via a Reinforcement Learning loop to autonomously train Kolmogorov-Arnold Networks (KANs) for symbolic scientific law discovery. Each round, the agent writes training code, receives structured feedback on generalization, expression complexity, and OOD extrapolation, and iteratively improves its strategy — with no gradient flowing through the LLM.</p>
+          <a href="#publications" class="project-link">Associated publications →</a>
+        </article>
 
-            <div class="project-highlights">
-              <h4>Key Features:</h4>
-              <ul>
-                <li>Full RL environment with a 7-step instrumented judge (generalization, parsimony, consistency, KAN conformity)</li>
-                <li>Structured feedback loop: stale model detection, OOD-2 collapse diagnosis, divergence recovery</li>
-                <li>Multi-model benchmark: GPT-OSS 120B reaches score 0.6936 (threshold 0.65) at round 5 / 20</li>
-                <li>Reward hacking prevention via triple orthogonal constraints — expression must match KAN activations</li>
-              </ul>
-            </div>
+        <!-- Energy Forecasting -->
+        <article class="project">
+          <h3 class="project-title">Energy forecasting system</h3>
+          <p class="project-desc">End-to-end ML solution for energy demand forecasting with a Streamlit dashboard for real-time monitoring and decision-making.</p>
+          <p class="project-impact">→ Full pipeline from data ingestion to deployed dashboard.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Scikit-learn</span>
+            <span class="tech-tag">Streamlit</span>
+            <span class="tech-tag">Time series</span>
+          </div>
+          <a href="https://github.com/MalekSnous/energy_forecasting" target="_blank" rel="noopener noreferrer" class="project-link">View project →</a>
+        </article>
+      </section>
 
-            <a href="https://github.com/MalekSnous/kan-rl-env" target="_blank" rel="noopener noreferrer">→ View Project on GitHub</a>
-            <div class="project-tech">
-              <span>Python</span>
-              <span>Reinforcement Learning</span>
-              <span>KAN</span>
-              <span>LLM Agent</span>
-              <span>PyTorch</span>
-              <span>Docker</span>
-              <span>Symbolic Regression</span>
-            </div>
-          </article>
+      <!-- PUBLICATIONS -->
+      <section class="section section-publications" id="publications">
+        <svg class="motif-bg motif-scrna" viewBox="0 0 360 170" aria-hidden="true">
+          <circle class="cell" cx="40" cy="40" r="2.1" fill="var(--accent)"/>
+          <circle class="cell" cx="32" cy="46" r="2.1" fill="var(--accent)"/>
+          <circle class="cell" cx="48" cy="50" r="2.1" fill="var(--accent)"/>
+          <circle class="cell" cx="36" cy="32" r="2.1" fill="var(--accent)"/>
+          <circle class="cell" cx="28" cy="36" r="2.1" fill="var(--accent)"/>
+          <circle class="cell" cx="50" cy="38" r="2.1" fill="var(--accent)"/>
+          <circle class="cell" cx="38" cy="54" r="2.1" fill="var(--accent)"/>
+          <circle class="cell" cx="25" cy="28" r="2.1" fill="var(--accent)"/>
+          <circle class="cell" cx="56" cy="44" r="2.1" fill="var(--accent)"/>
+          <circle class="cell" cx="46" cy="58" r="2.1" fill="var(--accent)"/>
+          <circle class="cell" cx="170" cy="90" r="2.1" fill="var(--text-primary)"/>
+          <circle class="cell" cx="162" cy="95" r="2.1" fill="var(--text-primary)"/>
+          <circle class="cell" cx="180" cy="85" r="2.1" fill="var(--text-primary)"/>
+          <circle class="cell" cx="168" cy="100" r="2.1" fill="var(--text-primary)"/>
+          <circle class="cell" cx="185" cy="93" r="2.1" fill="var(--text-primary)"/>
+          <circle class="cell" cx="175" cy="80" r="2.1" fill="var(--text-primary)"/>
+          <circle class="cell" cx="158" cy="87" r="2.1" fill="var(--text-primary)"/>
+          <circle class="cell" cx="190" cy="101" r="2.1" fill="var(--text-primary)"/>
+          <circle class="cell" cx="155" cy="100" r="2.1" fill="var(--text-primary)"/>
+          <circle class="cell" cx="275" cy="45" r="2.1" fill="var(--accent)"/>
+          <circle class="cell" cx="285" cy="41" r="2.1" fill="var(--accent)"/>
+          <circle class="cell" cx="280" cy="53" r="2.1" fill="var(--accent)"/>
+          <circle class="cell" cx="265" cy="47" r="2.1" fill="var(--accent)"/>
+          <circle class="cell" cx="290" cy="49" r="2.1" fill="var(--accent)"/>
+          <circle class="cell" cx="272" cy="55" r="2.1" fill="var(--accent)"/>
+          <circle class="cell" cx="295" cy="57" r="2.1" fill="var(--accent)"/>
+          <circle class="cell" cx="280" cy="37" r="2.1" fill="var(--accent)"/>
+          <circle class="cell" cx="262" cy="55" r="2.1" fill="var(--accent)"/>
+          <circle class="cell" cx="305" cy="120" r="2.1" fill="var(--text-primary)"/>
+          <circle class="cell" cx="315" cy="115" r="2.1" fill="var(--text-primary)"/>
+          <circle class="cell" cx="310" cy="128" r="2.1" fill="var(--text-primary)"/>
+          <circle class="cell" cx="300" cy="125" r="2.1" fill="var(--text-primary)"/>
+          <circle class="cell" cx="322" cy="121" r="2.1" fill="var(--text-primary)"/>
+          <circle class="cell" cx="295" cy="118" r="2.1" fill="var(--text-primary)"/>
+          <circle class="cell" cx="318" cy="133" r="2.1" fill="var(--text-primary)"/>
+          <circle class="cell" cx="330" cy="127" r="2.1" fill="var(--text-primary)"/>
+          <circle class="cell" cx="340" cy="75" r="2.1" fill="var(--accent)"/>
+          <circle class="cell" cx="346" cy="82" r="2.1" fill="var(--accent)"/>
+          <circle class="cell" cx="334" cy="80" r="2.1" fill="var(--accent)"/>
+          <circle class="cell" cx="348" cy="70" r="2.1" fill="var(--accent)"/>
+          <circle class="cell" cx="338" cy="88" r="2.1" fill="var(--accent)"/>
+        </svg>
+        <h2>Publications</h2>
+        <ul class="publications-list">
+          <li>
+            <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012006" target="_blank" rel="noopener noreferrer" class="pub-title">Partial label learning for automated classification of single-cell transcriptomic profiles</a>
+            <p class="pub-meta">PLOS Computational Biology · 2024</p>
+            <p class="pub-desc">Machine learning models for classifying single-cell RNA sequencing data under partial label learning. New methods benchmarked against adapted existing approaches on real and synthetic datasets.</p>
+          </li>
+          <li>
+            <a href="https://arxiv.org/abs/2409.05937" target="_blank" rel="noopener noreferrer" class="pub-title">Hierarchical novel class discovery for single-cell transcriptomic profiles</a>
+            <p class="pub-meta">Preprint arXiv · 2024</p>
+            <p class="pub-desc">Extreme learning scenario where models must classify without label knowledge. A hierarchical hypothesis on labels completes the learning schema for predictions on unlabelled data.</p>
+          </li>
+          <li>
+            <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011168" target="_blank" rel="noopener noreferrer" class="pub-title">Random walk informed heterogeneity detection reveals how the lymph node conduit network influences T cells collective exploration behavior</a>
+            <p class="pub-meta">PLOS Computational Biology · 2023</p>
+            <p class="pub-desc">Contributed to an interactive Plotly/Dash visualization tool for random-walk simulations on large-scale networks.</p>
+          </li>
+          <li>
+            <a href="https://hal.science/hal-04327608" target="_blank" rel="noopener noreferrer" class="pub-title">Classification hiérarchique pour des données transcriptomiques faiblement supervisées</a>
+            <p class="pub-meta">Conférence sur l'Apprentissage automatique · 2022</p>
+            <p class="pub-desc">Extension of hierarchical classification to the weakly-supervised problem. Three algorithms benchmarked on C. elegans transcriptomic profiles.</p>
+          </li>
+        </ul>
+      </section>
 
-          <!-- EXISTING PROJECT: LLM Diagnostic Framework -->
-          <article class="project featured">
-            <div class="project-title">📌 LLM Diagnostic Framework</div>
-            <p>Systematic framework for diagnosing Large Language Model (LLM) failures and testing optimization strategies. This project explores methodologies to improve LLM reliability and performance in production environments.</p>
-            
-            <div class="project-highlights">
-              <h4>Key Features:</h4>
-              <ul>
-                <li>Case study on medical entity extraction</li>
-                <li>Modular and extensible framework for diverse use cases</li>
-                <li>Docker deployment for reproducibility</li>
-                <li>Implementation of prompt engineering and optimization strategies</li>
-              </ul>
-            </div>
-            
-            <a href="https://github.com/MalekSnous/llm-diagnostic-framework" target="_blank" rel="noopener noreferrer">→ View Project on GitHub</a>
-            <div class="project-tech">
-              <span>Python</span>
-              <span>LLMs</span>
-              <span>Docker</span>
-              <span>Medical NLP</span>
-              <span>Diagnostics</span>
-              <span>Prompt Engineering</span>
-            </div>
-          </article>
+      <!-- EDUCATION -->
+      <section class="section" id="education">
+        <h2>Education</h2>
+        <ul class="education-list">
+          <li>
+            <p class="edu-title">PhD in Mathematics and Computer Science</p>
+            <p class="edu-meta">Aix-Marseille University · 2024</p>
+            <p class="edu-desc"><a href="https://theses.hal.science/tel-04968112" target="_blank" rel="noopener noreferrer">Classification of single-cell RNA sequencing</a></p>
+          </li>
+          <li>
+            <p class="edu-title">Master 2 Mathematics and Applications (CEPS)</p>
+            <p class="edu-meta">Aix-Marseille University · 2020</p>
+          </li>
+        </ul>
+      </section>
 
-          <article class="project">
-            <div class="project-title">📌 Energy Forecasting System</div>
-            <p>End-to-end ML solution for energy demand forecasting in production. Developed predictive models and deployed an interactive Streamlit dashboard for real-time monitoring and decision-making, enabling optimized energy resource allocation.</p>
-            <a href="https://github.com/MalekSnous/energy_forecasting/tree/main?tab=readme-ov-file" target="_blank" rel="noopener noreferrer">→ View Project</a>
-            <div class="project-tech">
-              <span>Python</span>
-              <span>Scikit-learn</span>
-              <span>Streamlit</span>
-              <span>Time Series</span>
-              <span>Production-Ready</span>
-            </div>
-          </article>
-          
-          <article class="project">
-            <div class="project-title">📌 High-Dimensional Classification Pipeline</div>
-            <p>Built deep learning models for classifying high-dimensional biological data (20K+ features). Implemented custom PyTorch architectures with automated feature selection and model evaluation pipelines, achieving state-of-the-art performance on complex classification tasks.</p>
-            <a href="#publications">→ View Associated Publications</a>
-            <div class="project-tech">
-              <span>Python</span>
-              <span>PyTorch</span>
-              <span>Deep Learning</span>
-              <span>Feature Engineering</span>
-              <span>Model Optimization</span>
-            </div>
-          </article>
+      <!-- LOOKING FOR -->
+      <section class="section" id="looking-for">
+        <h2>What I'm looking for</h2>
+        <ul class="looking-list">
+          <li>ML engineering roles bridging research and production</li>
+          <li>Focus areas: LLM evaluation, autonomous agents, applied biological ML</li>
+          <li>Research-focused startups or deeptech scale-ups</li>
+          <li>Europe-based (Switzerland, France, Netherlands, UK) or remote</li>
+        </ul>
+      </section>
 
-          <article class="project">
-            <div class="project-title">📌 Interactive Data Analytics Dashboard</div>
-            <p>Developed a full-stack analytics platform with advanced dimensionality reduction and interactive visualizations. Built with Plotly Dash and deployed via Docker for scalable, production-ready data exploration and insights discovery.</p>
-            <a href="#">→ Documentation Coming Soon</a>
-            <div class="project-tech">
-              <span>Python</span>
-              <span>Dash</span>
-              <span>Plotly</span>
-              <span>Docker</span>
-              <span>Full-stack</span>
-            </div>
-          </article>
+      <footer class="site-footer">
+        <p>© 2026 · Malek Senoussi</p>
+      </footer>
 
-          <article class="project">
-            <div class="project-title">📌 Large-Scale Graph Analytics Platform</div>
-            <p>Engineered a web application for analyzing and visualizing large-scale network data and random walk simulations. Implemented efficient graph algorithms with NetworkX and built an interactive frontend for real-time graph exploration.</p>
-            <a href="#">→ Documentation Coming Soon</a>
-            <div class="project-tech">
-              <span>Python</span>
-              <span>NetworkX</span>
-              <span>Graph Algorithms</span>
-              <span>Web App</span>
-              <span>Docker</span>
-            </div>
-          </article>
-        </section>
-
-        <!-- Publications -->
-        <section class="Publication section" id="publications">
-          <h2>Publications</h2>
-          <ul>
-            <li>
-              <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012006" target="_blank" rel="noopener noreferrer">Partial label learning for automated classification of single-cell transcriptomic profiles</a>, <i>PLOS Computational Biology</i>, 2024
-              <p>I developed machine learning models to classify single-cell RNA sequencing data. I adapted several existing models for the partial label learning case and created new ones. Next, we created an experimental protocol to compare the accuracy of classification on real-world and artificial datasets.</p>
-            </li>
-
-            <li>
-              <a href="https://arxiv.org/abs/2409.05937" target="_blank" rel="noopener noreferrer">Hierarchical novel class discovery for single-cell transcriptomic profiles</a>, <i>Preprint arXiv</i>, 2024
-              <p>My work focuses on the extreme learning scenario, where models are required to classify data without the knowledge of labels. I then use a hierarchical hypothesis on the label to complete the learning schema and make predictions on unlabelled data.</p>
-            </li>
-
-            <li>
-              <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011168" target="_blank" rel="noopener noreferrer">Random walk informed heterogeneity detection reveals how the lymph node conduit network influences T cells collective exploration behavior</a>, <i>PLOS Computational Biology</i>, 2023
-              <p>I participated in the deployment of an interactive visualisation tool incorporating Plotly and Dash, with the objective of visualising a random walk on a large-scale network.</p>
-            </li>
-
-            <li>
-              <a href="https://hal.science/hal-04327608" target="_blank" rel="noopener noreferrer">Classification hiérarchique pour des données transcriptomiques faiblement supervisées</a>, <i>Conférence sur l'Apprentissage automatique</i>, 2022
-              <p>I propose the extension of the hierarchical classification model to the weakly supervised classification problem. I developed three different algorithms to solve this problem and I made experiments on a real-world dataset composed of transcriptomic profiles of the worm <i>C. elegans</i>. I evaluate results on several classification metrics.</p>
-            </li>
-          </ul>
-        </section>
-
-        <!-- Education -->
-        <section class="Education section" id="education">
-          <h2>Education</h2>
-          <ul>
-            <li>
-              <strong>PhD in Mathematics and Computer Science</strong>, <a href="https://theses.hal.science/tel-04968112" target="_blank" rel="noopener noreferrer">Classification of single cell RNA sequencing</a>, <i>Aix-Marseille University</i>, 2024
-            </li>
-            <li>
-              <strong>Master 2 Mathematics and Applications CEPS</strong>, <i>Aix-Marseille University</i>, 2020
-            </li>
-          </ul>
-        </section>
-
-      </div> <!-- .content-wrapper -->
     </main>
 
-  </div> <!-- .container -->
+  </div>
 
-  <!-- Scroll to top button -->
-  <button id="scrollTopBtn" class="scroll-top" aria-label="Scroll to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
+  <!-- Cloudflare email obfuscation -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 
-  <footer>© 2026 – Portfolio Data Science & AI · Malek Senoussi</footer>
-
-  <!-- scroll reveal -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://unpkg.com/scrollreveal"></script>
+  <!-- Active nav on scroll -->
   <script>
-    ScrollReveal().reveal('.project', {
-      distance:'30px',
-      duration:800,
-      origin:'bottom',
-      interval:150,
-      easing:'ease-in-out',
-      opacity:0
-    });
+    (function() {
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.sidebar-nav a');
 
-    // Scroll to top button
-    const scrollTopBtn = document.getElementById('scrollTopBtn');
-    
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 300) {
-        scrollTopBtn.classList.add('visible');
-      } else {
-        scrollTopBtn.classList.remove('visible');
+      function updateActiveNav() {
+        let current = '';
+        sections.forEach(section => {
+          const top = section.offsetTop;
+          if (window.pageYOffset >= top - 200) {
+            current = section.getAttribute('id');
+          }
+        });
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
       }
-    });
 
-    scrollTopBtn.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-
-    // Active navigation
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.sidebar-nav a');
-
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - 200) {
-          current = section.getAttribute('id');
-        }
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) {
-          link.classList.add('active');
-        }
-      });
-    });
+      window.addEventListener('scroll', updateActiveNav, { passive: true });
+      updateActiveNav();
+    })();
   </script>
 
 </body>
