@@ -5,6 +5,11 @@
 
 <h1 align="center">Welcome to my Data Science Portfolio</h1>
 
+<p align="center">
+  <a href="https://github.com/MalekSnous/MalekSnous.github.io/actions/workflows/pages.yml"><img src="https://github.com/MalekSnous/MalekSnous.github.io/actions/workflows/pages.yml/badge.svg" alt="Build, Test & Deploy"></a>
+  <a href="https://github.com/MalekSnous/MalekSnous.github.io/actions/workflows/link-check.yml"><img src="https://github.com/MalekSnous/MalekSnous.github.io/actions/workflows/link-check.yml/badge.svg" alt="Link Check"></a>
+</p>
+
 <h1 align="center"> Malek Senoussi – Data Scientist & ML Engineer</h1>
 
 <p align="center">
@@ -52,6 +57,23 @@ It includes:
 - **Data:** Pandas, Polars, Scanpy  
 - **Visualisation:** Dash, Plotly, Seaborn, matplotlib
 - **MLOps:** GitHub Actions, Docker, Azure ML  
+
+---
+
+# ⚙️ CI/CD
+
+Le site est construit, testé et déployé automatiquement via **GitHub Actions** :
+
+- **`pages.yml`** – à chaque push/PR sur `main` : build Jekyll → vérification des liens internes (lychee) → déploiement sur GitHub Pages (uniquement sur `main`).
+- **`link-check.yml`** – vérification hebdomadaire des liens externes ; ouvre une issue si des liens sont cassés.
+- **Dependabot** – mises à jour mensuelles des actions GitHub et des gems.
+
+### Développement local
+
+```bash
+bundle install
+bundle exec jekyll serve   # http://localhost:4000
+```
 
 ---
 

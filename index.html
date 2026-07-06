@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Malek Senoussi — ML Engineer & PhD</title>
   <meta name="description" content="ML engineer with PhD in applied mathematics. Classification systems, LLM agents, and production AI — from single-cell biology to scientific law discovery.">
 
-  <meta name="color-scheme" content="dark light">
-  <meta name="theme-color" content="#0a0a0b">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#050508">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Malek Senoussi — ML Engineer & PhD">
@@ -18,146 +18,102 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/style.css">
+  <script>document.documentElement.classList.remove('no-js');</script>
 </head>
 <body>
 
-  <div class="container">
+  <!-- Ambient animated background -->
+  <div class="ambient" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
 
-    <!-- ============================================
-         SIDEBAR
-         ============================================ -->
-    <aside class="sidebar" aria-label="Sidebar">
-      <div class="sidebar-top">
-        <img src="assets/profil.jpg" alt="Malek Senoussi" class="profile-pic" width="44" height="44" loading="lazy">
-        <div>
-          <p class="sidebar-name">Malek Senoussi</p>
-          <p class="sidebar-role">ML engineer · PhD</p>
-        </div>
+  <!-- ============================================
+       NAVBAR
+       ============================================ -->
+  <nav class="nav" aria-label="Main navigation">
+    <a href="#top" class="nav-brand">
+      <img src="assets/profil.jpg" alt="" width="30" height="30">
+      <span>Malek Senoussi</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#expertise">Expertise</a>
+      <a href="#work">Work</a>
+      <a href="#publications">Publications</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <a href="./assets/CV.pdf" target="_blank" rel="noopener" class="nav-cta">CV ↓</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6">
+        <line x1="3" y1="6" x2="17" y2="6"/><line x1="3" y1="10" x2="17" y2="10"/><line x1="3" y1="14" x2="17" y2="14"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <header class="hero" id="top">
+    <canvas id="neural" aria-hidden="true"></canvas>
+    <div class="wrap hero-inner">
+      <p class="meta-label reveal">ML Engineer · PhD Applied Mathematics</p>
+      <h1 class="hero-name reveal d1">Malek<br><span class="grad-text">Senoussi</span></h1>
+      <p class="hero-tagline reveal d2">I engineer ML systems that survive the distance from research to production. PhD in applied mathematics (single-cell classification); now building LLM evaluation frameworks, agent training loops, and high-dimensional classification pipelines.</p>
+
+      <div class="hero-ctas reveal d3">
+        <a href="#work" class="btn-primary">Selected work →</a>
+        <a href="./assets/CV.pdf" target="_blank" rel="noopener" class="btn-secondary">Download CV</a>
       </div>
 
-      <nav class="sidebar-nav" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#expertise">Expertise</a>
-        <a href="#work">Selected work</a>
-        <a href="#publications">Publications</a>
-        <a href="#education">Education</a>
-        <a href="#looking-for">Looking for</a>
-      </nav>
-
-      <div class="sidebar-footer">
-        <div class="sidebar-links" aria-label="External links">
-          <a href="https://www.linkedin.com/in/maleksen" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-          <a href="https://github.com/MalekSnous" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-          <a href="/cdn-cgi/l/email-protection#fb969a979e90d5889e95948e888892bb9c969a9297d5989496">Email ↗</a>
+      <div class="metrics-grid reveal d3">
+        <div class="metric-card">
+          <p class="metric-value">2024</p>
+          <p class="metric-label">Doctorate</p>
         </div>
-        <a class="btn-secondary btn-sidebar" href="./assets/CV.pdf" target="_blank" rel="noopener">Download CV ↓</a>
+        <div class="metric-card">
+          <p class="metric-value">4</p>
+          <p class="metric-label">Peer-reviewed</p>
+        </div>
+        <div class="metric-card">
+          <p class="metric-value">2×</p>
+          <p class="metric-label">PLOS Comp Bio</p>
+        </div>
+        <div class="metric-card">
+          <p class="metric-value">LLM</p>
+          <p class="metric-label">Eval &amp; agents</p>
+        </div>
       </div>
-    </aside>
+    </div>
+    <a class="scroll-hint" href="#thread" aria-label="Scroll down">Scroll</a>
+  </header>
 
-    <!-- ============================================
-         MAIN CONTENT
-         ============================================ -->
-    <main class="main-content" role="main">
+  <main>
 
-      <!-- HERO -->
-      <section class="section hero" id="about">
-        <svg class="motif-bg motif-hero" viewBox="0 0 190 105" aria-hidden="true">
-          <line x1="15" y1="22" x2="95" y2="15" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
-          <line x1="15" y1="22" x2="95" y2="42" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
-          <line x1="15" y1="22" x2="95" y2="68" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
-          <line x1="15" y1="22" x2="95" y2="92" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
-          <line x1="15" y1="52" x2="95" y2="15" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
-          <line x1="15" y1="52" x2="95" y2="42" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
-          <line x1="15" y1="52" x2="95" y2="68" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
-          <line x1="15" y1="52" x2="95" y2="92" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
-          <line x1="15" y1="82" x2="95" y2="15" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
-          <line x1="15" y1="82" x2="95" y2="42" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
-          <line x1="15" y1="82" x2="95" y2="68" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
-          <line x1="15" y1="82" x2="95" y2="92" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
-          <line x1="95" y1="15" x2="175" y2="37" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
-          <line x1="95" y1="15" x2="175" y2="72" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
-          <line x1="95" y1="42" x2="175" y2="37" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
-          <line x1="95" y1="42" x2="175" y2="72" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
-          <line x1="95" y1="68" x2="175" y2="37" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
-          <line x1="95" y1="68" x2="175" y2="72" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
-          <line x1="95" y1="92" x2="175" y2="37" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
-          <line x1="95" y1="92" x2="175" y2="72" stroke="var(--text-primary)" stroke-width="0.6" opacity="0.35"/>
-          <circle class="node" cx="15" cy="22" r="3.2" fill="var(--accent)"/>
-          <circle class="node" cx="15" cy="52" r="3.2" fill="var(--accent)"/>
-          <circle class="node" cx="15" cy="82" r="3.2" fill="var(--accent)"/>
-          <circle class="node" cx="95" cy="15" r="3.2" fill="var(--accent)"/>
-          <circle class="node" cx="95" cy="42" r="3.2" fill="var(--accent)"/>
-          <circle class="node" cx="95" cy="68" r="3.2" fill="var(--accent)"/>
-          <circle class="node" cx="95" cy="92" r="3.2" fill="var(--accent)"/>
-          <circle class="node" cx="175" cy="37" r="3.2" fill="var(--accent)"/>
-          <circle class="node" cx="175" cy="72" r="3.2" fill="var(--accent)"/>
-        </svg>
-        <p class="meta-label">ML engineer · PhD applied mathematics</p>
-        <h1 class="hero-name">Malek Senoussi</h1>
-        <p class="hero-tagline">I engineer ML systems that survive the distance from research to production. PhD in applied mathematics (single-cell classification); now building LLM evaluation frameworks, agent training loops, and high-dimensional classification pipelines.</p>
+    <!-- THREAD -->
+    <section class="section thread" id="thread">
+      <div class="wrap">
+        <p class="meta-label reveal">The thread</p>
+        <p class="thread-text reveal d1">Three years teaching models to classify cells they'd never seen. The same muscle — rigorous evaluation, principled uncertainty, systems that survive messy real data — is what makes LLM agents useful in production.</p>
+      </div>
+    </section>
 
-        <div class="hero-ctas">
-          <a href="#work" class="btn-primary">Selected work →</a>
-          <a href="./assets/CV.pdf" target="_blank" rel="noopener" class="btn-secondary">Download CV</a>
+    <!-- EXPERTISE -->
+    <section class="section" id="expertise">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2><span class="section-num">01</span>Core expertise</h2>
         </div>
-
-        <div class="metrics-grid">
-          <div class="metric-card">
-            <p class="metric-label">Doctorate</p>
-            <p class="metric-value">2024</p>
-          </div>
-          <div class="metric-card">
-            <p class="metric-label">Peer-reviewed</p>
-            <p class="metric-value">4 papers</p>
-          </div>
-          <div class="metric-card">
-            <p class="metric-label">PLOS Comp Bio</p>
-            <p class="metric-value">2×</p>
-          </div>
-          <div class="metric-card">
-            <p class="metric-label">Focus</p>
-            <p class="metric-value">LLM eval &amp; agents</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- THREAD / POSITIONING -->
-      <section class="section">
-        <p class="meta-label">The thread</p>
-        <p class="thread-text">Three years teaching models to classify cells they'd never seen. The same muscle — rigorous evaluation, principled uncertainty, systems that survive messy real data — is what makes LLM agents useful in production.</p>
-      </section>
-
-      <!-- EXPERTISE -->
-      <section class="section" id="expertise">
-        <h2>Core expertise</h2>
 
         <div class="pillars-grid">
-          <article class="pillar-card">
-            <svg class="motif-bg motif-classification" viewBox="0 0 180 96" aria-hidden="true">
-              <path d="M 14 66 Q 90 38 168 52" stroke="var(--accent)" stroke-width="1.1" fill="none" stroke-dasharray="2 4" opacity="0.6"/>
-              <circle class="pt" cx="22" cy="22" r="2.4" fill="var(--accent)"/>
-              <circle class="pt" cx="34" cy="28" r="2.4" fill="var(--accent)"/>
-              <circle class="pt" cx="46" cy="20" r="2.4" fill="var(--accent)"/>
-              <circle class="pt" cx="28" cy="38" r="2.4" fill="var(--accent)"/>
-              <circle class="pt" cx="42" cy="36" r="2.4" fill="var(--accent)"/>
-              <circle class="pt" cx="18" cy="32" r="2.4" fill="var(--accent)"/>
-              <circle class="pt" cx="54" cy="32" r="2.4" fill="var(--accent)"/>
-              <circle class="pt" cx="38" cy="46" r="2.4" fill="var(--accent)"/>
-              <circle class="pt" cx="122" cy="68" r="2.4" fill="var(--text-primary)"/>
-              <circle class="pt" cx="134" cy="62" r="2.4" fill="var(--text-primary)"/>
-              <circle class="pt" cx="146" cy="72" r="2.4" fill="var(--text-primary)"/>
-              <circle class="pt" cx="118" cy="78" r="2.4" fill="var(--text-primary)"/>
-              <circle class="pt" cx="140" cy="82" r="2.4" fill="var(--text-primary)"/>
-              <circle class="pt" cx="158" cy="66" r="2.4" fill="var(--text-primary)"/>
-              <circle class="pt" cx="128" cy="82" r="2.4" fill="var(--text-primary)"/>
-              <circle class="pt" cx="152" cy="78" r="2.4" fill="var(--text-primary)"/>
-            </svg>
+          <article class="glass pillar-card reveal">
             <div class="pillar-icon" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 22 22" fill="currentColor">
+              <svg width="20" height="20" viewBox="0 0 22 22" fill="currentColor">
                 <circle cx="5" cy="7" r="1.6"/>
                 <circle cx="11" cy="4" r="1.6" opacity="0.55"/>
                 <circle cx="17" cy="7" r="1.6" opacity="0.35"/>
@@ -170,20 +126,9 @@
             <p class="pillar-desc">High-dim data (20K+ features), weakly-supervised and hierarchical learning. Partial labels, novel-class discovery, single-cell RNA-seq.</p>
           </article>
 
-          <article class="pillar-card">
-            <svg class="motif-bg motif-llm" viewBox="0 0 200 62" aria-hidden="true">
-              <rect class="tok" x="4" y="22" width="15" height="18" rx="2" fill="var(--accent)"/>
-              <rect class="tok" x="24" y="22" width="20" height="18" rx="2" fill="var(--accent)"/>
-              <rect class="tok" x="50" y="22" width="13" height="18" rx="2" fill="var(--accent)"/>
-              <rect class="tok" x="68" y="22" width="22" height="18" rx="2" fill="var(--accent)"/>
-              <rect class="tok" x="96" y="22" width="17" height="18" rx="2" fill="var(--accent)"/>
-              <rect class="tok" x="118" y="22" width="15" height="18" rx="2" fill="var(--accent)"/>
-              <rect class="tok" x="138" y="22" width="19" height="18" rx="2" fill="var(--accent)"/>
-              <rect class="tok" x="162" y="22" width="14" height="18" rx="2" fill="var(--accent)"/>
-              <rect class="tok" x="181" y="22" width="16" height="18" rx="2" fill="var(--accent)"/>
-            </svg>
+          <article class="glass pillar-card reveal d1">
             <div class="pillar-icon" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6">
+              <svg width="20" height="20" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6">
                 <line x1="6" y1="11" x2="16" y2="11"/>
                 <line x1="11" y1="7" x2="11" y2="15"/>
                 <circle cx="4" cy="11" r="2"/>
@@ -192,469 +137,542 @@
                 <circle cx="11" cy="17" r="2"/>
               </svg>
             </div>
-            <h3 class="pillar-title">LLM systems & agents</h3>
+            <h3 class="pillar-title">LLM systems &amp; agents</h3>
             <p class="pillar-desc">RAG, prompt engineering, RL loops for agent training. Instrumented evaluation, reward-hacking prevention, reliability-focused design.</p>
           </article>
 
-          <article class="pillar-card">
-            <svg class="motif-bg motif-production" viewBox="0 0 180 76" aria-hidden="true">
-              <line class="pipe-line" x1="5" y1="10" x2="145" y2="10" stroke="var(--accent)" stroke-width="1.3" opacity="0.75"/>
-              <line class="pipe-line" x1="5" y1="24" x2="95" y2="24" stroke="var(--accent)" stroke-width="1.3" opacity="0.75"/>
-              <line class="pipe-line" x1="5" y1="38" x2="165" y2="38" stroke="var(--accent)" stroke-width="1.3" opacity="0.75"/>
-              <line class="pipe-line" x1="5" y1="52" x2="115" y2="52" stroke="var(--accent)" stroke-width="1.3" opacity="0.75"/>
-              <line class="pipe-line" x1="5" y1="66" x2="80" y2="66" stroke="var(--accent)" stroke-width="1.3" opacity="0.75"/>
-            </svg>
+          <article class="glass pillar-card reveal d2">
             <div class="pillar-icon" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 22 22" fill="currentColor">
+              <svg width="20" height="20" viewBox="0 0 22 22" fill="currentColor">
                 <rect x="3" y="4" width="16" height="3" rx="1" opacity="0.4"/>
                 <rect x="3" y="9.5" width="16" height="3" rx="1" opacity="0.7"/>
                 <rect x="3" y="15" width="16" height="3" rx="1"/>
               </svg>
             </div>
-            <h3 class="pillar-title">Production & MLOps</h3>
+            <h3 class="pillar-title">Production &amp; MLOps</h3>
             <p class="pillar-desc">Docker, CI/CD, experiment tracking, Streamlit dashboards, model monitoring. Research systems built to be reproducible and deployed — internal tools serving researcher workflows.</p>
           </article>
         </div>
 
-        <p class="meta-label meta-label-small">Core ML</p>
-        <div class="tech-tags">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">PyTorch</span>
-          <span class="tech-tag">Scikit-learn</span>
-          <span class="tech-tag">Docker</span>
-          <span class="tech-tag">SQL</span>
-          <span class="tech-tag">Git</span>
-          <span class="tech-tag">Bash</span>
-        </div>
-
-        <p class="meta-label meta-label-small">LLM, evaluation &amp; infra</p>
-        <div class="tech-tags">
-          <span class="tech-tag">LangChain</span>
-          <span class="tech-tag">LangGraph</span>
-          <span class="tech-tag">Claude Sonnet</span>
-          <span class="tech-tag">MLflow</span>
-          <span class="tech-tag">Streamlit</span>
-          <span class="tech-tag">AWS</span>
-          <span class="tech-tag">SLURM</span>
-        </div>
-      </section>
-
-      <!-- SELECTED WORK -->
-      <section class="section" id="work">
-        <h2>Selected work</h2>
-
-        <!-- KAN RL — Featured latest -->
-        <article class="project featured">
-          <span class="badge">Featured · latest</span>
-          <h3 class="project-title">KAN RL Environment — LLM agent for scientific law discovery</h3>
-          <p class="project-desc">An LLM agent trained via a reinforcement learning loop to autonomously fit Kolmogorov-Arnold Networks for symbolic regression. Structured feedback on generalization, OOD extrapolation, and expression parsimony — with no gradient flowing through the LLM.</p>
-
-          <div class="project-diagram" aria-label="Architecture: LLM agent writes training code, model trains, 7-step judge returns structured feedback to the agent">
-            <svg viewBox="0 0 500 110" xmlns="http://www.w3.org/2000/svg" role="img">
-              <defs>
-                <marker id="arr-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-                  <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--text-tertiary)"/>
-                </marker>
-              </defs>
-
-              <rect x="10" y="42" width="85" height="30" rx="4" fill="var(--bg-subtle)" stroke="var(--border-strong)" stroke-width="1"/>
-              <text x="52" y="61" font-size="11" fill="var(--text-primary)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">LLM agent</text>
-
-              <path class="arch-flow" d="M 100 57 L 132 57" stroke="var(--text-tertiary)" stroke-width="1" fill="none" marker-end="url(#arr-head)"/>
-              <text x="117" y="49" font-size="9" fill="var(--text-secondary)" text-anchor="middle" font-family="Inter, sans-serif">writes</text>
-
-              <rect x="140" y="42" width="90" height="30" rx="4" fill="var(--bg-subtle)" stroke="var(--border-strong)" stroke-width="1"/>
-              <text x="185" y="61" font-size="11" fill="var(--text-primary)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">training code</text>
-
-              <path class="arch-flow" d="M 232 57 L 264 57" stroke="var(--text-tertiary)" stroke-width="1" fill="none" marker-end="url(#arr-head)"/>
-
-              <rect x="270" y="42" width="80" height="30" rx="4" fill="var(--bg-subtle)" stroke="var(--border-strong)" stroke-width="1"/>
-              <text x="310" y="61" font-size="11" fill="var(--text-primary)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">KAN model</text>
-
-              <path class="arch-flow" d="M 352 57 L 384 57" stroke="var(--text-tertiary)" stroke-width="1" fill="none" marker-end="url(#arr-head)"/>
-
-              <rect class="arch-pulse" x="390" y="42" width="95" height="30" rx="4" fill="var(--accent-soft)" stroke="var(--accent-border)" stroke-width="1"/>
-              <text x="438" y="61" font-size="11" fill="var(--accent)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">7-step judge</text>
-
-              <path class="arch-loop" d="M 437 42 Q 437 14 245 14 Q 52 14 52 39" stroke="var(--text-tertiary)" stroke-width="1" fill="none" stroke-dasharray="3,3" marker-end="url(#arr-head)"/>
-              <text x="250" y="10" font-size="9" fill="var(--text-secondary)" text-anchor="middle" font-family="Inter, sans-serif">structured feedback</text>
-            </svg>
-          </div>
-
-          <div class="result-grid">
-            <div class="result-card">
-              <p class="result-label">Best score (GPT-OSS 120B)</p>
-              <p class="result-value">0.694</p>
-            </div>
-            <div class="result-card">
-              <p class="result-label">Threshold 0.65 reached at</p>
-              <p class="result-value">round 5 / 20</p>
-            </div>
-          </div>
-
-          <p class="result-meaning">→ Evaluation loop architecture for autonomous agent training. A building block for research systems where LLMs train specialized models without human supervision.</p>
-
-          <div class="tech-tags">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">RL</span>
-            <span class="tech-tag">KAN</span>
-            <span class="tech-tag">LLM agents</span>
-            <span class="tech-tag">Symbolic regression</span>
-            <span class="tech-tag">Docker</span>
-          </div>
-
-          <a href="https://github.com/MalekSnous/kan-rl-env" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub →</a>
-        </article>
-
-        <!-- Board Game Generator — Featured -->
-        <article class="project featured">
-          <span class="badge">Featured</span>
-          <h3 class="project-title">Board Game Generator — Multi-agent pipeline</h3>
-          <p class="project-desc">A LangGraph pipeline orchestrating 5 specialized Claude Sonnet agents that generate fully playable browser games from a single text prompt. Each agent handles a distinct stage — game design, code generation, SVG assets, QA validation, documentation — with an automatic retry loop when the Tester detects blocking bugs.</p>
-
-          <p class="project-impact">→ 3 games generated end-to-end. €10 in API costs. Zero manual fixes on pipeline v2 vs 5 on v1 — a measurable robustness improvement across iterations.</p>
-
-          <div class="project-diagram" aria-label="5-agent pipeline: Designer to Developer to Asset Generator to Tester with retry loop back to Developer, then Documentalist">
-            <svg viewBox="0 0 500 110" xmlns="http://www.w3.org/2000/svg" role="img">
-              <defs>
-                <marker id="arr-bg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-                  <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--text-tertiary)"/>
-                </marker>
-              </defs>
-
-              <rect x="4" y="42" width="72" height="28" rx="4" fill="var(--bg-subtle)" stroke="var(--border-strong)" stroke-width="1"/>
-              <text x="40" y="60" font-size="10" fill="var(--text-primary)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">Designer</text>
-
-              <path d="M 78 56 L 100 56" stroke="var(--text-tertiary)" stroke-width="1" fill="none" marker-end="url(#arr-bg)"/>
-
-              <rect x="103" y="42" width="72" height="28" rx="4" fill="var(--bg-subtle)" stroke="var(--border-strong)" stroke-width="1"/>
-              <text x="139" y="60" font-size="10" fill="var(--text-primary)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">Developer</text>
-
-              <path d="M 177 56 L 199 56" stroke="var(--text-tertiary)" stroke-width="1" fill="none" marker-end="url(#arr-bg)"/>
-
-              <rect x="202" y="42" width="76" height="28" rx="4" fill="var(--bg-subtle)" stroke="var(--border-strong)" stroke-width="1"/>
-              <text x="240" y="55" font-size="10" fill="var(--text-primary)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">Asset</text>
-              <text x="240" y="66" font-size="10" fill="var(--text-primary)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">Generator</text>
-
-              <path d="M 280 56 L 302 56" stroke="var(--text-tertiary)" stroke-width="1" fill="none" marker-end="url(#arr-bg)"/>
-
-              <rect x="305" y="42" width="62" height="28" rx="4" fill="var(--accent-soft)" stroke="var(--accent-border)" stroke-width="1"/>
-              <text x="336" y="60" font-size="10" fill="var(--accent)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">Tester</text>
-
-              <path d="M 369 56 L 391 56" stroke="var(--text-tertiary)" stroke-width="1" fill="none" marker-end="url(#arr-bg)"/>
-
-              <rect x="394" y="42" width="100" height="28" rx="4" fill="var(--bg-subtle)" stroke="var(--border-strong)" stroke-width="1"/>
-              <text x="444" y="60" font-size="10" fill="var(--text-primary)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">Documentalist</text>
-
-              <path d="M 336 42 Q 336 14 237 14 Q 139 14 139 40" stroke="var(--accent)" stroke-width="1" fill="none" stroke-dasharray="3,3" marker-end="url(#arr-bg)" opacity="0.7"/>
-              <text x="238" y="10" font-size="9" fill="var(--accent)" text-anchor="middle" font-family="Inter, sans-serif" opacity="0.8">retry if bugs detected</text>
-
-              <text x="250" y="98" font-size="9" fill="var(--text-tertiary)" text-anchor="middle" font-family="Inter, sans-serif">index.html · game.js · style.css · assets/*.svg · rules.md · README.md</text>
-            </svg>
-          </div>
-
-          <div class="result-grid">
-            <div class="result-card">
-              <p class="result-label">Games generated</p>
-              <p class="result-value">3</p>
-            </div>
-            <div class="result-card">
-              <p class="result-label">Total API cost</p>
-              <p class="result-value">€10</p>
-            </div>
-          </div>
-
-          <p class="result-meaning">→ Multi-agent orchestration with stateful LangGraph graph, structured output, retry loops, JS syntax validation, and full CI/CD. Games are live and playable.</p>
-
-          <div class="tech-tags">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">LangGraph</span>
-            <span class="tech-tag">Claude Sonnet</span>
-            <span class="tech-tag">Multi-agent</span>
-            <span class="tech-tag">Prompt engineering</span>
-            <span class="tech-tag">GitHub Actions</span>
-          </div>
-
-          <a href="https://github.com/MalekSnous/boardgame-generator" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub →</a>
-          &nbsp;&nbsp;
-          <a href="https://maleksnous.github.io/boardgame-generator/" target="_blank" rel="noopener noreferrer" class="project-link">Live demo →</a>
-        </article>
-
-        <!-- LLM Diagnostic Framework — Featured -->
-        <article class="project featured">
-          <span class="badge">Featured</span>
-          <h3 class="project-title">LLM Diagnostic Framework</h3>
-          <p class="project-desc">Systematic framework for diagnosing LLM failures and testing optimization strategies in production. Case study on medical entity extraction; modular and extensible to other use cases.</p>
-
-          <p class="project-impact">→ Reduced inference cost by 10× while maintaining accuracy (91% vs 92%) on medical entity extraction.</p>
-
-          <p class="project-result-tagline">Pick the right model for the right complexity and cost.</p>
-
-          <div class="project-visual">
-            <svg viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Benchmark: GPT-4o and GPT-4o mini deliver comparable accuracy (92% vs 91%), but GPT-4o mini costs 10 times less.">
-              <text x="0" y="14" font-size="10" letter-spacing="0.08em" fill="var(--text-secondary)" font-weight="500" font-family="Inter, sans-serif">COST COMPARISON</text>
-
-              <text x="0" y="44" font-size="13" font-weight="500" fill="var(--text-primary)" font-family="Inter, sans-serif">GPT-4o</text>
-              <rect x="120" y="34" width="240" height="12" rx="2" fill="var(--bg-subtle)"/>
-              <rect class="bench-bar-slow" x="120" y="34" width="225" height="12" rx="2" fill="var(--accent)"/>
-              <text x="350" y="43" font-size="10" fill="var(--text-tertiary)" font-family="Inter, sans-serif">10×</text>
-              <text x="378" y="43" font-size="11" font-weight="500" fill="var(--accent)" font-family="Inter, sans-serif">92% acc</text>
-
-              <text x="0" y="89" font-size="13" font-weight="500" fill="var(--text-primary)" font-family="Inter, sans-serif">GPT-4o mini</text>
-              <rect x="120" y="79" width="240" height="12" rx="2" fill="var(--bg-subtle)"/>
-              <rect class="bench-bar-fast" x="120" y="79" width="24" height="12" rx="2" fill="var(--accent)"/>
-              <text x="150" y="88" font-size="10" fill="var(--text-tertiary)" font-family="Inter, sans-serif">1×</text>
-              <text x="378" y="88" font-size="11" font-weight="500" fill="var(--accent)" font-family="Inter, sans-serif">91% acc</text>
-
-              <rect x="120" y="112" width="260" height="24" rx="4" fill="var(--accent-soft)" stroke="var(--accent-border)" stroke-width="0.5"/>
-              <text x="250" y="128" font-size="11" font-weight="500" fill="var(--accent)" text-anchor="middle" font-family="Inter, sans-serif">Same output · 10× cheaper</text>
-            </svg>
-          </div>
-
-          <div class="tech-tags">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">LLMs</span>
-            <span class="tech-tag">Prompt engineering</span>
-            <span class="tech-tag">Medical NLP</span>
-            <span class="tech-tag">Docker</span>
-          </div>
-
-          <a href="https://github.com/MalekSnous/llm-diagnostic-framework" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub →</a>
-        </article>
-
-        <!-- High-dim Classification Pipeline — Featured with pipeline visual -->
-        <article class="project featured">
-          <span class="badge">Featured</span>
-          <h3 class="project-title">High-dimensional classification pipeline</h3>
-          <p class="project-desc">Deep learning models for biological data with 20K+ features. Custom PyTorch architectures with automated feature selection and dimensionality reduction, achieving state-of-the-art performance on complex scRNA-seq classification.</p>
-
-          <p class="project-impact">→ State-of-the-art performance on real scRNA-seq datasets. Benchmarked against existing methods in peer-reviewed work (see Publications).</p>
-
-          <div class="project-visual">
-            <svg viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pipeline: 20K features are projected to 2D, then classified via a decision boundary.">
-              <defs>
-                <marker id="pipe-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-                  <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--text-tertiary)"/>
-                </marker>
-              </defs>
-
-              <g transform="translate(5, 22)" opacity="0.85">
-                <rect x="0" y="0" width="102" height="52" rx="4" fill="var(--bg-subtle)" stroke="var(--border)" stroke-width="0.5"/>
-                <g fill="var(--accent)">
-                  <circle cx="8" cy="8" r="0.9"/><circle cx="16" cy="8" r="0.9"/><circle cx="24" cy="8" r="0.9"/><circle cx="32" cy="8" r="0.9"/><circle cx="40" cy="8" r="0.9"/><circle cx="48" cy="8" r="0.9"/><circle cx="56" cy="8" r="0.9"/><circle cx="64" cy="8" r="0.9"/><circle cx="72" cy="8" r="0.9"/><circle cx="80" cy="8" r="0.9"/><circle cx="88" cy="8" r="0.9"/><circle cx="96" cy="8" r="0.9"/>
-                  <circle cx="8" cy="16" r="0.9"/><circle cx="16" cy="16" r="0.9"/><circle cx="24" cy="16" r="0.9"/><circle cx="32" cy="16" r="0.9"/><circle cx="40" cy="16" r="0.9"/><circle cx="48" cy="16" r="0.9"/><circle cx="56" cy="16" r="0.9"/><circle cx="64" cy="16" r="0.9"/><circle cx="72" cy="16" r="0.9"/><circle cx="80" cy="16" r="0.9"/><circle cx="88" cy="16" r="0.9"/><circle cx="96" cy="16" r="0.9"/>
-                  <circle cx="8" cy="24" r="0.9"/><circle cx="16" cy="24" r="0.9"/><circle cx="24" cy="24" r="0.9"/><circle cx="32" cy="24" r="0.9"/><circle cx="40" cy="24" r="0.9"/><circle cx="48" cy="24" r="0.9"/><circle cx="56" cy="24" r="0.9"/><circle cx="64" cy="24" r="0.9"/><circle cx="72" cy="24" r="0.9"/><circle cx="80" cy="24" r="0.9"/><circle cx="88" cy="24" r="0.9"/><circle cx="96" cy="24" r="0.9"/>
-                  <circle cx="8" cy="32" r="0.9"/><circle cx="16" cy="32" r="0.9"/><circle cx="24" cy="32" r="0.9"/><circle cx="32" cy="32" r="0.9"/><circle cx="40" cy="32" r="0.9"/><circle cx="48" cy="32" r="0.9"/><circle cx="56" cy="32" r="0.9"/><circle cx="64" cy="32" r="0.9"/><circle cx="72" cy="32" r="0.9"/><circle cx="80" cy="32" r="0.9"/><circle cx="88" cy="32" r="0.9"/><circle cx="96" cy="32" r="0.9"/>
-                  <circle cx="8" cy="40" r="0.9"/><circle cx="16" cy="40" r="0.9"/><circle cx="24" cy="40" r="0.9"/><circle cx="32" cy="40" r="0.9"/><circle cx="40" cy="40" r="0.9"/><circle cx="48" cy="40" r="0.9"/><circle cx="56" cy="40" r="0.9"/><circle cx="64" cy="40" r="0.9"/><circle cx="72" cy="40" r="0.9"/><circle cx="80" cy="40" r="0.9"/><circle cx="88" cy="40" r="0.9"/><circle cx="96" cy="40" r="0.9"/>
-                  <circle cx="8" cy="48" r="0.9"/><circle cx="16" cy="48" r="0.9"/><circle cx="24" cy="48" r="0.9"/><circle cx="32" cy="48" r="0.9"/><circle cx="40" cy="48" r="0.9"/><circle cx="48" cy="48" r="0.9"/><circle cx="56" cy="48" r="0.9"/><circle cx="64" cy="48" r="0.9"/><circle cx="72" cy="48" r="0.9"/><circle cx="80" cy="48" r="0.9"/><circle cx="88" cy="48" r="0.9"/><circle cx="96" cy="48" r="0.9"/>
-                </g>
-              </g>
-              <text x="56" y="95" font-size="10" fill="var(--text-secondary)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">20K features</text>
-
-              <path class="pipe-arrow" d="M 115 48 L 160 48" stroke="var(--text-tertiary)" stroke-width="1" fill="none" marker-end="url(#pipe-arr)"/>
-
-              <g transform="translate(170, 22)" fill="var(--accent)">
-                <circle cx="12" cy="10" r="2"/>
-                <circle cx="20" cy="14" r="2"/>
-                <circle cx="14" cy="20" r="2"/>
-                <circle cx="24" cy="8" r="2"/>
-                <circle cx="8" cy="16" r="2"/>
-                <circle cx="52" cy="34" r="2" fill="var(--text-primary)"/>
-                <circle cx="60" cy="30" r="2" fill="var(--text-primary)"/>
-                <circle cx="56" cy="42" r="2" fill="var(--text-primary)"/>
-                <circle cx="48" cy="38" r="2" fill="var(--text-primary)"/>
-                <circle cx="64" cy="40" r="2" fill="var(--text-primary)"/>
-                <circle cx="82" cy="16" r="2"/>
-                <circle cx="88" cy="10" r="2"/>
-                <circle cx="84" cy="22" r="2"/>
-                <circle cx="74" cy="14" r="2"/>
-                <circle cx="90" cy="24" r="2"/>
-              </g>
-              <text x="215" y="95" font-size="10" fill="var(--text-secondary)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">2D projection</text>
-
-              <path class="pipe-arrow" d="M 268 48 L 325 48" stroke="var(--text-tertiary)" stroke-width="1" fill="none" marker-end="url(#pipe-arr)"/>
-
-              <g transform="translate(333, 15)">
-                <path class="pipe-boundary" d="M 10 12 Q 75 38 150 22" stroke="var(--accent)" stroke-width="1.2" fill="none" stroke-dasharray="3 3" opacity="0.7"/>
-                <circle cx="20" cy="10" r="2" fill="var(--accent)"/>
-                <circle cx="30" cy="16" r="2" fill="var(--accent)"/>
-                <circle cx="26" cy="6" r="2" fill="var(--accent)"/>
-                <circle cx="42" cy="14" r="2" fill="var(--accent)"/>
-                <circle cx="38" cy="4" r="2" fill="var(--accent)"/>
-                <circle cx="50" cy="20" r="2" fill="var(--accent)"/>
-                <circle cx="60" cy="10" r="2" fill="var(--accent)"/>
-                <circle cx="70" cy="16" r="2" fill="var(--accent)"/>
-                <circle cx="90" cy="46" r="2" fill="var(--text-primary)"/>
-                <circle cx="100" cy="52" r="2" fill="var(--text-primary)"/>
-                <circle cx="110" cy="42" r="2" fill="var(--text-primary)"/>
-                <circle cx="120" cy="50" r="2" fill="var(--text-primary)"/>
-                <circle cx="130" cy="46" r="2" fill="var(--text-primary)"/>
-                <circle cx="140" cy="38" r="2" fill="var(--text-primary)"/>
-                <circle cx="105" cy="58" r="2" fill="var(--text-primary)"/>
-                <circle cx="125" cy="40" r="2" fill="var(--text-primary)"/>
-              </g>
-              <text x="414" y="95" font-size="10" fill="var(--text-secondary)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">classified</text>
-            </svg>
-          </div>
-
+        <div class="reveal">
+          <p class="meta-label-small">Core ML</p>
           <div class="tech-tags">
             <span class="tech-tag">Python</span>
             <span class="tech-tag">PyTorch</span>
-            <span class="tech-tag">Deep learning</span>
-            <span class="tech-tag">Bioinformatics</span>
-            <span class="tech-tag">scRNA-seq</span>
-          </div>
-
-          <a href="#publications" class="project-link">Associated publications →</a>
-        </article>
-
-        <!-- Energy Forecasting -->
-        <article class="project">
-          <h3 class="project-title">Energy forecasting system</h3>
-          <p class="project-desc">End-to-end ML solution for energy demand forecasting with a Streamlit dashboard for real-time monitoring and decision-making.</p>
-          <p class="project-impact">→ Full pipeline from data ingestion to deployed dashboard.</p>
-          <div class="tech-tags">
             <span class="tech-tag">Scikit-learn</span>
-            <span class="tech-tag">Streamlit</span>
-            <span class="tech-tag">Time series</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">SQL</span>
+            <span class="tech-tag">Git</span>
+            <span class="tech-tag">Bash</span>
           </div>
-          <a href="https://github.com/MalekSnous/energy_forecasting" target="_blank" rel="noopener noreferrer" class="project-link">View project →</a>
-        </article>
-      </section>
 
-      <!-- PUBLICATIONS -->
-      <section class="section section-publications" id="publications">
-        <svg class="motif-bg motif-scrna" viewBox="0 0 360 170" aria-hidden="true">
-          <circle class="cell" cx="40" cy="40" r="2.1" fill="var(--accent)"/>
-          <circle class="cell" cx="32" cy="46" r="2.1" fill="var(--accent)"/>
-          <circle class="cell" cx="48" cy="50" r="2.1" fill="var(--accent)"/>
-          <circle class="cell" cx="36" cy="32" r="2.1" fill="var(--accent)"/>
-          <circle class="cell" cx="28" cy="36" r="2.1" fill="var(--accent)"/>
-          <circle class="cell" cx="50" cy="38" r="2.1" fill="var(--accent)"/>
-          <circle class="cell" cx="38" cy="54" r="2.1" fill="var(--accent)"/>
-          <circle class="cell" cx="25" cy="28" r="2.1" fill="var(--accent)"/>
-          <circle class="cell" cx="56" cy="44" r="2.1" fill="var(--accent)"/>
-          <circle class="cell" cx="46" cy="58" r="2.1" fill="var(--accent)"/>
-          <circle class="cell" cx="170" cy="90" r="2.1" fill="var(--text-primary)"/>
-          <circle class="cell" cx="162" cy="95" r="2.1" fill="var(--text-primary)"/>
-          <circle class="cell" cx="180" cy="85" r="2.1" fill="var(--text-primary)"/>
-          <circle class="cell" cx="168" cy="100" r="2.1" fill="var(--text-primary)"/>
-          <circle class="cell" cx="185" cy="93" r="2.1" fill="var(--text-primary)"/>
-          <circle class="cell" cx="175" cy="80" r="2.1" fill="var(--text-primary)"/>
-          <circle class="cell" cx="158" cy="87" r="2.1" fill="var(--text-primary)"/>
-          <circle class="cell" cx="190" cy="101" r="2.1" fill="var(--text-primary)"/>
-          <circle class="cell" cx="155" cy="100" r="2.1" fill="var(--text-primary)"/>
-          <circle class="cell" cx="275" cy="45" r="2.1" fill="var(--accent)"/>
-          <circle class="cell" cx="285" cy="41" r="2.1" fill="var(--accent)"/>
-          <circle class="cell" cx="280" cy="53" r="2.1" fill="var(--accent)"/>
-          <circle class="cell" cx="265" cy="47" r="2.1" fill="var(--accent)"/>
-          <circle class="cell" cx="290" cy="49" r="2.1" fill="var(--accent)"/>
-          <circle class="cell" cx="272" cy="55" r="2.1" fill="var(--accent)"/>
-          <circle class="cell" cx="295" cy="57" r="2.1" fill="var(--accent)"/>
-          <circle class="cell" cx="280" cy="37" r="2.1" fill="var(--accent)"/>
-          <circle class="cell" cx="262" cy="55" r="2.1" fill="var(--accent)"/>
-          <circle class="cell" cx="305" cy="120" r="2.1" fill="var(--text-primary)"/>
-          <circle class="cell" cx="315" cy="115" r="2.1" fill="var(--text-primary)"/>
-          <circle class="cell" cx="310" cy="128" r="2.1" fill="var(--text-primary)"/>
-          <circle class="cell" cx="300" cy="125" r="2.1" fill="var(--text-primary)"/>
-          <circle class="cell" cx="322" cy="121" r="2.1" fill="var(--text-primary)"/>
-          <circle class="cell" cx="295" cy="118" r="2.1" fill="var(--text-primary)"/>
-          <circle class="cell" cx="318" cy="133" r="2.1" fill="var(--text-primary)"/>
-          <circle class="cell" cx="330" cy="127" r="2.1" fill="var(--text-primary)"/>
-          <circle class="cell" cx="340" cy="75" r="2.1" fill="var(--accent)"/>
-          <circle class="cell" cx="346" cy="82" r="2.1" fill="var(--accent)"/>
-          <circle class="cell" cx="334" cy="80" r="2.1" fill="var(--accent)"/>
-          <circle class="cell" cx="348" cy="70" r="2.1" fill="var(--accent)"/>
-          <circle class="cell" cx="338" cy="88" r="2.1" fill="var(--accent)"/>
-        </svg>
-        <h2>Publications</h2>
-        <ul class="publications-list">
-          <li>
+          <p class="meta-label-small">LLM, evaluation &amp; infra</p>
+          <div class="tech-tags">
+            <span class="tech-tag">LangChain</span>
+            <span class="tech-tag">LangGraph</span>
+            <span class="tech-tag">Claude Sonnet</span>
+            <span class="tech-tag">MLflow</span>
+            <span class="tech-tag">Streamlit</span>
+            <span class="tech-tag">AWS</span>
+            <span class="tech-tag">SLURM</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED WORK -->
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2><span class="section-num">02</span>Selected work</h2>
+        </div>
+
+        <div class="projects">
+
+          <!-- KAN RL -->
+          <article class="glass project featured reveal">
+            <span class="badge">Featured · latest</span>
+            <h3 class="project-title">KAN RL Environment — LLM agent for scientific law discovery</h3>
+            <p class="project-desc">An LLM agent trained via a reinforcement learning loop to autonomously fit Kolmogorov-Arnold Networks for symbolic regression. Structured feedback on generalization, OOD extrapolation, and expression parsimony — with no gradient flowing through the LLM.</p>
+
+            <div class="project-diagram" aria-label="Architecture: LLM agent writes training code, model trains, 7-step judge returns structured feedback to the agent">
+              <svg viewBox="0 0 500 110" xmlns="http://www.w3.org/2000/svg" role="img">
+                <defs>
+                  <marker id="arr-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--text-tertiary)"/>
+                  </marker>
+                </defs>
+                <rect x="10" y="42" width="85" height="30" rx="4" fill="rgba(255,255,255,0.04)" stroke="var(--border-strong)" stroke-width="1"/>
+                <text x="52" y="61" font-size="11" fill="var(--text-primary)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">LLM agent</text>
+                <path class="arch-flow" d="M 100 57 L 132 57" stroke="var(--text-tertiary)" stroke-width="1" fill="none" marker-end="url(#arr-head)"/>
+                <text x="117" y="49" font-size="9" fill="var(--text-secondary)" text-anchor="middle" font-family="Inter, sans-serif">writes</text>
+                <rect x="140" y="42" width="90" height="30" rx="4" fill="rgba(255,255,255,0.04)" stroke="var(--border-strong)" stroke-width="1"/>
+                <text x="185" y="61" font-size="11" fill="var(--text-primary)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">training code</text>
+                <path class="arch-flow" d="M 232 57 L 264 57" stroke="var(--text-tertiary)" stroke-width="1" fill="none" marker-end="url(#arr-head)"/>
+                <rect x="270" y="42" width="80" height="30" rx="4" fill="rgba(255,255,255,0.04)" stroke="var(--border-strong)" stroke-width="1"/>
+                <text x="310" y="61" font-size="11" fill="var(--text-primary)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">KAN model</text>
+                <path class="arch-flow" d="M 352 57 L 384 57" stroke="var(--text-tertiary)" stroke-width="1" fill="none" marker-end="url(#arr-head)"/>
+                <rect class="arch-pulse" x="390" y="42" width="95" height="30" rx="4" fill="var(--accent-soft)" stroke="var(--accent-border)" stroke-width="1"/>
+                <text x="438" y="61" font-size="11" fill="var(--accent)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">7-step judge</text>
+                <path class="arch-loop" d="M 437 42 Q 437 14 245 14 Q 52 14 52 39" stroke="var(--text-tertiary)" stroke-width="1" fill="none" marker-end="url(#arr-head)"/>
+                <text x="250" y="10" font-size="9" fill="var(--text-secondary)" text-anchor="middle" font-family="Inter, sans-serif">structured feedback</text>
+              </svg>
+            </div>
+
+            <div class="result-grid">
+              <div class="result-card">
+                <p class="result-label">Best score (GPT-OSS 120B)</p>
+                <p class="result-value">0.694</p>
+              </div>
+              <div class="result-card">
+                <p class="result-label">Threshold 0.65 reached at</p>
+                <p class="result-value">round 5 / 20</p>
+              </div>
+            </div>
+
+            <p class="result-meaning">→ Evaluation loop architecture for autonomous agent training. A building block for research systems where LLMs train specialized models without human supervision.</p>
+
+            <div class="tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">RL</span>
+              <span class="tech-tag">KAN</span>
+              <span class="tech-tag">LLM agents</span>
+              <span class="tech-tag">Symbolic regression</span>
+              <span class="tech-tag">Docker</span>
+            </div>
+
+            <a href="https://github.com/MalekSnous/kan-rl-env" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub →</a>
+          </article>
+
+          <!-- Board Game Generator — Multi-agent pipeline -->
+          <article class="glass project featured reveal">
+            <span class="badge">Featured</span>
+            <h3 class="project-title">Board Game Generator — Multi-agent pipeline</h3>
+            <p class="project-desc">A LangGraph pipeline orchestrating 5 specialized Claude Sonnet agents that generate fully playable browser games from a single text prompt. Each agent handles a distinct stage — game design, code generation, SVG assets, QA validation, documentation — with an automatic retry loop when the Tester detects blocking bugs.</p>
+
+            <p class="project-impact">→ 3 games generated end-to-end. €10 in API costs. Zero manual fixes on pipeline v2 vs 5 on v1 — a measurable robustness improvement across iterations.</p>
+
+            <div class="project-diagram" aria-label="Multi-agent pipeline: Designer, Developer, Asset Generator, Tester and Documentalist run in sequence, with a retry loop from Tester back to Developer when bugs are detected. Output: index.html, game.js, style.css, SVG assets, rules.md and README.md.">
+              <svg viewBox="0 0 500 128" xmlns="http://www.w3.org/2000/svg" role="img">
+                <defs>
+                  <marker id="bg-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--text-tertiary)"/>
+                  </marker>
+                </defs>
+
+                <!-- retry loop (Tester -> Developer) -->
+                <path class="arch-loop" d="M 342 50 Q 342 16 264 16 Q 146 16 146 47" stroke="var(--text-tertiary)" stroke-width="1" fill="none" marker-end="url(#bg-arr)"/>
+                <text x="244" y="12" font-size="9" fill="var(--accent)" text-anchor="middle" font-family="Inter, sans-serif">retry if bugs detected</text>
+
+                <!-- agent boxes -->
+                <g font-family="Inter, sans-serif" font-size="9.5" font-weight="500" text-anchor="middle">
+                  <rect x="6" y="50" width="84" height="34" rx="4" fill="rgba(255,255,255,0.04)" stroke="var(--border-strong)" stroke-width="1"/>
+                  <text x="48" y="70" fill="var(--text-primary)">Designer</text>
+
+                  <rect x="104" y="50" width="84" height="34" rx="4" fill="rgba(255,255,255,0.04)" stroke="var(--border-strong)" stroke-width="1"/>
+                  <text x="146" y="70" fill="var(--text-primary)">Developer</text>
+
+                  <rect x="202" y="50" width="84" height="34" rx="4" fill="rgba(255,255,255,0.04)" stroke="var(--border-strong)" stroke-width="1"/>
+                  <text x="244" y="66" fill="var(--text-primary)">Asset</text>
+                  <text x="244" y="78" fill="var(--text-primary)">Generator</text>
+
+                  <rect class="arch-pulse" x="300" y="50" width="84" height="34" rx="4" fill="var(--accent-soft)" stroke="var(--accent-border)" stroke-width="1"/>
+                  <text x="342" y="70" fill="var(--accent)">Tester</text>
+
+                  <rect x="398" y="50" width="84" height="34" rx="4" fill="rgba(255,255,255,0.04)" stroke="var(--border-strong)" stroke-width="1"/>
+                  <text x="440" y="70" fill="var(--text-primary)">Documentalist</text>
+                </g>
+
+                <!-- flow arrows -->
+                <path class="arch-flow" d="M 90 67 L 100 67"  stroke="var(--text-tertiary)" stroke-width="1" fill="none" marker-end="url(#bg-arr)"/>
+                <path class="arch-flow" d="M 188 67 L 198 67" stroke="var(--text-tertiary)" stroke-width="1" fill="none" marker-end="url(#bg-arr)"/>
+                <path class="arch-flow" d="M 286 67 L 296 67" stroke="var(--text-tertiary)" stroke-width="1" fill="none" marker-end="url(#bg-arr)"/>
+                <path class="arch-flow" d="M 384 67 L 394 67" stroke="var(--text-tertiary)" stroke-width="1" fill="none" marker-end="url(#bg-arr)"/>
+
+                <!-- output artifacts -->
+                <text x="250" y="112" font-size="9" fill="var(--text-secondary)" text-anchor="middle" font-family="'JetBrains Mono', monospace">index.html · game.js · style.css · assets/*.svg · rules.md · README.md</text>
+              </svg>
+            </div>
+
+            <div class="result-grid">
+              <div class="result-card">
+                <p class="result-label">Games generated</p>
+                <p class="result-value">3</p>
+              </div>
+              <div class="result-card">
+                <p class="result-label">Total API cost</p>
+                <p class="result-value">€10</p>
+              </div>
+            </div>
+
+            <p class="result-meaning">→ Multi-agent orchestration with a stateful LangGraph graph, structured output, retry loops, JS syntax validation, and full CI/CD. Games are live and playable.</p>
+
+            <div class="tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">LangGraph</span>
+              <span class="tech-tag">Claude Sonnet</span>
+              <span class="tech-tag">Multi-agent</span>
+              <span class="tech-tag">Prompt engineering</span>
+              <span class="tech-tag">GitHub Actions</span>
+            </div>
+
+            <div class="tech-tags" style="gap:18px;margin-top:14px;">
+              <a href="https://github.com/MalekSnous/board-game-generator" target="_blank" rel="noopener noreferrer" class="project-link" style="margin-top:0;">View on GitHub →</a>
+              <a href="https://maleksnous.github.io/board-game-generator/" target="_blank" rel="noopener noreferrer" class="project-link" style="margin-top:0;">Live demo →</a>
+            </div>
+          </article>
+
+          <!-- LLM Diagnostic Framework -->
+          <article class="glass project featured reveal">
+            <span class="badge">Featured</span>
+            <h3 class="project-title">LLM Diagnostic Framework</h3>
+            <p class="project-desc">Systematic framework for diagnosing LLM failures and testing optimization strategies in production. Case study on medical entity extraction; modular and extensible to other use cases.</p>
+
+            <p class="project-impact">→ Reduced inference cost by 10× while maintaining accuracy (91% vs 92%) on medical entity extraction.</p>
+            <p class="project-result-tagline">Pick the right model for the right complexity and cost.</p>
+
+            <div class="project-visual">
+              <svg viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Benchmark: GPT-4o and GPT-4o mini deliver comparable accuracy (92% vs 91%), but GPT-4o mini costs 10 times less.">
+                <text x="0" y="14" font-size="10" letter-spacing="0.08em" fill="var(--text-secondary)" font-weight="500" font-family="Inter, sans-serif">COST COMPARISON</text>
+                <text x="0" y="44" font-size="13" font-weight="500" fill="var(--text-primary)" font-family="Inter, sans-serif">GPT-4o</text>
+                <rect x="120" y="34" width="240" height="12" rx="2" fill="rgba(255,255,255,0.06)"/>
+                <rect class="bench-bar-slow" x="120" y="34" width="225" height="12" rx="2" fill="var(--accent)"/>
+                <text x="350" y="43" font-size="10" fill="var(--text-tertiary)" font-family="Inter, sans-serif">10×</text>
+                <text x="378" y="43" font-size="11" font-weight="500" fill="var(--accent)" font-family="Inter, sans-serif">92% acc</text>
+                <text x="0" y="89" font-size="13" font-weight="500" fill="var(--text-primary)" font-family="Inter, sans-serif">GPT-4o mini</text>
+                <rect x="120" y="79" width="240" height="12" rx="2" fill="rgba(255,255,255,0.06)"/>
+                <rect class="bench-bar-fast" x="120" y="79" width="24" height="12" rx="2" fill="var(--accent-3)"/>
+                <text x="150" y="88" font-size="10" fill="var(--text-tertiary)" font-family="Inter, sans-serif">1×</text>
+                <text x="378" y="88" font-size="11" font-weight="500" fill="var(--accent-3)" font-family="Inter, sans-serif">91% acc</text>
+                <rect x="120" y="112" width="260" height="24" rx="4" fill="var(--accent-soft)" stroke="var(--accent-border)" stroke-width="0.5"/>
+                <text x="250" y="128" font-size="11" font-weight="500" fill="var(--accent)" text-anchor="middle" font-family="Inter, sans-serif">Same output · 10× cheaper</text>
+              </svg>
+            </div>
+
+            <div class="tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">LLMs</span>
+              <span class="tech-tag">Prompt engineering</span>
+              <span class="tech-tag">Medical NLP</span>
+              <span class="tech-tag">Docker</span>
+            </div>
+
+            <a href="https://github.com/MalekSnous/llm-diagnostic-framework" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub →</a>
+          </article>
+
+          <!-- High-dim Classification Pipeline -->
+          <article class="glass project featured reveal">
+            <span class="badge">Featured</span>
+            <h3 class="project-title">High-dimensional classification pipeline</h3>
+            <p class="project-desc">Deep learning models for biological data with 20K+ features. Custom PyTorch architectures with automated feature selection and dimensionality reduction, achieving state-of-the-art performance on complex scRNA-seq classification.</p>
+
+            <p class="project-impact">→ State-of-the-art performance on real scRNA-seq datasets. Benchmarked against existing methods in peer-reviewed work (see Publications).</p>
+
+            <div class="project-visual">
+              <svg viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pipeline: 20K features are projected to 2D, then classified via a decision boundary.">
+                <defs>
+                  <marker id="pipe-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--text-tertiary)"/>
+                  </marker>
+                </defs>
+                <g transform="translate(5, 22)" opacity="0.85">
+                  <rect x="0" y="0" width="102" height="52" rx="4" fill="rgba(255,255,255,0.04)" stroke="var(--border)" stroke-width="0.5"/>
+                  <g fill="var(--accent)">
+                    <circle cx="8" cy="8" r="0.9"/><circle cx="16" cy="8" r="0.9"/><circle cx="24" cy="8" r="0.9"/><circle cx="32" cy="8" r="0.9"/><circle cx="40" cy="8" r="0.9"/><circle cx="48" cy="8" r="0.9"/><circle cx="56" cy="8" r="0.9"/><circle cx="64" cy="8" r="0.9"/><circle cx="72" cy="8" r="0.9"/><circle cx="80" cy="8" r="0.9"/><circle cx="88" cy="8" r="0.9"/><circle cx="96" cy="8" r="0.9"/>
+                    <circle cx="8" cy="16" r="0.9"/><circle cx="16" cy="16" r="0.9"/><circle cx="24" cy="16" r="0.9"/><circle cx="32" cy="16" r="0.9"/><circle cx="40" cy="16" r="0.9"/><circle cx="48" cy="16" r="0.9"/><circle cx="56" cy="16" r="0.9"/><circle cx="64" cy="16" r="0.9"/><circle cx="72" cy="16" r="0.9"/><circle cx="80" cy="16" r="0.9"/><circle cx="88" cy="16" r="0.9"/><circle cx="96" cy="16" r="0.9"/>
+                    <circle cx="8" cy="24" r="0.9"/><circle cx="16" cy="24" r="0.9"/><circle cx="24" cy="24" r="0.9"/><circle cx="32" cy="24" r="0.9"/><circle cx="40" cy="24" r="0.9"/><circle cx="48" cy="24" r="0.9"/><circle cx="56" cy="24" r="0.9"/><circle cx="64" cy="24" r="0.9"/><circle cx="72" cy="24" r="0.9"/><circle cx="80" cy="24" r="0.9"/><circle cx="88" cy="24" r="0.9"/><circle cx="96" cy="24" r="0.9"/>
+                    <circle cx="8" cy="32" r="0.9"/><circle cx="16" cy="32" r="0.9"/><circle cx="24" cy="32" r="0.9"/><circle cx="32" cy="32" r="0.9"/><circle cx="40" cy="32" r="0.9"/><circle cx="48" cy="32" r="0.9"/><circle cx="56" cy="32" r="0.9"/><circle cx="64" cy="32" r="0.9"/><circle cx="72" cy="32" r="0.9"/><circle cx="80" cy="32" r="0.9"/><circle cx="88" cy="32" r="0.9"/><circle cx="96" cy="32" r="0.9"/>
+                    <circle cx="8" cy="40" r="0.9"/><circle cx="16" cy="40" r="0.9"/><circle cx="24" cy="40" r="0.9"/><circle cx="32" cy="40" r="0.9"/><circle cx="40" cy="40" r="0.9"/><circle cx="48" cy="40" r="0.9"/><circle cx="56" cy="40" r="0.9"/><circle cx="64" cy="40" r="0.9"/><circle cx="72" cy="40" r="0.9"/><circle cx="80" cy="40" r="0.9"/><circle cx="88" cy="40" r="0.9"/><circle cx="96" cy="40" r="0.9"/>
+                    <circle cx="8" cy="48" r="0.9"/><circle cx="16" cy="48" r="0.9"/><circle cx="24" cy="48" r="0.9"/><circle cx="32" cy="48" r="0.9"/><circle cx="40" cy="48" r="0.9"/><circle cx="48" cy="48" r="0.9"/><circle cx="56" cy="48" r="0.9"/><circle cx="64" cy="48" r="0.9"/><circle cx="72" cy="48" r="0.9"/><circle cx="80" cy="48" r="0.9"/><circle cx="88" cy="48" r="0.9"/><circle cx="96" cy="48" r="0.9"/>
+                  </g>
+                </g>
+                <text x="56" y="95" font-size="10" fill="var(--text-secondary)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">20K features</text>
+                <path class="pipe-arrow" d="M 115 48 L 160 48" stroke="var(--text-tertiary)" stroke-width="1" fill="none" marker-end="url(#pipe-arr)"/>
+                <g transform="translate(170, 22)" fill="var(--accent)">
+                  <circle cx="12" cy="10" r="2"/><circle cx="20" cy="14" r="2"/><circle cx="14" cy="20" r="2"/><circle cx="24" cy="8" r="2"/><circle cx="8" cy="16" r="2"/>
+                  <circle cx="52" cy="34" r="2" fill="var(--accent-3)"/><circle cx="60" cy="30" r="2" fill="var(--accent-3)"/><circle cx="56" cy="42" r="2" fill="var(--accent-3)"/><circle cx="48" cy="38" r="2" fill="var(--accent-3)"/><circle cx="64" cy="40" r="2" fill="var(--accent-3)"/>
+                  <circle cx="82" cy="16" r="2"/><circle cx="88" cy="10" r="2"/><circle cx="84" cy="22" r="2"/><circle cx="74" cy="14" r="2"/><circle cx="90" cy="24" r="2"/>
+                </g>
+                <text x="215" y="95" font-size="10" fill="var(--text-secondary)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">2D projection</text>
+                <path class="pipe-arrow" d="M 268 48 L 325 48" stroke="var(--text-tertiary)" stroke-width="1" fill="none" marker-end="url(#pipe-arr)"/>
+                <g transform="translate(333, 15)">
+                  <path class="pipe-boundary" d="M 10 12 Q 75 38 150 22" stroke="var(--accent)" stroke-width="1.2" fill="none" stroke-dasharray="3 3" opacity="0.7"/>
+                  <circle cx="20" cy="10" r="2" fill="var(--accent)"/><circle cx="30" cy="16" r="2" fill="var(--accent)"/><circle cx="26" cy="6" r="2" fill="var(--accent)"/><circle cx="42" cy="14" r="2" fill="var(--accent)"/><circle cx="38" cy="4" r="2" fill="var(--accent)"/><circle cx="50" cy="20" r="2" fill="var(--accent)"/><circle cx="60" cy="10" r="2" fill="var(--accent)"/><circle cx="70" cy="16" r="2" fill="var(--accent)"/>
+                  <circle cx="90" cy="46" r="2" fill="var(--accent-3)"/><circle cx="100" cy="52" r="2" fill="var(--accent-3)"/><circle cx="110" cy="42" r="2" fill="var(--accent-3)"/><circle cx="120" cy="50" r="2" fill="var(--accent-3)"/><circle cx="130" cy="46" r="2" fill="var(--accent-3)"/><circle cx="140" cy="38" r="2" fill="var(--accent-3)"/><circle cx="105" cy="58" r="2" fill="var(--accent-3)"/><circle cx="125" cy="40" r="2" fill="var(--accent-3)"/>
+                </g>
+                <text x="414" y="95" font-size="10" fill="var(--text-secondary)" text-anchor="middle" font-weight="500" font-family="Inter, sans-serif">classified</text>
+              </svg>
+            </div>
+
+            <div class="tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">PyTorch</span>
+              <span class="tech-tag">Deep learning</span>
+              <span class="tech-tag">Bioinformatics</span>
+              <span class="tech-tag">scRNA-seq</span>
+            </div>
+
+            <a href="#publications" class="project-link">Associated publications →</a>
+          </article>
+
+          <!-- Energy Forecasting -->
+          <article class="glass project reveal">
+            <h3 class="project-title">Energy forecasting system</h3>
+            <p class="project-desc">End-to-end ML solution for energy demand forecasting with a Streamlit dashboard for real-time monitoring and decision-making.</p>
+            <p class="project-impact">→ Full pipeline from data ingestion to deployed dashboard.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Scikit-learn</span>
+              <span class="tech-tag">Streamlit</span>
+              <span class="tech-tag">Time series</span>
+            </div>
+            <a href="https://github.com/MalekSnous/energy_forecasting" target="_blank" rel="noopener noreferrer" class="project-link">View project →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section class="section" id="publications">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2><span class="section-num">03</span>Publications</h2>
+        </div>
+        <ul class="list-plain publications-list">
+          <li class="glass reveal">
             <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012006" target="_blank" rel="noopener noreferrer" class="pub-title">Partial label learning for automated classification of single-cell transcriptomic profiles</a>
             <p class="pub-meta">PLOS Computational Biology · 2024</p>
             <p class="pub-desc">Machine learning models for classifying single-cell RNA sequencing data under partial label learning. New methods benchmarked against adapted existing approaches on real and synthetic datasets.</p>
           </li>
-          <li>
+          <li class="glass reveal">
             <a href="https://arxiv.org/abs/2409.05937" target="_blank" rel="noopener noreferrer" class="pub-title">Hierarchical novel class discovery for single-cell transcriptomic profiles</a>
             <p class="pub-meta">Preprint arXiv · 2024</p>
             <p class="pub-desc">Extreme learning scenario where models must classify without label knowledge. A hierarchical hypothesis on labels completes the learning schema for predictions on unlabelled data.</p>
           </li>
-          <li>
+          <li class="glass reveal">
             <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011168" target="_blank" rel="noopener noreferrer" class="pub-title">Random walk informed heterogeneity detection reveals how the lymph node conduit network influences T cells collective exploration behavior</a>
             <p class="pub-meta">PLOS Computational Biology · 2023</p>
             <p class="pub-desc">Contributed to an interactive Plotly/Dash visualization tool for random-walk simulations on large-scale networks.</p>
           </li>
-          <li>
+          <li class="glass reveal">
             <a href="https://hal.science/hal-04327608" target="_blank" rel="noopener noreferrer" class="pub-title">Classification hiérarchique pour des données transcriptomiques faiblement supervisées</a>
             <p class="pub-meta">Conférence sur l'Apprentissage automatique · 2022</p>
             <p class="pub-desc">Extension of hierarchical classification to the weakly-supervised problem. Three algorithms benchmarked on C. elegans transcriptomic profiles.</p>
           </li>
         </ul>
-      </section>
+      </div>
+    </section>
 
-      <!-- EDUCATION -->
-      <section class="section" id="education">
-        <h2>Education</h2>
-        <ul class="education-list">
-          <li>
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2><span class="section-num">04</span>Education</h2>
+        </div>
+        <ul class="list-plain education-list">
+          <li class="glass reveal">
             <p class="edu-title">PhD in Mathematics and Computer Science</p>
             <p class="edu-meta">Aix-Marseille University · 2024</p>
             <p class="edu-desc"><a href="https://theses.hal.science/tel-04968112" target="_blank" rel="noopener noreferrer">Classification of single-cell RNA sequencing</a></p>
           </li>
-          <li>
+          <li class="glass reveal">
             <p class="edu-title">Master 2 Mathematics and Applications (CEPS)</p>
             <p class="edu-meta">Aix-Marseille University · 2020</p>
           </li>
         </ul>
-      </section>
+      </div>
+    </section>
 
-      <!-- LOOKING FOR -->
-      <section class="section" id="looking-for">
-        <h2>What I'm looking for</h2>
-        <ul class="looking-list">
-          <li>ML engineering roles bridging research and production</li>
-          <li>Focus areas: LLM evaluation, autonomous agents, applied biological ML</li>
-          <li>Research-focused startups or deeptech scale-ups</li>
-          <li>Europe-based (Switzerland, France, Netherlands, UK) or remote</li>
-        </ul>
-      </section>
+    <!-- CONTACT / LOOKING FOR -->
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2><span class="section-num">05</span>What I'm looking for</h2>
+        </div>
+        <div class="looking-grid">
+          <div class="glass looking-item reveal">ML engineering roles bridging research and production</div>
+          <div class="glass looking-item reveal d1">Focus areas: LLM evaluation, autonomous agents, applied biological ML</div>
+          <div class="glass looking-item reveal">Research-focused startups or deeptech scale-ups</div>
+          <div class="glass looking-item reveal d1">Europe-based (Switzerland, France, Netherlands, UK) or remote</div>
+        </div>
+      </div>
+    </section>
 
-      <footer class="site-footer">
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/maleksen" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a href="https://github.com/MalekSnous" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="mailto:malek.senoussi@gmail.com">Email ↗</a>
+          <a href="./assets/CV.pdf" target="_blank" rel="noopener">CV ↓</a>
+        </div>
         <p>© 2026 · Malek Senoussi</p>
-      </footer>
+      </div>
+    </footer>
 
-    </main>
+  </main>
 
-  </div>
-
-  <!-- Cloudflare email obfuscation -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-
-  <!-- Active nav on scroll -->
+  <!-- ============================================
+       SCRIPTS
+       ============================================ -->
   <script>
-    (function() {
-      const sections = document.querySelectorAll('section[id]');
-      const navLinks = document.querySelectorAll('.sidebar-nav a');
+  (function () {
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      function updateActiveNav() {
-        let current = '';
-        sections.forEach(section => {
-          const top = section.offsetTop;
-          if (window.pageYOffset >= top - 200) {
-            current = section.getAttribute('id');
+    /* ---- Mobile nav toggle ---- */
+    var toggle = document.getElementById('navToggle');
+    var links = document.getElementById('navLinks');
+    if (toggle && links) {
+      toggle.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      links.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          links.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
+    /* ---- Active nav on scroll ---- */
+    var sections = document.querySelectorAll('main section[id], header[id]');
+    var navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    function updateActiveNav() {
+      var current = '';
+      sections.forEach(function (section) {
+        if (window.pageYOffset >= section.offsetTop - 220) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(function (link) {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+      });
+    }
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
+    updateActiveNav();
+
+    /* ---- Scroll reveal ---- */
+    var reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window && !reduceMotion) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            io.unobserve(entry.target);
           }
         });
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === '#' + current) {
-            link.classList.add('active');
-          }
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      reveals.forEach(function (el) { io.observe(el); });
+    } else {
+      reveals.forEach(function (el) { el.classList.add('visible'); });
+    }
+
+    /* ---- Cursor-follow glow on glass cards ---- */
+    if (!reduceMotion && window.matchMedia('(hover: hover)').matches) {
+      document.querySelectorAll('.glass').forEach(function (card) {
+        card.addEventListener('pointermove', function (e) {
+          var r = card.getBoundingClientRect();
+          card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+          card.style.setProperty('--my', (e.clientY - r.top) + 'px');
         });
+      });
+    }
+
+    /* ---- Neural network canvas ---- */
+    var canvas = document.getElementById('neural');
+    if (canvas && !reduceMotion) {
+      var ctx = canvas.getContext('2d');
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      var W = 0, H = 0, nodes = [], raf = null, running = true;
+      var mouse = { x: -9999, y: -9999 };
+      var LINK_DIST = 130;
+
+      function resize() {
+        W = canvas.clientWidth;
+        H = canvas.clientHeight;
+        canvas.width = W * dpr;
+        canvas.height = H * dpr;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        var target = Math.round((W * H) / 15000);
+        target = Math.max(28, Math.min(target, 90));
+        nodes = [];
+        for (var i = 0; i < target; i++) {
+          nodes.push({
+            x: Math.random() * W,
+            y: Math.random() * H,
+            vx: (Math.random() - 0.5) * 0.28,
+            vy: (Math.random() - 0.5) * 0.28
+          });
+        }
       }
 
-      window.addEventListener('scroll', updateActiveNav, { passive: true });
-      updateActiveNav();
-    })();
+      function step() {
+        ctx.clearRect(0, 0, W, H);
+        for (var i = 0; i < nodes.length; i++) {
+          var n = nodes[i];
+          // gentle attraction toward cursor
+          var dxm = mouse.x - n.x, dym = mouse.y - n.y;
+          var dm = Math.hypot(dxm, dym);
+          if (dm < 160 && dm > 0.1) {
+            n.vx += (dxm / dm) * 0.012;
+            n.vy += (dym / dm) * 0.012;
+          }
+          n.x += n.vx; n.y += n.vy;
+          n.vx *= 0.99; n.vy *= 0.99;
+          if (n.x < 0 || n.x > W) n.vx *= -1;
+          if (n.y < 0 || n.y > H) n.vy *= -1;
+          n.x = Math.max(0, Math.min(W, n.x));
+          n.y = Math.max(0, Math.min(H, n.y));
+        }
+        // links
+        for (var a = 0; a < nodes.length; a++) {
+          for (var b = a + 1; b < nodes.length; b++) {
+            var dx = nodes[a].x - nodes[b].x, dy = nodes[a].y - nodes[b].y;
+            var d = Math.hypot(dx, dy);
+            if (d < LINK_DIST) {
+              var o = (1 - d / LINK_DIST) * 0.5;
+              ctx.strokeStyle = 'rgba(123,163,255,' + o.toFixed(3) + ')';
+              ctx.lineWidth = 1;
+              ctx.beginPath();
+              ctx.moveTo(nodes[a].x, nodes[a].y);
+              ctx.lineTo(nodes[b].x, nodes[b].y);
+              ctx.stroke();
+            }
+          }
+        }
+        // nodes
+        for (var k = 0; k < nodes.length; k++) {
+          ctx.beginPath();
+          ctx.arc(nodes[k].x, nodes[k].y, 2, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(180,200,255,0.85)';
+          ctx.fill();
+        }
+        raf = requestAnimationFrame(step);
+      }
+
+      function start() { if (!running) { running = true; step(); } }
+      function stop() { running = false; if (raf) cancelAnimationFrame(raf); raf = null; }
+
+      window.addEventListener('resize', resize);
+      canvas.addEventListener('pointermove', function (e) {
+        var r = canvas.getBoundingClientRect();
+        mouse.x = e.clientX - r.left;
+        mouse.y = e.clientY - r.top;
+      });
+      canvas.addEventListener('pointerleave', function () { mouse.x = -9999; mouse.y = -9999; });
+
+      // pause when hero off-screen
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (entries) {
+          entries[0].isIntersecting ? start() : stop();
+        }, { threshold: 0.02 }).observe(canvas);
+      }
+
+      resize();
+      step();
+    }
+  })();
   </script>
 
 </body>

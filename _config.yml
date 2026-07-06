@@ -14,12 +14,3 @@ author:
   github: "https://github.com/MalekSnous"
   linkedin: "https://www.linkedin.com/in/maleksen/"
 
-navbar:
-  - name: "Home"
-    link: /
-  - name: "Projects"
-    link: /projects
-  - name: "About"
-    link: /about
-  - name: "CV"
-    link: /assets/CV.pdf
